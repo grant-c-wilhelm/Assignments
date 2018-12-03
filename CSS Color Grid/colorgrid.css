@@ -1,0 +1,36 @@
+.light-pink {
+    background: pink;
+    height:  250px;
+    padding: 25px;
+}
+.dark-pink {
+    background: #EE2E84;
+    height: 250px;
+    width:  325px;
+    margin: 12px;
+    display: inline-block;
+}
+
+.light-blue {
+    background: #85CFD8;
+    height: 250px;
+    width:  650px;
+    margin: 24px;
+    display: inline-block;
+}
+
+.green {
+    background: #8DC63F;
+    display: inline-block;
+    width: 950px;
+    height: 250px;
+    margin: 12px;
+}
+
+.orange {
+    background: #E76E34;
+    display: inline-block;
+    width: 250px;
+    height: 250px;
+    margin: 12px;
+}
