@@ -187,3 +187,159 @@ out of the usual flow of the page. Things get turned into inline elements when u
     background-color:red;
     border-radius: 50%;
   }
+
+  #greece1 {
+    position: absolute;
+    top: 1850px;
+    height: 50px;
+    width: 800px; 
+    background: blue;
+}
+#greece2 {
+    position: absolute;
+    top: 1900px;
+    height: 50px;
+    width: 800px; 
+    background: white;
+}
+#greece3 {
+    position: absolute;
+    top: 1950px;
+    height: 50px;
+    width: 800px; 
+    background: blue;
+}
+#greece4 {
+   position: absolute;
+    top: 2000px;
+    height: 50px;
+    width: 800px; 
+    background: white;
+}
+ #greece5 {
+    position: absolute;
+    top: 2050px;
+    height: 50px;
+    width: 800px; 
+    background: blue;
+}
+#greece6 {
+    position: absolute;
+    top: 2100px;
+    height: 50px;
+    width: 800px; 
+    background: white;
+}
+#greece7 {
+    position: absolute;
+    top: 2150px;
+    height: 50px;
+    width: 800px; 
+    background: blue;
+}
+#greece8 {
+   position: absolute;
+    top: 2200px;
+    height: 50px;
+    width: 800px; 
+    background: white;
+}
+
+#greece9 {
+    position: absolute;
+    top: 2250px;
+    height: 50px;
+    width: 800px; 
+    background: blue;
+}
+
+#greece10{
+    position: absolute;
+    margin-bottom: 10px;
+    top: 1850px;
+    height: 225px;
+    width: 225px; 
+    background: blue;
+}
+#greece11{
+    position: absolute;
+    height: 111%;
+    left: 35%;
+    width: 56.25px; 
+    background: white;
+}
+#greece12{
+    position: absolute;
+    top: 43%;
+    height: 56.25px;
+    width: 100%; 
+    background: white;
+}
+
+#niger1 {
+    position: absolute;
+    padding-top: 10px;
+    top: 2350px;
+    height: 110px;
+    width: 725px; 
+    background: red;
+}
+#niger2 {
+    position: relative;
+    top: 110px;
+    height: 125px;
+    width: 725px; 
+    background: white;
+}
+#niger3 {
+    position: relative;
+    top: 15%;
+    left: 45%;
+    height: 100px;
+    width: 100px;
+    background-color:red;
+    border-radius: 50%;
+}
+#niger4 {
+    position: relative;
+    top: 110px;
+    margin-bottom: 10px;
+    height: 125px;
+    width: 725px; 
+    background: green;
+}
+
+#mald1 {
+    position: absolute;
+    margin-bottom: 50px;
+    top: 2750px;
+    height: 400px;
+    width: 800px; 
+    background: red;
+}
+#mald2 {
+    position: relative;
+    left: 200px;
+    top: 100px;
+    height: 200px;
+    width: 400px; 
+    background: green;
+}
+#mald3 {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    top: 25px;
+    left: 125px;
+    background-color:white;
+    border-radius: 50%;
+
+}
+#mald4 {
+    position: relative;
+    left: 25px;;
+    height: 150px;
+    width: 150px;
+    background-color:green;
+    border-radius: 50%;
+}
