@@ -1,0 +1,30 @@
+h1 {
+    color: darkgreen;
+}
+h1, h3 {
+    font-family: Georgia;
+    text-align: center;
+    font-size: 40px;
+    margin-left: 100px;
+    margin-right: 100px;
+
+}
+
+p, span, ul {
+    line-height: 25px;
+    font-size: 22px;
+    word-wrap: break-word;
+    text-align: left;
+    margin-right: 450px;
+    margin-left: 50px;
+    margin-top: 55px;
+
+  
+}
+img {
+    float: left;
+    padding: 55px;
+}
+.link-hover:hover {
+    text-decoration: underline;
+}
