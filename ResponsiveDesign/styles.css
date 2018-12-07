@@ -1,0 +1,120 @@
+/*responsive design will mimic various screen sizes so that your page can be viewed on all platforms
+adding styles based on condistions of the webpage/screen size/width X height
+"media querys"
+dont build things for particular devices, the deices change too much. instead pick a range for sizes, 600px, 900px, 1200px,
+
+the order of the media queries is important
+your medias always go at the bottom of the code, othewise it will not work correctly*/
+
+
+/*@media (min-width:600px){ }
+    /* everything in here will be normal css. you only really need to do code here for the attributes on the 
+    page that are getting distorted when the screen size is adjusted
+    
+@media (min-width:900px){
+    #box {
+        width: 50%;
+
+    }
+}
+@media (min-width:1200px){
+    #box {
+        width: 35%;
+        
+    }
+}
+
+/* flex box is a feature in css to help with position shit on the page
+we are taking an element and telling it how to behave postitionally
+defines behavior of children elements ALWAYS, parents job to define behavior of the children 
+
+left axis is the main axis 
+top and down are the "y" axis
+positioing tings on the  axis
+we tell things where to go on the x axis and the y axis
+if we tell a div to be flex then all of its chidlren will align inline block
+
+set the parent to have height: xxvh; use the vh on the parent for height and VW for the width
+and then use the regualar px for the children,
+
+display: flex; this will be added to the parent of the div
+
+justify-content: center;  this will put all the children in the center. justify content tells how 
+things along the main access are arranged... flex-start will put it left, flex end will put it far right,
+space-between puts space around the children, space-around and space-between are the most commonly used 
+values for the justify-content property.
+
+if you dont them to squish set the flex-wrap property to wrap flex-wrap: wrap so things dont get squished
+
+positioning things on the y axis:
+
+align-items: is a property that will align things along the y axis, so to the left or to the right.
+
+flex-direction: will change the postion of the x and y axis so that they are flip flopped
+flex-direction: column;
+
+if you want to split it so one set of something is on one side and the other is on the other side use
+set an id on the items you want to align opposite then call the m in the css and asign marin-left:auto
+or margin-right:auto depending on if you are trying to split items to the left or to the right.
+
+sometimes you may want to stretch the children across the parent evenly so tht they fill up the parent
+take out your width property and tell the children to have the property of flex: 1; this will fill the 
+page with the children by streching them
+
+maybe you want one to be fatter than the rest of the children
+set the id/class name of the fat one to flex:2; and that specific child will be bigger than all the rest
+
+align-self: is a property that will isolate the one specific item.
+*/
+
+
+.cell {
+    height: 150px;
+    align-items: center;
+    border: 2px white solid;
+
+} 
+
+.lightPink {
+    background-color: #F5C6D6;
+}
+
+.darkPink{
+    background-color: #EE2E84;
+    width: 24.5%;
+    display: inline-block;
+ 
+}
+.blue {
+    background-color: #85CFD8;
+    width: 49.57%;
+    display:inline-block;
+
+}
+.green {
+    background-color: #8DC63F;
+    display:inline-block;
+    width: 74%;
+}
+.orange {
+    background-color: #E76E34;
+    display:inline-block;
+    width: 25%;
+}
+
+
+
+
+
+@media (min-width:768px){
+/* .green {
+    width: 75%;
+}
+.orange {
+    width: 25%;
+} */
+
+
+
+
+} 

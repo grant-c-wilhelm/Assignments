@@ -27,4 +27,4 @@ document.addEventListener('keydown', keyPressed, false);
         else if (e.keyCode === 66) {
          box.style.backgroundColor = 'blue';
         }
-}
+} 

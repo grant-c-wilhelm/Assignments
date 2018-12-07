@@ -1,6 +1,7 @@
 body, html {
     height: 100%;
     background-color: aliceblue;
+    margin: 5px;
 }
 .parallax {
     background-image: url('https://www.section8ski.com/wp-content/uploads/ski-instructor-course-powder-face-shots.jpg');
@@ -12,7 +13,7 @@ body, html {
     opacity: .75;
     min-height: 500px;
     padding: 5%;
-}
+} 
 
 .parallax1 {
     background-image: url('https://www.fs.usda.gov/Internet/FSE_MEDIA/stelprdb5347007.jpg');
@@ -21,26 +22,71 @@ body, html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: .75;
+    opacity: .85;
     min-height: 500px;
+}
+#JSLogo {
+    position: relative;
+    top: 100px;
+    left: 150px;
+    height: 200px;
+    width: 200px;
+}
+#react {
+    position: relative;
+    top: 100px;
+    left: 300px;
+    height: 200px;
+    width: 375px;
+}
+#html {
+    position: relative;
+    top: 125px;
+    left: 470px;
+    height: 250px;
+    width: 250px;
+}
+#redux {
+    position: relative;
+    top: 455px;
+    right: 775px;
+    height: 250px;
+    width: 450px;
+}
+#nodejs {
+    position: relative;
+    left: 560px;
+    top: 270px;
+    height: 150px;
+    width: 350px;
+}
+#angular {
+    position: relative;
+    left: 700px;
+    top: 225px;
+ 
 }
 
 #text-block-top {
     position: absolute;
-    top: 550px;
-    left: 185px;
-    background-color: salmon;
-    height: 250px;
-    width: 1100px;
-    opacity: .5;
+    top: 150px;
+    left: 85px;
+    border: 3px solid rgb(255, 255, 255);
+    background-color: rgb(220, 255, 255);
+    height: 300px;
+    width: 550px;
+    opacity: .85;
 }
 
-text {
-    position: absolute;
+.text {
+    position: relative;
+    top: 20px;
     text-align: center;
-    color: white;
-    font-size: 55px;
-    width: 25px;
+    color: rgb(0, 0, 0);
+    margin: 10px;
+    line-height: 65px;
+    font-weight: 1000;
+    font-size: 35px;
 }
 
 #navbar { /*this is the actual nav bar*/
@@ -58,18 +104,4 @@ text {
     padding: 25px;
     text-decoration: none;
     font-size: 25px;
-}
-#about-text {
-    position: fixed;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    left: 25%;
-    bottom: 725px;
-    text-align:center;
-    font-size: 20px;
-    max-width: 33%;
-    word-spacing: 3px;
-    background: slategray;
-    padding: 5px;
 }
