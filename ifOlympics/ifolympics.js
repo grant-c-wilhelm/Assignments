@@ -25,3 +25,28 @@ if (person.age>=13) {
 else if (person.age<=12){
     console.log('Sorry little ' + person.name + ' you gotta stay home!')
 }
+ if (person.name.startsWith('B')){
+    console.log('come on in!')
+};
+
+if (person.name.startsWith('B') && person.age >=18){
+    console.log('Welcome to the show! Come inside!')}
+    else {
+        console.log('hit the road bub!')
+    };
+if (cat.includes(dog)){
+    console.log('damn skippity it does')
+} else {
+    console.log('What in tarnation are you trying to say!?')
+}
+var thisTrue = true;
+if (typeof thisTrue ==='boolean'){
+    console.log('yup thats a boolean botha')
+}   else {
+    console.log('Definitley not a boolean bro')
+};
+if (typeof notDefined !=='undefined'){
+    console.log("yah man, thats not a dfined variable")
+}   else{
+    console.log('yup that is a defined variable somewhere in this code')
+};

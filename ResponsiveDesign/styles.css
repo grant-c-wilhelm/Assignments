@@ -14,7 +14,7 @@ your medias always go at the bottom of the code, othewise it will not work corre
 @media (min-width:900px){
     #box {
         width: 50%;
-
+ 
     }
 }
 @media (min-width:1200px){
@@ -48,7 +48,7 @@ if you dont them to squish set the flex-wrap property to wrap flex-wrap: wrap so
 
 positioning things on the y axis:
 
-align-items: is a property that will align things along the y axis, so to the left or to the right.
+align-items: is a property that will align things along the x axis, so to the left or to the right.
 
 flex-direction: will change the postion of the x and y axis so that they are flip flopped
 flex-direction: column;

@@ -2,7 +2,7 @@
 const calculator = {          //I am making this to keep track of what the user inputs//
     displayValue: '0',       //will display '0' to start
     firstNum: false,           //first number n/a
-    secondNumHere: false,       //checking to see if 2nd number is needed of if calculation can be done w/o
+    secondNum: false,       //checking to see if 2nd number is needed of if calculation can be done w/o
     mathOperator: null,       //math operator is n/a
     onSecondVaule: false
 }
@@ -12,12 +12,21 @@ const calculator = {          //I am making this to keep track of what the user 
 function buttonClick(e){    
     
         if (calculator.firstNum === false) {
-            console.log(document.querySelector(this.value));
-        }};
+            console.log(document.querySelector(this.value))//store value of button pressed as firstNum
+        } 
+        else if (calculator.firstNum === true){
+            //store this value of the button pressed as secondum
+        }
+        else if (calculator.firstNum===true && secondNum===true){
+            //store this value of the button pressed as mathOperator and perform value of the math operation on the stored firstNum and SecondNum
+        }
+        else {
+            console.log('your call cannot be completed as dialed')
+        };
 
  
 
-
+    }
 
 
 

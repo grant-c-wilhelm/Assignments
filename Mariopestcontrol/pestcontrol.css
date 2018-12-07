@@ -1,0 +1,73 @@
+body {
+    background-color: rgba(255, 217, 135, 0.829);
+}
+button {
+    height: 100px;
+    font-size: 25px;
+    margin-left: 600px;;
+}
+footer {
+    border: solid 5px rgb(99, 125, 212);
+    font-size: 20px;
+}
+.imageone{
+    position: relative;
+    background-image: url(https://miketendo64.com/wp-content/uploads/2017/12/vs-super-mario-bros.jpg);
+    max-width: 100%;
+    height: 380px;
+    border: 15px rgb(99, 125, 212) solid;
+    opacity: .86; 
+}
+.slogan {
+    position: absolute;
+    height: 500px;
+    width: 500px;
+    left: 500px;
+}
+.baddie {
+    display: flex;
+    justify-content: center;
+    height: 250px;
+    padding-top: 15PX;
+    margin: auto;
+}
+.goomba {
+    content: url(https://vignette.wikia.nocookie.net/nintendo/images/d/d5/GoombaNSMB.png/revision/latest/scale-to-width-down/200?cb=20110724131649&path-prefix=en);
+    border: 5px rgb(99, 125, 212) solid;
+    flex: 1;
+}
+.bobombs {
+    content: url(https://www.mariowiki.com/images/9/9e/Bobomb_-_MarioPartyStarRush.png);
+    border: 5px rgb(99, 125, 212) solid;
+    flex: 1;
+}
+.cheepcheeps {
+    content: url(https://vignette.wikia.nocookie.net/mario/images/3/31/Deep_Cheep%2C_New_Super_Mario_Bros._U.png/revision/latest/scale-to-width-down/260?cb=20121106191437);
+    border: 5px rgb(99, 125, 212) solid;
+    flex: 1;
+}
+.master {
+    display: flex;
+    justify-content: center;
+    height: 150px;
+    max-width: 90%;
+    font-size: 25px;
+    font-weight: 15px;
+    margin: auto;
+    padding-top: 25px;
+}
+.goombatxt {
+   text-align: center;
+   border: 5px rgb(99, 125, 212) solid;
+   flex: 1;
+}
+.bobombtxt {
+    text-align: center;
+    border: 5px rgb(99, 125, 212) solid;
+    flex: 1;
+}
+.cheepcheeptxt {
+    text-align: center;
+    border: 5px rgb(99, 125, 212) solid;
+    flex: 1;
+}
