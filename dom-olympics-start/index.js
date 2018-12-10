@@ -10,13 +10,16 @@ document.getElementsByTagName('body')[0].prepend(subHeader);
 
 var myHeader = document.createElement('h1');
 var HeaderText = document.createTextNode('Javascript made this ');
-myHeader.prepend(HeaderText);
+myHeader.prepend(HeaderText); 
 document.body.prepend(myHeader);
 
-var clear = document.getElementById("clear-button").addEventListener('click',function(e){
-    document.getElementsByClassName('messages').innerHTML = ' '
+
+document.getElementById("clear-button").addEventListener('click',function(e){
+    var clear = document.getElementsByClassName('message-left');
+        
 });
 
+// document.getElementsByClassName('.messages').prep = ' '
 
 
 
