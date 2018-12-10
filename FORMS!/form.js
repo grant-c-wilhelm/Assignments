@@ -1,99 +1,20 @@
 
-const calculator = {          //I am making this to keep track of what the user inputs//
-    displayValue: '0',       //will display '0' to start
-    firstNum: false,           //first number n/a
-    secondNum: false,       //checking to see if 2nd number is needed of if calculation can be done w/o
-    mathOperator: null,       //math operator is n/a
-    onSecondVaule: false
-}
+//adding
+var addButton = document.querySelector('.add');
 
-//if firstnum = false  store that button value on the display 
+addButton.addEventListener('click',function(){
+    var num1 = document.querySelector('.num1').value;   //refs 1st input box
+    var num2 = document.querySelector('.num2').value;   //refs 2nd input box
 
-function buttonClick(e){    
-    
-        if (calculator.firstNum === false) {
-            console.log(document.querySelector(this.value))//store value of button pressed as firstNum
-        } 
-        else if (calculator.firstNum === true){
-            //store this value of the button pressed as secondum
-        }
-        else if (calculator.firstNum===true && secondNum===true){
-            //store this value of the button pressed as mathOperator and perform value of the math operation on the stored firstNum and SecondNum
-        }
-        else {
-            console.log('your call cannot be completed as dialed')
-        };
+    console.log(parseInt(num1)*10 + parseInt(num2));
+    //console.log(parseInt(num1) + parseInt(num2) + (10));//to add an additional 10 or mutiply like in mario
+})
 
- 
+var multiplyButton = document.querySelector('.multiply');
 
-    }
+multiplyButton.addEventListener('click',function(){
+    var num3 = document.querySelector('.num3').value;   //refs 1st input box
+    var num4 = document.querySelector('.num4').value;   //refs 2nd input box
 
-
-
-// function updateDisplay (){
-//     let display = document.querySelector('.display')
-//     displayValue = calculator.displayValue;
-// }
-// updateDisplay();                                     
- 
-// function firstNumber (){
-//      let firstNum = document.querySelector('.number')
-//      displayValue = calculator.display;
-//  }
-//  updateDisplay();
-
-// function secondNumber (){
-//     let isSecondNumHere = document.querySelector('.number')
-//     displayValue = calculator.display;
-// }
-// updateDisplay();
-
-
-
-
-
-
-
-
-
-
-
-
-// var form = document.querySelector('form');
-// var list = document.querySelector('#list');
-
-
-// form.addEventListener('submit', function(e){
-//     e.preventDefault(); // "whatever you normally do dont do it because the sumbit button naturally wants to refresh the page"
-//     var data = {
-//         fname: this.fname.value,
-//         age: this.age.value
-    //       veteran: this.veteran.checked,
-    //       maritalStatus: this.maritalStatus
-//     };
-//     handleDisplay(data);
-
-// function handleDisplay(data){
-// //creating the elements
-//     var wrapper = document.createElement('div');
-//     var fnameLabel = document.createElement('p');
-//     var ageLabel = document.createElement('p');
-// //set text to the values of the inputs
-//     fnameLabel.textcontent = "NAME:" + data.fname;
-//     ageLabel.textcontent = "Age:" + data.age;
-// //append it to the page
-//     wrapper.appendChild(fnameLabel);
-//     wrapper.appendChild(ageLabel);
-//     list.appendChild(wrapper);
-// }
-
-//     // alert('Name: ' + form.fname.value + ' Age: ' + form.age.value);
-// })
-// //alert('Name: ' + e.target.fname.value + ' Age: ' + e.target.age.value);
-// //alert('Name: ' + this.fname.value + ' Age: ' + this.age.value);
-// //above comments are other ways of writing the same code we have above
-
-// //create elemets 
-// //set text to the values of the inputs
-// //append it to the page
-// //the above steps would get the page to display the user input on the page as an html element
+    console.log(parseInt(num3) * parseInt(num4));
+})
