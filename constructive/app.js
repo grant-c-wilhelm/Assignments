@@ -17,7 +17,7 @@
 
 function Animal (name, sound) {           //passing the argument name allows us //must be capitalized
     this.hasCellWalls = true                //this. is always an object and will never not be an object
-    this.name = name     
+    this.name = name                        // this. refers to a future object to be made
     this.sound = sound
 }
 Animal.prototype.makeSound = function (){       //all we are saying is that htis function is available on the 'animal prototype'
@@ -44,6 +44,6 @@ function speak(){
 }
 var person = {
     name: "anakin",
-    speak: speak
+    speak: speak 
 }
 console.log(person);

@@ -30,7 +30,7 @@ else if (person.age<=12){
 };
 
 if (person.name.startsWith('B') && person.age >=18){
-    console.log('Welcome to the show! Come inside!')}
+    console.log('Welcome to the show! Come inside!')} 
     else {
         console.log('hit the road bub!')
     };

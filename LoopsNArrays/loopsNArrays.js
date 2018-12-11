@@ -5,12 +5,12 @@ for (var i = 0; i < animals.length; i++){
       console.log('animals ' + i +  ' is ' + animals[i])
   }
 }
-function (createEvenArray())
-for (var i = 0; i < animals.length; i++){
-    if (animals[i] === "cat"){
-        console.log('animals ' + i +  ' is ' + animals[i])
-    }
-  }
+// function (createEvenArray())
+// for (var i = 0; i < animals.length; i++){
+//     if (animals[i] === "cat"){
+//         console.log('animals ' + i +  ' is ' + animals[i])
+//     }
+//   }
 
 // var eventsAtWork = ["work", "pretend to work", "party", "work", "meeting", "party", "daily grind", "work", "party"]
 
@@ -27,10 +27,10 @@ for (var i = 0; i < animals.length; i++){
 //     }
 // // } 
 // console.log(number);
-// var highestNum = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
-// function createEvenArray() {
-//     for (var i = 0; i <= highestNum.length; i++){
-//         if (highestNum[i]%2 === true)
-//     }
-// }    return createEvenArray;}
-// function createEvenArray(highestNum = 15)
+var highestNum = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+function createEvenArray() {
+    for (var i = 0; i <= highestNum.length; i++){
+        if (highestNum[i]%2 === true)
+    
+} }   console.log(highestNum);
+function createEvenArray(highestNum = 15)
