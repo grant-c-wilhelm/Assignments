@@ -1,3 +1,5 @@
+//loop through a for loop and find if the numbers are even, then see if you can code for it to find the odd ones
+
 // for (var i = 1; i <= 10; i++){
 //     if (i%2 == 0){
 //         console.log(i + ' Thats an even Number')

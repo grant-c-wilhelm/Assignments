@@ -8,25 +8,34 @@
     <link rel="stylesheet" type="text/css" href="travel.css">
 </head>
 <body>
+<div id="container">  </div>
+<div id="container2">  
+    <form id="master">
+        First Name:
+        <input name="fName">
+        Last Name:
+        <input name="lName">
+        Age:
+        <input name="age">
+            Male <input  type="radio" name="gender" value="Male"/> 
+            Female <input  type="radio" name="gender" value="Female"/>
+            Other<input  type="radio" name="gender" value="Other"/> 
+            <br>
+        Where are you traveling to?
+            <select name="location"> 
+                <option value="New York">NYC, New York</option>
+                <option value="Miami">Miami, Florida</option>
+                <option value="LA">LA, California</option>
+                <option value="Austin">Austin, Texas</option>
+            </select> <br>
+            Diet Restriction:
+            None <input name="diet" type="radio" value="None"/> 
+            Vegan <input name="diet"  type="radio" value="Vegan"/>
+            Vegetarian <input name="diet" type="radio" value="Vegetarian"/>  <button class="submit">Submit</button>
+    </form>  
+    </div>
+    <div id="container3">  </div>
 
-
-    <form id="firstName">
-        First Name: <input/>
-    </from>
-    <form id="lastName">
-        Last Name: <input/>
-    </from>
-    <form id="age">
-        Age: <input/>
-    </form>
-
-
-
-
-    <form name="gender">
-            Male <input  type="radio" name="gender"/> 
-            Female <input  type="radio" name="gender"/>
-            Other/Prefer not to say <input  type="radio" name="gender"/>
-        </form>
+<script src="travel.js"></script>
 </body>
-</html>
+</html> 

@@ -1,4 +1,4 @@
-var animals = ['dog', 'cat', 'wildebeast','dragon', 'snake'];
+// var animals = ['dog', 'cat', 'wildebeast','dragon', 'snake'];
 
 
 // var renderedAnimals = animals.map(function(animal){
@@ -33,34 +33,53 @@ var animals = ['dog', 'cat', 'wildebeast','dragon', 'snake'];
 // console.log(newArr);
 
 
+Array.prototype.every
+
+
+
+numArr = [1,2,'3'];
+function every(myArr, callBack){
+    for (var i = 0; i < myArr.length; i++){
+       if (callBack(myArr[i])){
+        continue;
+    } else {
+           return false;
+       }
+    }
+}
+var is = every(numArr, function(num) {
+    return typeof num === 'number';
+});
+
+console.log(is);
 
 // Make an array of numbers that are doubles of the first array
- var numberDouble = [2,8,12,18]
+//  var numberDouble = [2,8,12,18]
 
-newSet = numberDouble.map(function(item){
-    return item * 2;
-})
-console.log(newSet);
+// newSet = numberDouble.map(function(item){
+//     return item * 2;
+// })
+// console.log(newSet);
 
-//Make an array of numbers into a string of numbers
- var arrNumbers = [1,2,3,4,5,6];
- newString = arrNumbers.toString(function(item){
- });
- console.log(newString);
-
-//  var arrNames = ['roger', 'alex', 'dillon', 'dan', 'kevin', 'steve'];
-//  newNames = arrNames.toUpperCase(function(item){
+// //Make an array of numbers into a string of numbers
+//  var arrNumbers = [1,2,3,4,5,6];
+//  newString = arrNumbers.toString(function(item){
 //  });
-//  console.log(newNames);
+//  console.log(newString);
 
- function capitalizeNames(arr){
-    newNames = arr.map(function(item){
-        lowerCase = item.toLowerCase();
-        allCaps = lowerCase[0].toUpperCase();
-        correct = allCaps + lowerCase.substring(1);
-        return correct;
-    })
-    console.log(newNames);
-}
+// //  var arrNames = ['roger', 'alex', 'dillon', 'dan', 'kevin', 'steve'];
+// //  newNames = arrNames.toUpperCase(function(item){
+// //  });
+// //  console.log(newNames);
 
-capitalizeNames(["john", "JACOB", "jinGleHeimer", "schmidt"]); // ["John", "Jacob", "Jingleheimer", "Schmidt"]
+//  function capitalizeNames(arr){
+//     newNames = arr.map(function(item){
+//         lowerCase = item.toLowerCase(); //put them all to lowercase
+//         allCaps = lowerCase[0].toUpperCase();
+//         correct = allCaps + lowerCase.substring(1);
+//         return correct;
+//     })
+//     console.log(newNames);
+// }
+
+// capitalizeNames(["john", "JACOB", "jinGleHeimer", "schmidt"]); // ["John", "Jacob", "Jingleheimer", "Schmidt"]

@@ -1,0 +1,75 @@
+ body{
+    background-color: darkslategray;
+    color: rgb(255, 255, 255); 
+ }
+
+ #container {
+     position: relative;
+     background-image: url('https://c1.staticflickr.com/8/7049/6956052736_9ca6fcf26e_b.jpg');
+     background-repeat: no-repeat;
+     height: 175px;
+     background-size:  cover; 
+    }
+#container3 {
+    position: relative;
+    background-image: url('http://allhdwallpapers.com/wp-content/uploads/2015/06/Cave-9.jpg');
+    background-repeat: no-repeat;
+    height: 175px;
+    background-size:  cover; 
+}
+#container2 {
+    background-image: url('https://hellodoktor.com/wp-content/uploads/2017/03/travel-1.jpg');
+    background-repeat: no-repeat;
+    height: 200px;
+    background-size:  cover; 
+}
+form {
+    position: relative;
+    top: 55px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 10px;
+    font-weight: 450;
+    word-spacing: 2.5px;
+    line-height: 22px;
+    letter-spacing: .75px;
+    background-color: rgba(47, 79, 79, 0.329);   
+    margin: auto;  
+}
+@media (min-width:768px){
+    #container {
+        width: 75%;
+        height: 300px;
+        margin: auto;
+        background-position: center; 
+
+    }
+    form{
+        position: relative;
+        font-size: 25px;
+        font-weight: 600;
+        word-spacing: 5px;
+        line-height: 45px;
+        letter-spacing: 1.5px;
+        width: 75%; 
+        top: 125px;
+    }
+    #container2{
+        width: 75%;
+        height: 550px;
+        margin: auto;
+        background-position: center; 
+        background-attachment: fixed;
+    }
+    #submit {
+        width: 50px;
+        height: 25px;
+    }
+    #container3{
+        width: 75%;
+        height: 300px;
+        margin: auto;
+        background-position: center; 
+
+    }
+
+}
