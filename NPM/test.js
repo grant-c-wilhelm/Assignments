@@ -23,10 +23,10 @@ function genRandomTourist () {  //generatre random enemy
 function dealTouristDamage (tourist){
     var userLocalsOnlyPower =  Math.floor(Math.random() * (75 - 25 + 1) + 25); //gens users power
     tourist.touristHP -= userLocalsOnlyPower;
-        console.log('Whoa! You just attacked a ' + tourist.type + ' with about ' + userLocalsOnlyPower + " pounds of force! \n Watch out for the patrol!" );  
+        console.log('Whoa! You just attacked a ' + tourist.type + ' with about ' + userLocalsOnlyPower + " pounds of force! Watch out for the patrol!" );  
 };
 function playerMove() { //function for the player to 'move' within the game. I want this to get ran until 
-    var keyPress = readlineSync.question('If you want to ski and attack the pesky tourists press "s" but if you\'re not feeling it press "q" to be a quitter\n');
+    var keyPress = readlineSync.question('If you want to ski and attack the pesky tourists press "s" but if you\'re not feeling it press "q" to be a quitter');
     switch(keyPress) {                //switch statement for the differeent keys im allowng to be pressed
         case 'q':
             self.activeBro = false;             //you lose the game and bacs you out
@@ -35,7 +35,9 @@ function playerMove() { //function for the player to 'move' within the game. I w
         case 's':
             var tourist = new Tourist; 
             console.log('Whoa! A rare ' + tourist.type +  ' has a beef with you! ');
+
             fightLoop(tourist)
+            
     } 
 };
 function fightLoop(tourist){
@@ -48,13 +50,13 @@ function fightLoop(tourist){
     if (self.activeBro == true && tourist.touristHP > 0){  //going to determine the tourists response
         var touristRagePower = Math.floor(Math.random() * (75 - 25 + 1)); //determines the amount of power the tourist has
         self.broHP -= touristRagePower;                 //subtract and total
-        console.log( tourist.type + 'just slapped you with about '+ touristRagePower + ' pounds of force!' );
+        console.log( tourist.type + 'just slapped you with about '+ touristRagePower + ' pounds of force! \n You have '+ self.broHP + ' HP left' );
 
     if (self.broHP <= 0) {
         self.activeBro = false
             console.log('Dude..The kooks are taking over and youre dead. Get back here asap!!');
     }    
-}    if (self.touristHP <= 0){ //bro killed a tourist and the kill is added to the count
+}   else if (self.touristHP <= 0){ //bro killed a tourist and the kill is added to the count
     tourist.touristActive = false;
         tourist.touristInjured++;
         console.log('Nice!' +self.user + 'You wreaked havoc on the ' + tourist)
@@ -70,3 +72,31 @@ while(self.broHP >= 0 && self.touristInjured <= enemies.length) {
    } else {
        console.log('You have lost the mountain')
    }
+
+
+
+    // activation = function (){
+    //     self.touristActive = true;
+    //     readlineSync.keyIn('Press any key to ski! ');
+    //     playerMove();
+    // };  
+    // activation();
+
+    
+
+        
+        
+    // function followAttack () { //this is the tourist response attack. I want it to keep getting called until the tourist hp hits zero
+    //     if(this.touristActive){
+    //         while(tourist.touristHP > 0 && self.activeBro === true) {
+            
+    //         }
+    //     }
+    // };
+   
+
+    // function touristRevive () { //revives the tourist..I want to be able to call on this to reset the tourists settings after one is defeated
+    //     tourist.touristActive = true;
+    //     tourist.touristHP = 75;
+    // };
+

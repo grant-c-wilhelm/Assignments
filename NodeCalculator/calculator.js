@@ -1,2 +1,3 @@
 var rs=require('readline-sync');
-var name = rs.question("hello what is your name")
+var userName = rs.question("hello what is your name")
+console.log(userName);

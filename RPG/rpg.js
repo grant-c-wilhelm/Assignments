@@ -17,4 +17,4 @@ function Player (name){
     this.hp = 100;
     this.inventory = [];
     this.enemiesKilled = 0;
-}
+} 
