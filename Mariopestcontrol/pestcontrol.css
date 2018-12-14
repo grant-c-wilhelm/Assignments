@@ -37,6 +37,7 @@ footer {
 
 }
 .goomba {
+    /* use background-image instead of content to avoid warping the images */
     content: url(https://vignette.wikia.nocookie.net/nintendo/images/d/d5/GoombaNSMB.png/revision/latest/scale-to-width-down/200?cb=20110724131649&path-prefix=en);
     border: 5px rgb(99, 125, 212) solid;
     flex: 1;
@@ -76,3 +77,5 @@ footer {
     border: 5px rgb(99, 125, 212) solid;
     flex: 1;
 }
+
+/* good organization and use of classes, however there are still some places where code is repeated, for example .bobombtxt and .cheepcheeptxt */
