@@ -6,20 +6,35 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Business</title>
     <link rel="stylesheet" href= "business.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 </head>
+<div id="mysideNav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> <!-- need to check what the &times does-->
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Projects</a>
+</div>
+<span onclick="openNav()"><i class="material-icons" style="font-size:40px; shape-rendering: crispEdges; " >menu</i></span>
 
+
+<div id="pageContent">
 <body>
-    <haeader>
-            <h2>A Place For Decompression</h2>
-    </haeader>
-    <div id="backpicture1"></div>
+        
+    <div id="backpicture1">
+        <div id="frame"></div>
+    </div>
+    <div id="whiteblock">
+            <div id="icon1"></div>
+            <div id="icon2"></div>
+            <div id="icon3"></div>
+    </div>
     <div id="backpicture2"></div>
-    <div id="backpicture3"></div>
+    <div id="whiteblock2"> 
+    </div>
+</div>
 
-
-
-
-     
+  
 </body>
-
+<script src="biz.js"></script>
 </html>
