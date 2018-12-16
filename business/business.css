@@ -38,12 +38,6 @@ body {
     font-size: 25px;
     margin-left: 50px;
 }
-@media screen and (max-height: 450px) { /*change for screen size*/
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-  }
-
-
 #backpicture1 {
     background-image: url('https://images.pexels.com/photos/248700/pexels-photo-248700.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
     background-repeat: no-repeat;
@@ -76,7 +70,7 @@ body {
     width: 50px;
     height: 50px;
     transform: translate(0%, 25%);
-    transition: transform .2s; /*for icon pop on hover*/
+    transition: transform .2s;  /*for icon pop on hover*/
 }
 #icon1:hover { /*for icon pop on hover*/
     -ms-transform: scale(1.5); /* IE 9 */
@@ -115,12 +109,15 @@ body {
 }
 
 
-
+@media screen and (max-height: 450px) { /*change for screen size*/
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
 
 @media (min-width:765px){
     
     body {
-        margin: 50px;
+        margin: 0px 25px 25px 25px;
     }
     #backpicture1{
         width: 80vw;
@@ -164,6 +161,8 @@ body {
         transform: translate(7%, 15%);
         margin-top: 35px;
         background-size: cover;
+        padding-top:15%;
+
 
     }
 
