@@ -7,6 +7,7 @@ body {
 }
 .material-icons {
     position: fixed;
+    
 }
 .sidenav { /*the menu*/
     height: 100%;
@@ -142,7 +143,6 @@ body {
   }
 
 @media (min-width:765px){
-    
     body {
         margin: 0px 50px 50px 50px;
     }
@@ -152,6 +152,10 @@ body {
         transform: translate( 7%, 15%);
         background-size: cover;
     }
+    .sidenav a {
+        font-size: 40px;;
+    }
+
     #frame {
         height: 70vh;
         width: 70vw;
@@ -160,9 +164,8 @@ body {
     }
     #whiteblock {
         display: flex;
-        height: 300px;
-        transform: translate( 15%, 35%);
-
+        height: 500px;
+        transform: translate( 15%, 0%);
     }
     #whiteblock2 {
         display: flex;
