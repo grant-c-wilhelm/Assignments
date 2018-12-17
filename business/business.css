@@ -3,7 +3,7 @@ html {
 }
 body {
     background-color: whitesmoke ;
-    margin: 25px;
+    margin: 0px 25px 25px 25px;
 }
 .material-icons {
     position: fixed;
@@ -26,10 +26,10 @@ body {
     font-size: 25px;
     color: whitesmoke;
     display: block;
-    transition: 0.3s; /*not sure why we have htis here at time of writing code*/
+    transition: 0.3s; /*not sure why we have this here at time of writing code*/
 }
-.sidenav a:hover { /*color chang eon hover over links*/
-    color: antiquewhite;
+.sidenav a:hover { /*color change on hover over links*/
+    color: silver;
 }
 .sidenav .closebtn {/*close button style and positoning within menu pop*/
     position: absolute;
@@ -39,26 +39,41 @@ body {
     margin-left: 50px;
 }
 #backpicture1 {
-    background-image: url('https://images.pexels.com/photos/248700/pexels-photo-248700.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    background-image: 
+    linear-gradient(  /*this darkens the image without effecting the text or anything else put into the parent*/
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.1)
+    ),
+    url('https://images.pexels.com/photos/248700/pexels-photo-248700.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
     background-repeat: no-repeat;
     display: flex;
     justify-content: space-evenly;
-    height: 200px;
-    width: 275px;
+    height: 170px;
+    width: 285px;
     transform: translate(15%, 20%);
     background-size:  contain;    
 }
 #frame {
+    display: flex;
+    justify-content: space-evenly;
     height: 100px;
     width: 250px;
     transform: translate( 0%, 25%);
-    background-color: whitesmoke;
-    opacity: .25;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    color: white;
+}
+#slogan4{
+    color: white;
+    font-size: 28px;
+    transform: translate(14%,-175%);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
 }
 #whiteblock {
     display: flex;
     height: 100px;
-    transform: translate(15%, 20%);
+    transform: translate(15%, -14%);
     width:75%;
     border: rgba(0, 0, 0, 0.089) solid 2px;
     border-top: none;
@@ -81,14 +96,26 @@ body {
     content: url('https://img.icons8.com/ios/500/000000/react-native.png');
     width: 50px;
     height: 50px; 
-   transform: translate(0%, 25%);
+    transform: translate(0%, 25%);
+    transition: transform .2s;
 }
+#icon2:hover { /*for icon pop on hover*/
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5); 
+  }
 #icon3{
     content: url('https://img.icons8.com/ios/100/000000/angularjs.png');
     width: 50px;
     height: 50px;
     transform: translate(0%, 25%);
+    transition: transform .2s;
 }
+#icon3:hover { /*for icon pop on hover*/
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5); 
+  }
 #backpicture2 {
     background-image: url('https://images.pexels.com/photos/533973/pexels-photo-533973.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
     background-repeat: no-repeat;
@@ -117,7 +144,7 @@ body {
 @media (min-width:765px){
     
     body {
-        margin: 0px 25px 25px 25px;
+        margin: 0px 50px 50px 50px;
     }
     #backpicture1{
         width: 80vw;
@@ -129,13 +156,12 @@ body {
         height: 70vh;
         width: 70vw;
         transform: translate( 0%, 0%);
-        background-color: whitesmoke;
-        opacity: .25;
+        font-size: 85px;
     }
     #whiteblock {
         display: flex;
-        height: 250px;
-        transform: translate( 15%, 40%);
+        height: 300px;
+        transform: translate( 15%, 35%);
 
     }
     #whiteblock2 {
@@ -159,11 +185,15 @@ body {
         width: 80vw;
         height: 80vh;
         transform: translate(7%, 15%);
-        margin-top: 35px;
+        margin-top: 125px;
         background-size: cover;
         padding-top:15%;
-
-
     }
+    #slogan4{
+        color: white;
+        font-size: 90px;
+        transform: translate(20%,-100%);
+    }
+   
 
 }
