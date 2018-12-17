@@ -1,13 +1,12 @@
 html {
-    background-color: darkgrey;
+    background-color: black;
 }
 body {
-    background-color: whitesmoke ;
+    background-color: aliceblue ;
     margin: 0px 25px 25px 25px;
 }
 .material-icons {
     position: fixed;
-    
 }
 .sidenav { /*the menu*/
     height: 100%;
@@ -73,16 +72,15 @@ body {
 }
 #whiteblock {
     display: flex;
-    height: 100px;
+    height: 135px;
     transform: translate(15%, -14%);
     width:75%;
-    border: rgba(0, 0, 0, 0.089) solid 2px;
-    border-top: none;
-    background-color: whitesmoke;
+    border: black solid 2px;
+    background-color: rgb(226, 246, 235);
     justify-content: space-evenly;
 }
 #icon1{
-    content: url('https://img.icons8.com/ios/1600/javascript.png');
+    content: url('http://chittagongit.com//images/javascript-icon/javascript-icon-18.jpg');
     width: 50px;
     height: 50px;
     transform: translate(0%, 25%);
@@ -94,7 +92,7 @@ body {
     transform: scale(1.5); 
   }
 #icon2{
-    content: url('https://img.icons8.com/ios/500/000000/react-native.png');
+    content: url('https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/064fc70f-5df3-4333-b9d4-f6abe2f946de/react-wp-app8.png');
     width: 50px;
     height: 50px; 
     transform: translate(0%, 25%);
@@ -104,9 +102,9 @@ body {
     -ms-transform: scale(1.5); /* IE 9 */
     -webkit-transform: scale(1.5); /* Safari 3-8 */
     transform: scale(1.5); 
-  }
+  } 
 #icon3{
-    content: url('https://img.icons8.com/ios/100/000000/angularjs.png');
+    content: url('https://img.icons8.com/color/96/000000/angularjs.png');
     width: 50px;
     height: 50px;
     transform: translate(0%, 25%);
@@ -117,6 +115,47 @@ body {
     -webkit-transform: scale(1.5); /* Safari 3-8 */
     transform: scale(1.5); 
   }
+  #whiteblock3 {
+    display: flex;
+    transform: translate(15%, -150%);
+    width:75%;
+    border: rgba(0, 0, 0, 0.089) solid 2px;
+    border-top: none;
+    justify-content: space-evenly;
+}
+#icon4{
+    content: url('https://img.icons8.com/color/100/000000/html-5.png');
+    width: 50px;
+    height: 50px;
+    transition: transform .2s;  /*for icon pop on hover*/
+}
+#icon4:hover { /*for icon pop on hover*/
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5); 
+}
+#icon5{
+    content: url('https://img.icons8.com/color/96/000000/css3.png');
+    width: 50px;
+    height: 50px;
+    transition: transform .2s;  /*for icon pop on hover*/
+}
+#icon5:hover { /*for icon pop on hover*/
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5); 
+  } 
+#icon6{
+    content: url('https://img.icons8.com/color/96/000000/npm.png');
+    width: 50px;
+    height: 50px;
+    transition: transform .2s;  /*for icon pop on hover*/
+}
+#icon6:hover { /*for icon pop on hover*/
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5); 
+  } 
 #backpicture2 {
     background-image: url('https://images.pexels.com/photos/533973/pexels-photo-533973.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
     background-repeat: no-repeat;
@@ -170,19 +209,38 @@ body {
     #whiteblock2 {
         display: flex;
         height: 250px;
-    }
+        width: 60%;
+        transform: translate( 32%, 100%);
 
+    }
     #icon1{
-        width: 100px;
-        height: 100px;
+        width: 125px;
+        height: 125px;
     }
     #icon2{
-        width: 100px;
-        height: 100px; 
+        width: 125px;
+        height: 125px; 
     }
     #icon3{
-        width: 100px;
-        height: 100px;
+        width: 125px;
+        height: 125px;
+    }
+    #whiteblock3 {
+        display: flex;
+        height: 250px;
+        transform: translate( 15%, -100%);
+    }
+    #icon4{
+        width: 125px;
+        height: 125px;
+    }
+    #icon5{
+        width: 125px;
+        height: 125px;
+    }
+    #icon6{
+        width: 125px;
+        height: 125px;
     }
     #backpicture2{
         width: 80vw;
@@ -194,8 +252,9 @@ body {
     }
     #slogan4{
         color: white;
-        font-size: 90px;
-        transform: translate(20%,-100%);
+        font-size: 75px;
+        width: 1000px;
+        transform: translate(35%,-450%);
     }
    
 
