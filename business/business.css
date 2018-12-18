@@ -76,7 +76,7 @@ body {
     transform: translate(15%, -14%);
     width:75%;
     border: black solid 2px;
-    background-color: rgb(226, 246, 235);
+    background-color: whitesmoke;
     justify-content: space-evenly;
 }
 #icon1{
@@ -211,7 +211,6 @@ body {
         height: 250px;
         width: 60%;
         transform: translate( 32%, 100%);
-
     }
     #icon1{
         width: 125px;
@@ -256,6 +255,9 @@ body {
         width: 1000px;
         transform: translate(35%,-450%);
     }
-   
+   #contact-info {
+       font-size: 55px;
+       transform: translate(-0%,0%);
+   }
 
 }

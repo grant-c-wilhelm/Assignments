@@ -14,13 +14,25 @@ myHeader.prepend(HeaderText);
 document.body.prepend(myHeader);
 
 
-document.getElementById("clear-button").addEventListener('click',function(e){
-    var clear = document.getElementsByClassName('message-left');
-        
-});
+function clearDialogueChat(dialogue){
+    for (i = 0; i<dialogue.length;i++){
+        dialogue[i].innerHTML= " This is nice";
+    }
+}
+document.getElementById("clear-button").addEventListener('click',function(){
+    var dialogue = document.getElementsByClassName('messages');
+   clearDialogueChat(dialogue);      
+}); 
 
-// document.getElementsByClassName('.messages').prep = ' '
-
+// function clearDialogueChat2(dialogueRight){
+//     for (i=0; i < dialogueRight.length; i++){
+//         dialogueRight[i].innerHTML='I am nice too!';
+//     }
+//     document.getElementById('clear-button').addEventListener(click, function(){
+//         var dialogueRight = document.getElementsByClassName('message-right');
+//         clearDialogueChat2(dialogueRight);
+//     })
+// }
 
 
 
