@@ -59,7 +59,15 @@
 //       }
 
 //   }
-var arr = [1,12,34,5,4,6,8,76,34,38,43,234,567,654];
-var number = arr[arr.length-1];
+// var arr = [1,12,34,5,4,6,8,76,34,38,43,234,567,654];
+// var number = arr[arr.length-1];
 
-console.log(number);
+// console.log(number);
+str = ['this is a string that will pass through the function'];
+function  acceptsString(str) {
+    var storingArray = [];
+    for (i=0;i<str.length; i++){
+        
+    }
+
+}

@@ -27,19 +27,28 @@
 //     }
 // // } 
 // console.log(number);
-var highestNum = 25;
+// var highestNum = 25;
 
-function createEvenArray(highestNum) {
-    var arr = [];
-    for (var i = 0; i <= highestNum; i++){
-        if (i%2 === 0){
-            arr.push(i);
-        }
-    } 
-    return (arr)
+// function createEvenArray(highestNum) {
+//     var arr = [];
+//     for (var i = 0; i <= highestNum; i++){
+//         if (i%2 === 0){
+//             arr.push(i);
+//         }
+//     } 
+//     return (arr)
+// }
+// console.log(createEvenArray(highestNum));
+// function addOdds (param1){
+
+// }
+var str = "this is a string with a few A's in it, and it is A ok!"
+function removeA (x){
+    
+    arr = []
+    for (i=0; i < x.length; i++){
+        arr.push(x[i].replace('a', " "));
+    }
+    return arr.join("");
 }
-console.log(createEvenArray(highestNum));
-function addOdds (param1){
-
-}
-
+console.log(removeA(str));
