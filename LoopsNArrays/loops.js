@@ -63,11 +63,46 @@
 // var number = arr[arr.length-1];
 
 // console.log(number);
-str = ['this is a string that will pass through the function'];
-function  acceptsString(str) {
-    var storingArray = [];
-    for (i=0;i<str.length; i++){
-        
-    }
-
+// str = 'this is a string that will pass through the function';
+// function  acceptsString(str) {
+//     var storingArray = [];
+//     for (i=0;i<str.length; i++){
+//         storingArray.push(str[i])
+//     }
+// return storingArray;
+// }
+// console.log(acceptsString(str));
+var thisIsAString = "this ha h a hha"
+function acceptsTwoInputs (str, character){
+    var storedCharacter = [];
+    for (i=0; i<str.length; i++){
+        if (str[i] == character){
+            // console.log('the specified character was found at ' + str[i].indexOf(character))
+            storedCharacter.push(i);
+        } 
+    }console.log(storedCharacter) ;
 }
+acceptsTwoInputs(thisIsAString,'h');
+
+
+var numArray = [ 32, 42, 60, 43, 56, 54,23,45,32,789,43];
+ 
+function findsFourtyTwo(arr) {
+    for (i=0; i<arr.length;i++){
+        if ( arr[i] === 42){
+            console.log('42 was found at the index location of ' + i)
+        }
+    }
+}
+findsFourtyTwo(numArray);
+
+function findSmallNumber(arr){
+    currentNum = arr[0];
+    for (i=0; i<arr.length;i++){
+        if (arr[i] < currentNum){
+            currentNum = arr[i];
+        }
+    }
+    return currentNum;
+}
+console.log(findSmallNumber(numArray));
