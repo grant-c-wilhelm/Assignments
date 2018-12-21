@@ -1,0 +1,45 @@
+html{
+
+}
+.header {
+    grid-area: header;
+    height: 250px;
+    padding: 20px 10px 70px 10px;
+    background-image: url(./contours@2x.png) , url(./noise.png), url(./gridlines.png), url(./huntington.png) ;
+    background-blend-mode: darken;
+    background-repeat: repeat, repeat, repeat, no-repeat;
+    background-size: auto, auto, auto, cover;
+    text-align: center;
+}
+h1, h2 {
+    padding-bottom: 10%;
+    margin: 0;
+    color: #fff;
+    font-weight: lighter;
+    font-family: 'Julius Sans One', sans-serif;
+}
+h1 {
+
+
+}
+.menu-content {grid-area: menu-content;}
+.main-content {grid-area: main-content;}
+.right-side {grid-area: right-side;}
+.footer {grid-area: footer;}    
+#container {
+    display: grid;
+    grid-template-rows: .5fr  1fr 10fr .5fr;
+    min-height: 100vh;
+    grid-column: 6 / 12;
+    grid-template-areas: 
+        "header header header header header header header header header header header header  "
+        "menu-content menu-content menu-content menu-content menu-content menu-content menu-content menu-content menu-content menu-content menu-content menu-content"
+        "main-content main-content main-content main-content main-content main-content main-content main-content main-content main-content main-content main-content"
+        "main-content main-content main-content main-content main-content main-content main-content main-content main-content main-content main-content main-content"
+        "footer footer footer footer footer footer footer footer footer footer footer footer ";  
+        grid-gap: 10px;  /* change ths here to adjust space between the main divisions within the page */
+        padding: 10px;                                                                            
+       }
+       
+
+    
