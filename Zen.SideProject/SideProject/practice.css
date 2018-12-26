@@ -1,0 +1,25 @@
+content {
+    margin-top: 50px;
+}
+h2{
+    color: black;
+    font-size: 30px;
+    letter-spacing: 3px;
+    font-weight: 100;
+    margin-bottom: 20px;
+}
+.backimage{
+    position: relative;
+    min-height: 88vh;
+    padding: 40px;
+    background: url('./pexels-photo-351448.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(71, 71, 51, 0.924);
+    background-blend-mode: color-dodge ;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+
+
+  }
+

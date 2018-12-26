@@ -1,0 +1,36 @@
+.content {
+    margin-top: 100px;
+}
+h2{
+    color: white;
+    margin-bottom: 20px;
+}
+.full-overlay{
+    position: relative;
+    z-index: 1;
+    height: 350px;
+    text-align: center;
+    padding: 40px;
+    background: url('./pexels-photo-351448.jpeg');
+    background-size: cover;
+    font-family: 'Open Sans', sans-serif;
+    @include dark-overlay();
+}
+.full-overlay::after{
+    background: rgba(0, 0, 0, 0.75);
+}
+@mixin dark-overlay {
+    &::after{
+        content:"";
+        width: 50%;                                  //adjust this if wanting to change where the overlay extends to
+        height:auto;
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+    }
+
+}
+.co
