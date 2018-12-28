@@ -1,14 +1,20 @@
 html{
 
 }
+.header::before{
+    background: url('http://www.csszengarden.com/214/enso.svg');
+}
 .header {
     grid-area: header;
-    height: 250px;
-    padding: 20px 10px 70px 10px;
-    background-image: url(./contours@2x.png) , url(./noise.png), url(./gridlines.png), url(./huntington.png) ;
-    background-blend-mode: darken;
+    border-top: solid 10px rgba(19, 67, 71, 0.9);
+    height: 185px;
+    width: 100%;
+    padding: 20px 5px 70px 5px;
+    background-image: url(./contours@2x.png),  url(./noise.png),url(./gridlines.png), url(./huntington.png);
+    background-attachment: fixed, fixed, fixed, local;
     background-repeat: repeat, repeat, repeat, no-repeat;
-    background-size: auto, auto, auto, cover;
+    background-position: 0 0, 0 0, 0 0, 0 0; 
+    background-size:cover;
     text-align: center;
 }
 h1, h2 {
@@ -18,9 +24,19 @@ h1, h2 {
     font-weight: lighter;
     font-family: 'Julius Sans One', sans-serif;
 }
-h1 {
-
-
+.contain-view-all{
+    list-style-type: none;
+    width: 90%;
+    height: 95px;
+    background-color: rgba(255, 255, 255, 0.39);
+    text-decoration: none;
+}
+.view-all{
+    text-align: center;
+    padding-top: 15px;
+}
+.arrow{
+    float: right;
 }
 .menu-content {grid-area: menu-content;}
 .main-content {grid-area: main-content;}
@@ -38,7 +54,7 @@ h1 {
         "main-content main-content main-content main-content main-content main-content main-content main-content main-content main-content main-content main-content"
         "footer footer footer footer footer footer footer footer footer footer footer footer ";  
         grid-gap: 10px;  /* change ths here to adjust space between the main divisions within the page */
-        padding: 10px;                                                                            
+        padding: 5px;                                                                            
        }
        
 
