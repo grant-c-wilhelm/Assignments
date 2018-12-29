@@ -1,4 +1,8 @@
-html{
+body{
+    font-family: 'Libre Baskerville', sans-serif;
+    color: #325050;
+    font-size: 70%;
+    text-align: center;
 
 }
 .header::before{
@@ -7,29 +11,29 @@ html{
 .header {
     grid-area: header;
     border-top: solid 10px rgba(19, 67, 71, 0.9);
-    height: 185px;
-    width: 100%;
-    padding: 20px 5px 70px 5px;
-    background-image: url(./contours@2x.png),  url(./noise.png),url(./gridlines.png), url(./huntington.png);
+    background-image:   url(./noise.png), url(./contours.png), url(./gridlines.png), url(./huntington.png);
     background-attachment: fixed, fixed, fixed, local;
     background-repeat: repeat, repeat, repeat, no-repeat;
     background-position: 0 0, 0 0, 0 0, 0 0; 
-    background-size:cover;
+    background-size:  auto, 50% auto, auto, 100% 250px;
+    height: 160px;
+    width: 100%;
+    padding: 20px 5px 70px 5px;
     text-align: center;
 }
 h1, h2 {
-    padding-bottom: 10%;
-    margin: 0;
     color: #fff;
     font-weight: lighter;
+    font-size: 2.5em;
     font-family: 'Julius Sans One', sans-serif;
 }
 .contain-view-all{
     list-style-type: none;
     width: 90%;
-    height: 95px;
+    height: 70px;
     background-color: rgba(255, 255, 255, 0.39);
-    text-decoration: none;
+    margin-top: 50px;
+
 }
 .view-all{
     text-align: center;
@@ -38,23 +42,27 @@ h1, h2 {
 .arrow{
     float: right;
 }
-.menu-content {grid-area: menu-content;}
-.main-content {grid-area: main-content;}
-.right-side {grid-area: right-side;}
+.main-content {
+    grid-area: main-content;
+}
+p{
+    font-size:  1.2em;
+    margin: 0.75em 55px;
+    line-height: 2;
+}
+
+.participation-content {grid-area: participation-content;}
 .footer {grid-area: footer;}    
 #container {
     display: grid;
-    grid-template-rows: .5fr  1fr 10fr .5fr;
+    grid-template-rows: 0fr  1fr 10fr .5fr;
     min-height: 100vh;
     grid-column: 6 / 12;
     grid-template-areas: 
         "header header header header header header header header header header header header  "
-        "menu-content menu-content menu-content menu-content menu-content menu-content menu-content menu-content menu-content menu-content menu-content menu-content"
         "main-content main-content main-content main-content main-content main-content main-content main-content main-content main-content main-content main-content"
-        "main-content main-content main-content main-content main-content main-content main-content main-content main-content main-content main-content main-content"
+        "participation-content participation-content participation-content participation-content participation-content participation-content participation-content participation-content participation-content participation-content participation-content participation-content"
         "footer footer footer footer footer footer footer footer footer footer footer footer ";  
-        grid-gap: 10px;  /* change ths here to adjust space between the main divisions within the page */
-        padding: 5px;                                                                            
        }
        
 
