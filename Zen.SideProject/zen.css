@@ -1,9 +1,10 @@
+@import url(http://fonts.googleapis.com/css?family=Julius+Sans+One|Libre+Baskerville:400,400italic);
+
+
 body{
     font-family: 'Libre Baskerville', sans-serif;
     color: #325050;
     font-size: 70%;
-    text-align: center;
-
 }
 .header::before{
     background: url('http://www.csszengarden.com/214/enso.svg');
@@ -32,22 +33,33 @@ h1, h2 {
     width: 90%;
     height: 70px;
     background-color: rgba(255, 255, 255, 0.39);
+    color: white;
     margin-top: 50px;
-
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: lighter;
 }
 .view-all{
     text-align: center;
-    padding-top: 15px;
+    padding-top: 20px;
+    font-size: 20px;
 }
 .arrow{
     float: right;
 }
 .main-content {
     grid-area: main-content;
+    padding-top: 10px;
+    height: 100px;
+    width: 100%;
+    text-align: left;
+    font-size: 1.2em;
+}
+.main-content-two{
+    grid-area: main-content-two;
+    font-size: 1.2em;
+
 }
 p{
-    font-size:  1.2em;
-    margin: 0.75em 55px;
     line-height: 2;
 }
 
@@ -55,14 +67,14 @@ p{
 .footer {grid-area: footer;}    
 #container {
     display: grid;
-    grid-template-rows: 0fr  1fr 10fr .5fr;
+    grid-template-rows: 2fr  1fr 10fr .5fr;
     min-height: 100vh;
     grid-column: 6 / 12;
     grid-template-areas: 
-        "header header header header header header header header header header header header  "
+        "header header header header header header header header header header header header"
         "main-content main-content main-content main-content main-content main-content main-content main-content main-content main-content main-content main-content"
-        "participation-content participation-content participation-content participation-content participation-content participation-content participation-content participation-content participation-content participation-content participation-content participation-content"
-        "footer footer footer footer footer footer footer footer footer footer footer footer ";  
+        "main-content-two main-content-two main-content-two main-content-two main-content-two main-content-two main-content-two main-content-two main-content-two main-content-two main-content-two main-content-two"
+        "participation-content participation-content participation-content participation-content participation-content participation-content participation-content participation-content participation-content participation-content participation-content participation-content";  
        }
        
 
