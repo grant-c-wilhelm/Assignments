@@ -1,6 +1,4 @@
 @import url(http://fonts.googleapis.com/css?family=Julius+Sans+One|Libre+Baskerville:400,400italic);
-
-
 body{
     font-family: 'Libre Baskerville', sans-serif;
     color: #325050;
@@ -50,20 +48,37 @@ h1, h2 {
     grid-area: main-content;
     padding-top: 10px;
     height: 100px;
-    width: 100%;
-    text-align: left;
+    margin: 0px 30px 0px 30px;
     font-size: 1.2em;
 }
 .main-content-two{
     grid-area: main-content-two;
     font-size: 1.2em;
-
+    margin: 0px 30px 0px 30px;
 }
 p{
     line-height: 2;
 }
 
-.participation-content {grid-area: participation-content;}
+.participation-content {
+    grid-area: participation-content;
+    background-color: rgba(138,188,159,0.5);
+    background-image: url(./contours-opaque.png), url(./gridlines-opaque.png), url(./bamboo.png);
+    background-size: auto, auto, cover;
+    background-attachment: scroll,scroll,fixed;
+    height: 160px;
+    width: 100%;
+
+
+
+
+
+}
+
+
+
+
+
 .footer {grid-area: footer;}    
 #container {
     display: grid;
@@ -74,7 +89,7 @@ p{
         "header header header header header header header header header header header header"
         "main-content main-content main-content main-content main-content main-content main-content main-content main-content main-content main-content main-content"
         "main-content-two main-content-two main-content-two main-content-two main-content-two main-content-two main-content-two main-content-two main-content-two main-content-two main-content-two main-content-two"
-        "participation-content participation-content participation-content participation-content participation-content participation-content participation-content participation-content participation-content participation-content participation-content participation-content";  
+        "participation-content participation-content participation-content participation-content participation-content participation-content participation-content participation-content participation-content participation-content participation-content participation-content" 
        }
        
 
