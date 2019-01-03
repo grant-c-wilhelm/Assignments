@@ -62,11 +62,12 @@ p{
 
 .participation-content {
     grid-area: participation-content;
+    padding: 10px;
     background-color: rgba(138,188,159,0.5);
     background-image: url(./contours-opaque.png), url(./gridlines-opaque.png), url(./bamboo.png);
     background-size: auto, auto, cover;
     background-attachment: scroll,scroll,fixed;
-    height: 160px;
+    height: 500px;
     width: 100%;
 
 
