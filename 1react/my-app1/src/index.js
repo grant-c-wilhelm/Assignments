@@ -1,14 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import App from './App'
-import "./assets/index.css";
+import App from './App';
+import Box from './Box';
 
 
-ReactDOM.render(
+ReactDOM.render (
     <App />,
     document.getElementById('root')
 )
-
-
- 

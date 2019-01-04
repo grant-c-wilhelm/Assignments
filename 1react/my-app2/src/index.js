@@ -1,14 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import App from './App'
-import "./assets/index.css";
+import App from './App';
+import Spots from './Spots'
 
-
-ReactDOM.render(
+ReactDOM.render (
     <App />,
     document.getElementById('root')
 )
-
-
- 
