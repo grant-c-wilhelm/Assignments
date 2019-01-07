@@ -5,11 +5,11 @@ class Box extends Component {
         super();
         this.state = {                     //defining what the initial state is//
             currentRoll: 0,
-            previousRolls: [] 
+            previousRolls: []
         }
         this.handleClick = this.handleClick.bind(this);
     }
-    genRandomNumber(){
+    genRandomNumber() {
         return Math.floor(Math.random() * 6) + 1;
     }
     handleClick(event) {
