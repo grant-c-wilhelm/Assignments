@@ -1,44 +1,21 @@
 import React from 'react';
 
+import Styles from './assets/styles.css';
 
 import Joke from './components/Joke';
-
-import Styles from './assets/styles.css'
+import jokesData from './components/jokeData';
+import ProductComps from './components/ProductComps';
 
 const App = () => {
+    const jokeComponents = jokesData.map((joke) => {   /*joke in () is each individual joke object the function will recieve. () not necessary. */
+        return ( /*return is not neccesarry when using arrow functions*/
+            <Joke key = {joke} question={joke.question} punchLine={joke.punchLine} />
+        )
+    })
     return (
-        <div className='todo-list'>
-            <Joke
-                joke={{
-                    question: "Whys the sky blue",
-                    punchLine: "because"
-                    }}
-            />
-            <Joke
-                joke={{
-                    question: "Whys the sky red",
-                    punchLine: "its not"
-                    }}
-            />
-            <Joke
-                joke={{
-                    question: "Whys the sky yellow",
-                    punchLine: "go away"
-                    }}
-            />
-            <Joke
-                joke={{
-                    question: "Whys the sky yellow",
-                    punchLine: "go away"
-                    }}
-            />
-            <Joke
-                joke={{
-                    question: "Whys the sky yellow",
-                    punchLine: "go away"
-                    }}
-            />
-            
+        <div>
+            {jokeComponents}
+            <ProductComps />
         </div>
     )
 }
