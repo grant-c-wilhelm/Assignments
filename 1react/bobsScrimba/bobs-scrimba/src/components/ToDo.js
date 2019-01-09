@@ -1,22 +1,19 @@
 // import React from 'react';
 
-// const MainContent = () => {
-//     return(
-//     <div className = 'todo-items'>
-//         <input type="checkbox" />
-//         <p>Get Ski Boots</p>
+// import TodoData from './TodoData'
 
-//         <input type="checkbox" />
-//         <p>Pack Ski Box</p>
-
-//         <input type="checkbox" />
-//         <p>Get Skis</p>
-
-//         <input type="checkbox" />
-//         <p>Load all into Jeep</p>
-//     </div>
+// const Todo = (props) => {
+//     return (
+//         <div className='todo-item'>
+//             <h1>
+//                 {props.text}
+//             </h1>
+                
+//             <input type="checkbox" checked={props.completed}/>
+//             <h2>
+//             </h2>
+//         </div>
 //     )
 // }
 
-
-// export default MainContent;
+// export default Todo;

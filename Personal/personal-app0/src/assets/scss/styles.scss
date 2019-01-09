@@ -1,0 +1,34 @@
+//Variables
+$deepBlue: #032f3e;
+$sectionHeading: 24px;
+$offWhite: #f8f9fb;
+
+#main-nav{
+    background: $deepBlue;
+    ul{
+        width: 100%;
+    }
+    li{
+        float: left;
+        width: 14%;
+    }
+    a{
+        color: $offWhite;
+        text-decoration: none;
+        padding: 16px;
+        display: block;
+        text-align: center;
+    }
+}
+//ending the main nav
+
+#main-nav ul:after{ //this is called a clearing teqnique. we cleared the float to make the li tags reapear as the nav bar. "float clearing"
+    content: "";
+    display: block;
+    clear: both;
+}
+
+section h1{
+    font-size: $sectionHeading;
+    color: $deepBlue;
+}
