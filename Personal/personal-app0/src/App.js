@@ -1,7 +1,7 @@
 import React from 'react';
 
 import styles from "./assets/scss/styles.scss";
-import reset from "./assets/css/reset.css";
+
 
 import Header from './Header/Header';
 import Services from './Services';

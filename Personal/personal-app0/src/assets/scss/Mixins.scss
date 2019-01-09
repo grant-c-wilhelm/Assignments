@@ -1,0 +1,50 @@
+//Mixins
+@mixin banner {
+    with: 100%;
+    position: relative;
+    color: complement($color: $deepBlue);
+    .banner-content{
+        position: absolute;
+        top: 50px;
+        width: 100%;
+
+    }
+    img{
+        width: 100%;
+    }
+    span {
+        font-size: $bannerHeading;
+        display: block;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    span.title{
+        font-weight: normal;
+        margin-bottom: 30px;
+
+    }    
+}
+
+@mixin clearingFunction{
+    &:after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+}  //this is called a clearing teqnique. we cleared the float to make the li tags reapear as the nav bar. "float clearing"
+
+@mixin grid($columns, $margin) {
+    float: left;
+    margin-right: $margin;
+    margin-bottom: $margin;
+    width: ((100% - ((($columns)-1) * $margin)) / $columns);
+    &:nth-child(#{$columns}-n){
+        margin-right: 0;
+    } //sets last child of colmn to margin of 0
+}
+
+@mixin mediaQuery($arg) { //the arg is to set the width at which the mediaQuery is triggered, then inside {} you do styling
+    @media screen and (max-width: $arg) {
+        @content; //@content allows us to apply w/e styling we want once injected into styles file.
+    }
+}
