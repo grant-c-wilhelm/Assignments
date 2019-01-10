@@ -10,36 +10,38 @@
     li {
         float: left;
         width: (100%/6);
-        @include mediaQuery(600px) {
+        @include mediaQuery(860px) {
             width: 100%;
         }
     }
-    a {
+    a{
         color: $offWhite;
         text-decoration: none;
         padding: 16px;
         display: block;
         text-align: center;
-        &:hover {
+        &:hover{
             background: lighten($deepBlue, $amount: 4)
         }
     }
 }
 
 //ending the main nav
-section h1 {
+section h1{
     font-size: $sectionHeading;
     color: $deepBlue;
-    @include mediaQuery(630px) {
+    @include mediaQuery(860px){
         font-size: $mQHeadingTxtSize;
     }
 }
 
-.lead-banner {
+.lead-banner{
     @include banner;
     text-align: right;
-    .banner-content span {
-        @include mediaQuery(630px) {
+    
+    .banner-content span{
+        font-size: $bannerHeading;
+        @include mediaQuery(860px){
             font-size: $mQHeadingTxtSize;
         }
     }
@@ -47,22 +49,24 @@ section h1 {
 
 .lessons-banner {
     @include banner;
-    li {
+    li{
         text-transform: uppercase;
-        font-size: 2px;
+        font-size: 20px;
         max-width: 500px;
         margin: 60px 0;
-        
-        
+        @include mediaQuery(630px){
+            font-size: 12px;
+            margin: 15px;
+        } 
     }
-    .banner-content span {
+    .banner-content span{
         @include mediaQuery(630px) {
-            font-size: 5px;
+            font-size: 15px;
         }
     }
 }
 
-#services {
+#services{
     margin-bottom: 60px;
     li {
         float: left;
@@ -70,7 +74,7 @@ section h1 {
         text-align: center;
         width: (100% / 3);
     }
-    img {
+    img{
         width: 60%;
         margin: 20px 20%;
     }
@@ -82,13 +86,12 @@ section h1 {
             color: complement($color: $deepBlue);
         }
     }
-    ul {
+    ul{
         @include clearingFunction;
     }
 }
-
 #project li {
-    @include grid(5, 2%);
+    @include grid(6, 3%);
     img {
         width: 100%;
     }

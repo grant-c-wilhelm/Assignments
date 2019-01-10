@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from "./assets/scss/styles.scss";
+import styles from "./assets/css/styles.css";
 
 
 import Header from './Header/Header';
@@ -21,3 +21,5 @@ const App = () => {
 }
 
 export default App;
+
+
