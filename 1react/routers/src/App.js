@@ -6,7 +6,7 @@ import MainView from './MainView'
 
 const App = () => {
     return(
-  <div>
+  <div> 
         <Header />
         <MainView />
         <Footer />

@@ -1,0 +1,61 @@
+
+//Variables
+
+$black: #333;
+$pale: #d2e1dd;
+$pink: #c69;
+$blue: #036;
+
+$font-stack: "Andale Mono",monospace
+$font-size: 14px;
+
+//Mxins
+@mixin circleThing($rad, $height, $width, $bg, $color) 
+    -webkit-border-radius: $rad
+    -moz-border-radius: $rad
+    -ms-border-radius: $rad
+    border-radius: $rad
+
+    height: $height
+    width: $width
+    line-height: $height
+    text-align: center
+    background: $bg
+    color: $color
+    margin: 0 auto
+
+
+
+//Styles
+body 
+    background: $pale
+    color: $black
+    font-family: $font-stack
+    font-size: $font-size
+
+article 
+    background: white
+    width: 760px
+    margin: -60px auto
+    padding: 40px
+    box-sizing: border-box
+    position: relative
+    z-index: -2
+
+
+header 
+    @include circleThing(100%,200px ,200px ,$blue ,white )
+    
+    h1
+        font-size: $font-size + 4
+    
+   
+
+footer 
+    
+    @include circleThing(100%,150px ,150px ,$black ,$pale )
+    position: relative
+    font-size: $font-size
+    z-index: -4
+    margin-top: 20px
+   

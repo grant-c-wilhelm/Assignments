@@ -6,7 +6,7 @@ const Nav = () => {
     return (
         <nav>
             <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
+            <Link to="/about">About</Link>   {/*this "/about", "/services" are linked to the switch statement in the  mainview.js*/}
             <Link to="/services">Services</Link>
            
         </nav>

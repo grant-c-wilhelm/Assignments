@@ -8,4 +8,4 @@ import Nav from './Nav'
          </div>
      )
  }
- export default Header;
+ export default Header; 

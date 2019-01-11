@@ -2,20 +2,21 @@ import React from 'react'
 
 import Home from './Home'
 import About from './About'
-import Service from './Service'
+// import Service from './Service'
+import ServiceContainer from './ServicesContainer'
 import { Switch, Route } from 'react-router-dom';
-
-
+import ServiceDetail from './ServiceDetail';
 
 
 const MainView = () => {
     return (
         <div className='main'>
-            <Switch>
+           
                 <Route exact path="/" component={Home} /> {/*use the exact path for the home page*/}
                 <Route path="/About" component={About} />
-                <Route path="/Services" component={Service} />
-            </Switch>
+                <Route exact path="/Services" component={ServiceContainer} />
+                <Route path="/Service/:id" component={props => <ServiceDetail{...props.location.state.service}/>} />
+          
         </div>
     )
 }
