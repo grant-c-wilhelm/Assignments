@@ -6,7 +6,7 @@ export default class Services extends Component {
     super();
     this.state = {
         services: [
-            {
+            { 
                 _id:'a',
                 name: 'Massage Therapy',
                 description: 'withhot rocks',
@@ -14,18 +14,18 @@ export default class Services extends Component {
                 privider: 'nancy'
             },
             {
-                _id:'a',
-                name: 'Massage Therapy',
-                description: 'withhot rocks',
+                _id:'b',
+                name: 'Hot Rocks',
+                description: 'with hot rocks',
                 price: '$180',
                 privider: 'nancy'
             },
             {
-                _id:'a',
-                name: 'Massage Therapy',
+                _id:'c',
+                name: 'Russian Massage',
                 description: 'withhot rocks',
                 price: '$180',
-                privider: 'nancy'
+                privider: 'Dimitri'
             }
         ]
     }

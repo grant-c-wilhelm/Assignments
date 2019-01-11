@@ -1,5 +1,8 @@
-import React from 'react'
- const ServiceDetail = (name, _id, description, provider, price) => {
+import React from 'react' 
+
+import ServicesContainer from './ServicesContainer'
+
+ const ServiceDetail = ({name, _id, description, provider, price}) => {
      return (
         <div>
             <h2>{name}</h2>
