@@ -6,7 +6,7 @@ import About from './About'
 import Service from './Service'
 import ServicesContainer from './ServicesContainer'
 import { Switch, Route } from 'react-router-dom';
-import ServiceDetail from './ServiceDetail';
+import ServiceDetail from './ServiceDetail'; 
 
 
 const MainView = () => {

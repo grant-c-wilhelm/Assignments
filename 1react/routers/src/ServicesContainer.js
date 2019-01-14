@@ -8,15 +8,15 @@ export default class Services extends Component {
         services: [
             { 
                 _id:'a',
-                name: 'Massage Therapy',
-                description: 'withhot rocks',
-                price: '$180',
-                privider: 'nancy'
+                name: 'Group Ski Lesson',
+                description: 'Full day ski lesson in small group setting',
+                price: '$120',
+                privider: 'Grant'
             },
             {
                 _id:'b',
-                name: 'Hot Rocks',
-                description: 'with hot rocks',
+                name: 'Private family Lesson',
+                description: 'Ski lesson with your familiy.  Group minimum is 4.',
                 price: '$180',
                 privider: 'nancy'
             },
