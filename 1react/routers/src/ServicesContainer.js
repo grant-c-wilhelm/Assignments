@@ -36,6 +36,6 @@ export default class Services extends Component {
             
                 <Service services = {services}/>
             
-        )
+        ) 
     }
 }

@@ -1,17 +1,18 @@
 import React from 'react';
-
+import { Navbar, Nav, NavItem } from 'react-bootstrap'
 
 const NavBar = () => (
-    <div>
-        <div className='companyName' >Start Bootstrap</div> 
-        <ul className='menu'>
-            <li>Home</li>
-            <li>About</li>
-            <li>Sample Post</li>
-            <li>Contact</li>
-        </ul>
-
-    </div>
-);
-
+    <Navbar>
+        <Navbar.Brand>
+            <a href="#home">Start-Bootstrap</a>
+        </Navbar.Brand>
+        <Nav classID='NavLinkList'>
+            <NavItem className='NavLinks' eventKey={1} href="#">Home</NavItem>
+            <NavItem className='NavLinks' eventKey={2} href="#">About</NavItem>
+            <NavItem className='NavLinks' eventKey={3} href="#">Sample Post</NavItem>
+            <NavItem className='NavLinks' eventKey={4} href="#">Contact</NavItem>
+        </Nav>
+    </Navbar>
+)
+        
 export default NavBar;

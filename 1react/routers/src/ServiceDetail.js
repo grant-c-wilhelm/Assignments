@@ -14,4 +14,4 @@ import ServicesContainer from './ServicesContainer'
      )
  }
 
-export default ServiceDetail;
+export default ServiceDetail; 
