@@ -11,12 +11,12 @@ class Form extends Component {
         this.handleChange = this.handleChange.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
     }
-    handleChange ({ target : { name, value } }) {       /*handling changes within the input. Put the e in because its an event listener*/
-        this.setState ({
-            [name] :value  //dynamically sets the input
+    handleChange({ target: { name, value } }) {       /*handling changes within the input. Put the e in because its an event listener*/
+        this.setState({
+            [name]: value  //dynamically sets the input
         })
     }
-    handleSubmit(e){
+    handleSubmit(e) {
         e.preventDefault();
         this.props.submit(this.state)
         this.state = {
@@ -30,8 +30,8 @@ class Form extends Component {
         return (
             <form onSubmit={this.handleSubmit}>
                 <input onChange={this.handleChange} name='name' value={name} type='text' placeholder='Enter Name'></input>
-                <input onChange={this.handleChange} name = 'age'value={age} type='number' placeholder='Enter Age'></input>
-                <input onChange={this.handleChange} name = 'color' value={color} type='text' placeholder='Enter Favorite Color'></input>
+                <input onChange={this.handleChange} name='age' value={age} type='number' placeholder='Enter Age'></input>
+                <input onChange={this.handleChange} name='color' value={color} type='text' placeholder='Enter Favorite Color'></input>
                 <button>Submit</button>
             </form>
         )

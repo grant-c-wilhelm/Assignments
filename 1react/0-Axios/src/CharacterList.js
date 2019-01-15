@@ -6,7 +6,7 @@ function CharactersList ({characters}){
     const charComponents = characters.map((char, i) => (
         <CharacterDetail key={i}{...char}/>
     ))
-    return (
+    return ( 
         <div>
             {charComponents}
         </div>

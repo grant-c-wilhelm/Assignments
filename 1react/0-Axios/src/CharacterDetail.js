@@ -7,5 +7,5 @@ function CharacterDetail ({name}){
             <h3>{name}</h3>
         </div>
     )
-}
+} 
 export default CharacterDetail

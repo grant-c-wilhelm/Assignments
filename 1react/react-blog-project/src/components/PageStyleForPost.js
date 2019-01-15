@@ -6,7 +6,7 @@ const PageStyleForPost = ({ title, sub_title, author, date }) => {
 
     return (
         <div>
-            <h4>{author}</h4>
+            <h4>{author}</h4>      
             <h6>{date}</h6>
             <h1>{title}</h1>
             <h2> {sub_title}</h2>

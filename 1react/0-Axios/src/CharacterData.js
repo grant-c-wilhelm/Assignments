@@ -12,7 +12,7 @@ export default class CharactersData extends Component {
 
         }
     }
-    //
+    
     getCharacters(url) {
         return axios.get(url)
             .then(response => this.setState({

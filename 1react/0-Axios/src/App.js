@@ -9,9 +9,9 @@ import Interval from './Interval'
 const App = () => {
   return (
     <div>
-      <Interval />
+      {/* <Interval /> */}
 
-      {/* <CharactersData>
+      <CharactersData>
       {({characters, loading, errMsg}) => 
       <Loading loading ={loading}>
           <ErrorHandler errMsg={errMsg}>
@@ -19,7 +19,7 @@ const App = () => {
           </ErrorHandler>
         </Loading>
         }
-      </CharactersData> */}
+      </CharactersData>
     </div>
   )
 }

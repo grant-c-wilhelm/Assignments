@@ -9,12 +9,12 @@ class TodoFeature extends Component {
         }
         this.addItem = this.addItem.bind(this);
     }
-    addItem (item){
+    addItem (items){
         this.setState(ps => ({
-            items: [item, ...ps.items]
+            items: [items, ...ps.items]
         }))
     }
-    render(){
+    render(){ 
         return (
             <div>
                 <Form submit={this.addItem} />

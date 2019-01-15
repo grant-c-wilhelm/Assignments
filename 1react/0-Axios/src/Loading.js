@@ -6,5 +6,5 @@ function Loading ({loading, children}) {
         <div>...loading</div> :
         children
     )
-}
+} 
 export default Loading;
