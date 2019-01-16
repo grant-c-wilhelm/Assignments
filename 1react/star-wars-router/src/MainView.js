@@ -10,7 +10,6 @@ import PlanetDetail from './PlanetDetail'
 function MainView() {
     return (
         <div>
-            
              <PlanetData> 
                 {   ({loading, errMsg, planets}) => (
                     <Loading loading={loading}>
@@ -23,12 +22,8 @@ function MainView() {
                             )} />
                        </ErrorHandler>
                     </Loading>
-
                 )}
-
             </PlanetData>
-
-
         </div>
     )
 }
