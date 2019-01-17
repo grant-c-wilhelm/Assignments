@@ -17,4 +17,4 @@ function CannabisLinks ({cannabis}) {
         </ul>
     )
 }
-export default CannabisLinks
+export default CannabisLinks 

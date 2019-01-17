@@ -1,9 +1,9 @@
 import React from 'react'
-
+import Nav from './Nav'
 function Header () {
     return (
         <h1>
-            The Canna Search
+            <Nav />
         </h1>
     )
 }

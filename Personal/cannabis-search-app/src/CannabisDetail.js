@@ -9,3 +9,4 @@ function CannabisDetail({id}) {
 }
 
 export default CannabisDetail
+ 
