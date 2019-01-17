@@ -1,7 +1,8 @@
 import React, {createContext} from 'react'
 
 export const {Consumer, Provider} = React.createContext()
-class ThemeProvider extends React.Component {
+
+export default class ThemeProvider extends React.Component {
     constructor() {
         super()
         this.state = {
@@ -27,8 +28,6 @@ class ThemeProvider extends React.Component {
         )
     }
 }
-
-export default ThemeProvider
 export const withTheme = C => props => (
     <Consumer>
       {value => <C {...value}{...props}/>}

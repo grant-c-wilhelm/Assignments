@@ -4,13 +4,15 @@ import { render } from 'react-dom'
 import { BrowserRouter } from 'react-router-dom'
 import App from './App'
 
+import DataProvider from './DataProvider'
+
 export const { Consumer, Provider } = React.createContext()
 render(
-    <Provider>
+    <DataProvider>
         <BrowserRouter>
             <App />
         </BrowserRouter>
-    </Provider>,
+    </DataProvider>,
     
 
     document.getElementById('root')

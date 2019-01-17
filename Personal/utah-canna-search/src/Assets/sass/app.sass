@@ -1,0 +1,29 @@
+@import "reset"
+@import "Mixins"
+@import "Variables"
+#main-nav 
+    background: $deepBlue
+    ul 
+        width: 100%
+        @include clearingFunction 
+    
+    li 
+        float: left
+        width: (100%/6)
+        @include mediaQuery(860px) 
+            width: 100%
+        
+    
+    a
+        color: $offWhite
+        text-decoration: none
+        padding: 16px
+        display: block
+        text-align: center
+        &:hover
+            background: lighten($deepBlue, $amount: 4)
+        
+    
+
+
+//ending the main nav

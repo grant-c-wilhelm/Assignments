@@ -11,4 +11,4 @@ const Vacations = () => {
             </div>
     )
 }
-export default Vacations;
+export default Vacations; 

@@ -13,7 +13,7 @@ function PlanetLinks({ planets }) {
     ))
     return (
         <ul>
-            {planetLinks}
+            {planetLinks} 
         </ul>
     )
 }

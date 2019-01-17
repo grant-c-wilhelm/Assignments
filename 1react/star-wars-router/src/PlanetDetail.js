@@ -12,6 +12,6 @@ function PlanetDetail({name, surface_water,climate,terrain }) {
             <h4>Percent of surface covered in water: {surface_water}</h4>
         </ul>
     )
-}
-
+} 
+ 
 export default PlanetDetail

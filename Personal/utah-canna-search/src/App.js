@@ -3,6 +3,8 @@ import Footer from './Footer'
 import Header from './Header'
 import MainView from './MainView'
 
+import app from "./Assets/sass/app.sass";
+
 function App () {
     return (
         <div>

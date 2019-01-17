@@ -1,8 +1,12 @@
-import React, { Component } from 'react';
-import { Provider } from './index';
+// import React, { Component } from 'react';
 import axios from 'axios'
 
-class DataProvider extends React.Component{
+
+import React, {createContext} from 'react'
+export const {Consumer, Provider} = React.createContext()
+
+
+export default class DataProvider extends React.Component{
     constructor(){
         super();
         this.state = {
@@ -39,4 +43,9 @@ class DataProvider extends React.Component{
     } 
     
 } // consumer function in new componet
-export const 
+
+export const withStrainData = C => props => (
+    <Consumer>
+        {value => <C {...value} {...props}/>}
+    </Consumer>
+)

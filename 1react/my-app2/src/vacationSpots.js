@@ -24,7 +24,7 @@ const vacationSpots = [
         timeToGo: " Summer"
     }, {
         className: 'lebanon',
-        place: "Lebanon $",
+        place: "Lebanon $", 
         price: 400,
         timeToGo: " Spring"
     }
