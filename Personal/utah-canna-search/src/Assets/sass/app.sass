@@ -8,12 +8,12 @@
         @include clearingFunction 
     
     li 
-        float: left
-        width: (100%/6)
+        float: right
+        font-size: 22px
+        width: (100%/3)
         @include mediaQuery(860px) 
             width: 100%
         
-    
     a
         color: $offWhite
         text-decoration: none
@@ -22,8 +22,46 @@
         text-align: center
         &:hover
             background: lighten($deepBlue, $amount: 4)
-        
-    
-
-
 //ending the main nav
+//Beginning sub header image
+
+section h1
+    font-size: $sectionHeading
+    color: $deepBlue
+    @include mediaQuery(860px)
+        font-size: $mQHeadingTxtSize
+    
+.lead-banner
+    @include banner
+    text-align: right
+    
+    .banner-content span
+        font-size: $bannerHeading
+        @include mediaQuery(860px)
+            font-size: $mQHeadingTxtSize
+
+
+
+//Beginning of the gridded api list
+.strainsTitle
+    h1
+        left: 50px
+
+#specificStrainDetails li
+    @include grid(2, 4%) 
+    li 
+        width: 100%
+
+#strainListBanner
+    background: $deepBlue
+    ul 
+        width: 100%
+        @include clearingFunction 
+        
+        #sectionHeading
+            color: $offWhite
+            font-size: 55px
+            text-decoration: none
+            padding: 14px
+            display: inline-block
+            text-align: left

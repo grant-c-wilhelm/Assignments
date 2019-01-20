@@ -1,15 +1,15 @@
 import React from 'react'
 
-function StrainsDetails({ name, race, flavors, ...props }) {
+function EffectsDetails({ name, effects, medical, ...props }) {
     return (
 
         <section id="specificStrainDetails">
             <ul {...props}> 
                 <div className='wrapper'>
                     <li>
-                        <h3>Strain Name: {name}</h3>
-                        <h5>Genetics: {race}</h5>
-                        <h5>Flavors: {flavors.join(", ")}</h5>
+                        <h3>{name}</h3>
+                        <h5>{name} Effects: {effects.medical.join(' , ')}</h5>
+                        
                     </li>
                 </div>
 
@@ -18,4 +18,4 @@ function StrainsDetails({ name, race, flavors, ...props }) {
 
     )
 }
-export default StrainsDetails
+export default EffectsDetails
