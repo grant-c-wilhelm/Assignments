@@ -1,7 +1,12 @@
 @import "reset"
 @import "Mixins"
 @import "Variables"
+
+footer 
+    background: $deepBlue
+    color: $offWhite
 #main-nav 
+    
     background: $deepBlue
     ul 
         width: 100%
@@ -34,15 +39,22 @@ section h1
 .lead-banner
     @include banner
     text-align: right
+    // img
+    //     height: 765px
+    //     @include mediaQuery(860px) 
+    //         height: 400px
     
     .banner-content span
-        font-size: $bannerHeading
+        font-size: 54px
+        text-align: left
+        color: $offWhite
         @include mediaQuery(860px)
             font-size: $mQHeadingTxtSize
+            text-align: center
 
 
 
-//Beginning of the gridded api list
+//Beginning of the gridded api STRAINS list
 .strainsTitle
     h1
         left: 50px
@@ -51,6 +63,12 @@ section h1
     @include grid(2, 4%) 
     li 
         width: 100%
+    h3
+        @include mediaQuery(860px)
+            font-size: 16px
+    h5
+        @include mediaQuery(860px)
+            font-size: 14px
 
 #strainListBanner
     background: $deepBlue
@@ -65,3 +83,43 @@ section h1
             padding: 14px
             display: inline-block
             text-align: left
+            @include mediaQuery(860px)
+                text-align: center
+                font-size: 20px
+                
+
+//Begignning of gridded api for EFFECTS
+.strainsTitle
+    h1
+        left: 50px
+
+#specificEffectDetails li
+    @include gridTwo(2, 4%) 
+    li 
+        width: 100%
+    h3
+        @include mediaQuery(860px)
+            font-size: 16px
+    h5
+        @include mediaQuery(860px)
+            font-size: 14px
+
+        
+
+
+#strainListBanner
+    background: $deepBlue
+    ul 
+        width: 100%
+        @include clearingFunction 
+        
+        #sectionHeading
+            color: $offWhite
+            font-size: 55px
+            text-decoration: none
+            padding: 14px
+            display: inline-block
+            text-align: left
+            @include mediaQuery(860px)
+                text-align: center
+                font-size: 20px

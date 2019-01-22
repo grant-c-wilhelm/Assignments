@@ -23,8 +23,12 @@ li {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+footer {
+  background: #05386b;
+  color: #f8f9fb; }
+
 #main-nav {
-  background: #032f3e; }
+  background: #05386b; }
   #main-nav ul {
     width: 100%; }
     #main-nav ul:after {
@@ -45,11 +49,11 @@ li {
     display: block;
     text-align: center; }
     #main-nav a:hover {
-      background: #043e51; }
+      background: #06427e; }
 
 section h1 {
   font-size: 24px;
-  color: #032f3e; }
+  color: #05386b; }
   @media screen and (max-width: 860px) {
     section h1 {
       font-size: 23px; } }
@@ -57,7 +61,7 @@ section h1 {
 .lead-banner {
   with: 100%;
   position: relative;
-  color: #3e1203;
+  color: #6b3805;
   text-align: right; }
   .lead-banner .banner-content {
     position: absolute;
@@ -74,10 +78,13 @@ section h1 {
     font-weight: normal;
     margin-bottom: 30px; }
   .lead-banner .banner-content span {
-    font-size: 66px; }
+    font-size: 54px;
+    text-align: left;
+    color: #f8f9fb; }
     @media screen and (max-width: 860px) {
       .lead-banner .banner-content span {
-        font-size: 23px; } }
+        font-size: 23px;
+        text-align: center; } }
 
 .strainsTitle h1 {
   left: 50px; }
@@ -91,9 +98,15 @@ section h1 {
     margin-right: 100px; }
   #specificStrainDetails li li {
     width: 100%; }
+  @media screen and (max-width: 860px) {
+    #specificStrainDetails li h3 {
+      font-size: 16px; } }
+  @media screen and (max-width: 860px) {
+    #specificStrainDetails li h5 {
+      font-size: 14px; } }
 
 #strainListBanner {
-  background: #032f3e; }
+  background: #05386b; }
   #strainListBanner ul {
     width: 100%; }
     #strainListBanner ul:after {
@@ -107,3 +120,46 @@ section h1 {
       padding: 14px;
       display: inline-block;
       text-align: left; }
+      @media screen and (max-width: 860px) {
+        #strainListBanner ul #sectionHeading {
+          text-align: center;
+          font-size: 20px; } }
+
+.strainsTitle h1 {
+  left: 50px; }
+
+#specificEffectDetails li {
+  float: right;
+  margin-right: 4%;
+  margin-bottom: 4%;
+  width: 46%; }
+  #specificEffectDetails li:nth-child(2-n) {
+    margin-right: 100px; }
+  #specificEffectDetails li li {
+    width: 100%; }
+  @media screen and (max-width: 860px) {
+    #specificEffectDetails li h3 {
+      font-size: 16px; } }
+  @media screen and (max-width: 860px) {
+    #specificEffectDetails li h5 {
+      font-size: 14px; } }
+
+#strainListBanner {
+  background: #05386b; }
+  #strainListBanner ul {
+    width: 100%; }
+    #strainListBanner ul:after {
+      content: "";
+      display: block;
+      clear: both; }
+    #strainListBanner ul #sectionHeading {
+      color: #f8f9fb;
+      font-size: 55px;
+      text-decoration: none;
+      padding: 14px;
+      display: inline-block;
+      text-align: left; }
+      @media screen and (max-width: 860px) {
+        #strainListBanner ul #sectionHeading {
+          text-align: center;
+          font-size: 20px; } }

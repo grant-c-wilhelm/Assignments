@@ -9,7 +9,7 @@ import app from "./Assets/sass/app.sass";
 function App () {
     return (
         <div>
-            <Header />
+            {/* <Header />  removed this here to add diff banners to each page*/}
             
             <MainView />
             {/* <Footer /> */}
