@@ -1,50 +1,57 @@
 const uuid = require('uuid')
 
-const CosmicBeverage = function(beverage){
+const Transormer = function(bot){
     this._id = uuid();
-    this.name= beverage.name;
-    this.origin = beverage.origin;
-    this.price = beverage.price;
+    this.name= bot.name;
+    this.affiliation = bot.affiliation;
+    this.vehicle = beverage.vehicle;
     
 }
-
 const Database = function(){
-    this.cosmicBeverages = []
-}
-Database.prototype.find = function(){
-    return this.cosmicBeverages;
+    this.transformers = []
 }
 
-Database.prototype.save = function (beverage){
-    const newBeverage = new CosmicBeverage(beverage);
-    this.cosmicBeverages.push(newBeverage);
-    return newBeverage;
+Database.prototype.find = function(){ 
+    return this.transformers;
+}
+
+
+Database.prototype.save = function (bot){
+    const newBot = new Transformer(Transformer);
+    this.cosmicTransformers.push(newTransformer);
+    return newTransformer;
 }
 Database.prototype.findByIdAndRemove = function (id){
-    //find beverage with the matching ID
-    const foundBeverage = this.cosmicBeverages.find(beverage => {
-        return beverage._id === id;
+    //find bot with the matching ID
+    const foundBot = this.transformers.find(bot => {
+        return bot._id === id;
     })
-    if(foundBeverage === undefined) return;
+    if(foundBot === undefined) return;
 
     //find the inex of the given beverage
-    const index = this.cosmicBeverages.indexOf(foundBeverage);
+    
+    const index = this.transformers.indexOf(foundBot);
     
     //remove it from teh array
-    this.cosmicBeverages.splice(index, 1);
+    this.transformers.splice(index, 1);
 }
+
 Database.prototype.findByAndUpdate = function (id ,updates){
-    const foundBeverage = this.cosmicBeverages.find(beverage =>{
-        return beverage._id === id;
+    const foundBot = this.transformers.find(bot =>{
+        return bot._id === id;
     })
-    if(foundBeverage === undefined) return;
+    if(foundBot === undefined) return;
 
-    const index = this.cosmicBeverages.indexOf(foundBeverage); 
-    const newBeverage = { ...foundBeverage, ...updates};
-
-    this.cosmicBeverages.splice(index, 1, newBeverage);
-
-    return newBeverage;
+    //find the index
+    const index = this.transformers.indexOf(foundBot); 
+   
+    const newBot = { ...foundBot, ...updates}; //what it was before but with the new updates added to it
+    
+    //replace old with the new
+    this.transformers.splice(index, 1, newBot);
+    
+    //return the newly added bot
+    return newBot;
 
  }
 
