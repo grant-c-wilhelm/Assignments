@@ -22,26 +22,91 @@ body {
 
 .header {
     height: 95vh;
-    background-image: linear-gradient(
-        to right bottom,
+    background-image: linear-gradient(to right bottom,
         hsla(111, 55%, 64%, 0.801),
-        hsla(160, 64%, 43%, 0.801) ),
-        url(../Img/hero.jpg);               /*we can add this gradient */
+        hsla(160, 64%, 43%, 0.801)),
+        url(../Img/hero.jpg);
+    /*we can add this gradient */
     background-size: cover;
     background-position: top;
-   
 
-    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%)  /*this is a way of taking out chunks of pictures and you can do it by taking out specific shapes or using specific coordiniates to get even more precise... coordinates are given starting from top left of image and working to the right "clock-wise"*/
-    
+
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%)
+        /*this is a way of taking out chunks of pictures and you can do it by taking out specific shapes or using specific coordiniates to get even more precise... coordinates are given starting from top left of image and working to the right "clock-wise"*/
+
 }
 
 .logo-box {
     position: absolute;
-    top: 40px;
-    left: 40px;
+    top: 50px;
+    left: 50px;
 }
 
 .logo {
-    height: 35px; /*width will auto calc based on height*/
+    height: 55px;
+    animation: moveInBottom 1s ease-out;
+    animation-delay: .1s;
+    /*width will auto calc based on height*/
+}
+
+.text-box {
+    position: absolute;
+    top: 40%; /* in relation of the parent element*/
+    left: 50%;
+    transform: translate(-50%, -50%); /* in relation to the element itself*/
+}
+
+.heading-primary {
+    color: #ffffff;
+    text-transform: uppercase;
+    backface-visibility: hidden; /*this smooths out the animation. determines if the back part(background) of whatever is being animated is visable on that animation*/
+}
+
+.heading-primary-main {
+    display: block;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 35px;
+    animation: moveInTop 1s ease-out ;
     
+}
+
+.heading-primary-sub {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 17.4px;
+    animation: moveInBottom 1s ease-out ;
+    animation-delay: .05s;
+}
+
+@keyframes moveInTop {
+    0%{
+        opacity: 0; /*browsers optimized for opacity and tranform mostly*/
+        transform: translateY(-100px)
+    }
+
+    50%{
+        transform: translateY(10px)
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+@keyframes moveInBottom {
+    0%{
+        opacity: 0; /*browsers optimized for opacity and tranform mostly*/
+        transform: translateY(100px)
+    }
+
+    50%{
+        transform: translateY(-10px)
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0)
+    }
 }

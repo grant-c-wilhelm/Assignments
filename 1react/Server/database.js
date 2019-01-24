@@ -1,10 +1,10 @@
 const uuid = require('uuid')
 
-const Transormer = function(bot){
+const Transformer = function(bot){
     this._id = uuid();
     this.name= bot.name;
     this.affiliation = bot.affiliation;
-    this.vehicle = beverage.vehicle;
+    this.vehicle = bot.vehicle;
     
 }
 const Database = function(){
@@ -17,9 +17,9 @@ Database.prototype.find = function(){
 
 
 Database.prototype.save = function (bot){
-    const newBot = new Transformer(Transformer);
-    this.cosmicTransformers.push(newTransformer);
-    return newTransformer;
+    const newBot = new Transformer(bot);
+    this.transformers.push(newBot);
+    return newBot;
 }
 Database.prototype.findByIdAndRemove = function (id){
     //find bot with the matching ID
@@ -34,6 +34,12 @@ Database.prototype.findByIdAndRemove = function (id){
     
     //remove it from teh array
     this.transformers.splice(index, 1);
+}
+
+Database.prototype.findById = function(id){
+    const foundBot = this.transformers.find(bot => bot._id === id);
+
+    return foundBot
 }
 
 Database.prototype.findByAndUpdate = function (id ,updates){

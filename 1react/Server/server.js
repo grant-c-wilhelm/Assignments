@@ -12,17 +12,19 @@ app.use(express.json());
 
 //GET ALL
 app.get('/transformers', (req, res) => {
+    //find all transformers
     const foundTransformers = database.find();
+    //send back to client
     res.status(200).send(foundTransformers)
 })
 
-//GET ONE 
-app.get('/transformers', (req, res) => {
-    const id = req.params.id
+//GET ONE by id
+app.get('/transformers/:id', (req, res) => {
+    const id = req.params.id; //get the id
 
-    const foundTransformers = database.find(id);
-    
-    res.status(200).send(foundTransformers)
+    const foundBot = database.findById(id); //find object using id
+
+    res.status(200).send(foundBot) //then send it back
 })
 
 
@@ -34,7 +36,7 @@ app.post('/transformers', (req, res) => {
     const savedBot = database.save(newTransformer)
 
     //send back a response containing the newly added items
-    res.status(201).res.send(savedBot);
+    res.status(201).send(savedBot);
 })
 
 
