@@ -1,10 +1,15 @@
 import React from 'react'
 import DataProvider from './DataProvider'
+import BotList from './BotList';
 
 function App (){
     return (
         <div>
-            <DataProvider />
+            <header>
+                <h1>Bot list</h1>
+            </header>
+            <BotList />
+            {/* <DataProvider /> */}
         </div>
     )
 }
