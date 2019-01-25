@@ -7,9 +7,11 @@ const app = express();
 
 const database = require('./database.js');
 
+app.listen(process.env.PORT, console.log(`listening on PORT ${process.env.PORT}`))
+
 //make sure to include this, it converts everything ot json
 app.use(express.json());
-
+ 
 //GET ALL
 app.get('/transformers', (req, res) => {
     //find all transformers
@@ -27,19 +29,15 @@ app.get('/transformers/:id', (req, res) => {
     res.status(200).send(foundBot) //then send it back
 })
 
-
 //POST
 app.post('/transformers', (req, res) => {
     //see what the body is stating
     const newTransformer = req.body;
     //add it to the database
     const savedBot = database.save(newTransformer)
-
     //send back a response containing the newly added items
     res.status(201).send(savedBot);
 })
-
-
 
 //DELETE
 app.delete('/transformers/:id', (req, res) => {
@@ -62,8 +60,7 @@ app.put('/transformers/:id', (req, res) => {
     const updates = req.body
     
     //send response with updated item
-    const updatedBot = database.findByIdAndRemove(id, updates)
+    const updatedBot = database.findByAndUpdate(id, updates)
     res.status(200).send(updatedBot)
 })
 
-app.listen(process.env.PORT, () => console.log(`server listening on Port ${process.env.PORT}`))

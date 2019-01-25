@@ -1,24 +1,21 @@
 import React, { Component } from 'react'
-
 import axios from 'axios'
 
 export default class DataProvider extends Component {
     constructor() {
         super();
         this.state = {
-            transformers: []
+            bountyHunters: []
         }
     }
     componentDidMount() {
-        axios.get('/transformers')
-            .then(response => this.setState({ transformers: JSON.stringify(response.data) }))
-
+        axios.get('/bountyHunters')
+            .then(response => this.setState({ bountyHunters: JSON.stringify(response.data) }))
     }
-
-    render() { 
+    render() {
         return (
             <div>
-                {this.state.transformers}
+                {this.state.bountyHunters}
             </div>
         )
     }
