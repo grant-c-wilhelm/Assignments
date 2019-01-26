@@ -54,12 +54,14 @@ body {
     top: 40%; /* in relation of the parent element*/
     left: 50%;
     transform: translate(-50%, -50%); /* in relation to the element itself*/
+    text-align: center; /* by declaring this here it is telling the button to position itself in the center of the text box area*/
 }
 
 .heading-primary {
     color: #ffffff;
     text-transform: uppercase;
     backface-visibility: hidden; /*this smooths out the animation. determines if the back part(background) of whatever is being animated is visable on that animation*/
+    margin-bottom: 60px; /*this sets the marg on the bot to push dowb the button and give the button some space */
 }
 
 .heading-primary-main {
@@ -109,4 +111,30 @@ body {
         opacity: 1;
         transform: translateY(0)
     }
+}
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .2); /* the 3rd value is going to dictate the amount of blure given*/
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+
+}
+
+.btn-white{
+    background-color: #fff;
+    color: #777;
 }
