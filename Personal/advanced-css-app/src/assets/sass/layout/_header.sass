@@ -1,0 +1,29 @@
+/*HEADER LAYOUT
+.header
+    height: 95vh
+    background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.801), rgba($color-primary-dark, 0.801)),url(../img/mountain-lake.jpeg)
+    background-size: cover
+    background-position: top
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%)
+    //HEADER LOGO  
+    & .logo-box
+        position: absolute
+        top: 6rem
+        left: 6rem
+    & .logo
+        height: 5.5rem
+        animation: moveInRight 1s ease-out .4s backwards
+        //anim-func, anim-dur, time-func, anim-delay=args fill-mode
+
+    //HEADER TEXT
+    & .text-box
+        position: absolute
+        top: 40%
+        left: 50%
+        transform: translate(-50%, -50%)
+        text-align: center
+        //by declaring this here it is telling the button to position itself in the center of the text box area
+
+    
+
+
