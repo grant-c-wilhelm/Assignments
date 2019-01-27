@@ -1,0 +1,187 @@
+/* COLORS TO BE USED:
+light green :  #7ed56f
+medium green:  #55c57a
+dark green:    #28b485
+*/
+
+*
+*::after
+*::before  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5% ;
+        /* 1rem is the root font size so here we are setting the rem (root) font size for the file*/
+}
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: #777;
+    padding: 3rem
+}
+/*HEADER*/
+.header {
+    height: 95vh;
+    background-image: 
+        linear-gradient(to right bottom,
+        hsla(111, 55%, 64%, 0.801),
+        hsla(160, 64%, 43%, 0.801)),
+        url(../img/mountain-lake.jpeg);
+    /*we can add this gradient */
+    background-size: cover;
+    background-position: top;
+
+
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%)
+        /*this is a way of taking out chunks of pictures and you can do it by taking out specific shapes or using specific coordiniates to get even more precise... coordinates are given starting from top left of image and working to the right "clock-wise"*/
+
+}
+
+/*HEADER LOGO */
+
+.logo-box {
+    position: absolute;
+    top: 6rem;
+    left: 6rem;
+}
+
+.logo {
+    height: 5.5rem;
+    animation: moveInBottom 1s ease-out .4s ;
+        /*anim-func, anim-dur, time-func, anim-delay=args*/
+    animation-fill-mode: backwards;
+        /*width will auto calc based ;on height*/
+}
+
+/*HEADER TEXT*/
+
+.text-box {
+    position: absolute;
+    top: 40%; /* in relation of the parent element*/
+    left: 50%;
+    transform: translate(-50%, -50%); /* in relation to the element itself*/
+    text-align: center; /* by declaring this here it is telling the button to position itself in the center of the text box area*/
+}
+
+.heading-primary {
+    color: #fff;
+    text-transform: uppercase;
+    backface-visibility: hidden; /*this smooths out the animation. determines if the back part(background) of whatever is being animated is visable on that animation*/
+    margin-bottom: 6rem; /*this sets the marg on the bot to push dowb the button and give the button some space */
+}
+
+.heading-primary-main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation: moveInTop 1s ease-out ;
+    
+}
+
+.heading-primary-sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.74rem;
+    animation: moveInBottom 1s ease-out .3;
+}
+
+@keyframes moveInTop {
+    0%{
+        opacity: 0; /*browsers optimized for opacity and tranform mostly*/
+        transform: translateY(-10rem)
+    }
+
+    50%{
+        transform: translateY(1rem)
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+@keyframes moveInBottom {
+    0%{
+        opacity: 0; /*browsers optimized for opacity and tranform mostly*/
+        transform: translateY(10rem)
+    }
+
+    50%{
+        transform: translateY(-1rem)
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+/*HEADER BUTTON*/
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all .2;
+    position: relative;
+}
+
+.btn:hover {
+    transform: translateY(-.3rem);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2); /* the 3rd value is going to dictate the amount of blure given*/
+}
+
+.btn:active {
+    transform: translateY(-.1rem);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+
+}
+
+.btn-white{
+    background-color: #fff;
+    color: #777;
+}
+
+ .btn::after { 
+        /*to get the effect of the white "splashing" we add this here  */
+    content: ""  ;
+        /* must be specified*/
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1 ;
+        /*deifnes the position of elements when they are one befind the other*/
+    transition: all .4s ;
+        /* shorthand for trnasDur, time func, transProp & transDelay */
+ }
+
+.btn-white::after { 
+    background-color: #fff;
+}
+
+.btn:hover::after { 
+        /* when we hover the button then we want some certain styles to be applied to the after psudeo element: the ref looks complicated... but its not */
+    transform: scaleX(1.5) scaleY(1.6) ;
+        /* this pushes out the btn on hover */
+    opacity: 0 ;/*this makes it fade out after the hover has occured*/
+}
+   
+.btn-animated {
+    animation: moveInRight .5s ease-out .75s ; 
+        /*<--last arg is delay */
+    animation-fill-mode: backwards;
+        /* wil auto apply the sttyles @ 0% so that the element doesnt show before the animay delay*/
+}

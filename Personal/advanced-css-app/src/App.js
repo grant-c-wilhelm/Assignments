@@ -1,7 +1,7 @@
 import React from 'react'
 import MainView from './MainView';
 
-import styles from './styles/styles.css'
+import styles from './assets/css/main.css'
 
 const App = () => {
     return (

@@ -13,8 +13,8 @@ const Header = () => {
                     <span className="heading-primary-sub"> is where life happens
                     </span>
                 </h1>
-                <a href="#" className= "btn btn-white">Discover our tours</a>
-
+                <a href="#" className= "btn btn-white btn-animated">Discover our tours</a>
+                    {/* we add 3 class names here be cause we will have many btn but this particular btn needs to perform specific funtions that other btn will not */}
             </div>
 
         </header>
