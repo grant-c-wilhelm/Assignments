@@ -1,5 +1,5 @@
 import React from 'react'
-import Bounties from './Bounties'
+import bounties from './bounties.json'
 
 
 import { withBountyContext } from './BountyProvider'

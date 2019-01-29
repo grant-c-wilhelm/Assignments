@@ -1,5 +1,6 @@
-import React, { Component } from 'react'
-import Bounties from './Bounties'
+import React, { Component, createContext } from 'react'
+import bounties from './bounties.json'
+
 const { Consumer, Provider } = createContext();
 
 
@@ -7,7 +8,7 @@ export default class BountyProvider extends Component {
     constructor() {
         super();
         this.state = {
-            Bounties
+            bounties
         }
     }
     render() {
