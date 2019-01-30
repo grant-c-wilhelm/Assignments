@@ -10,10 +10,29 @@ export default class BountyProvider extends Component {
         this.state = {
             bounties
         }
+        this.editBounty = this.editBounty.bind(this);
     }
+
+    editBounty(id, updatedBounty){
+        //send out put requet,
+        alert(JSON.stringify(id, updatedBounty))
+    
+        this.setState(ps => ({
+            bounties: ps.bounties.map(bounty =>bounty._id === id ? {...bounty, ...updatedBounty} : bounty)
+        }))
+    }
+    
+
+    
+
+    
     render() {
+        const value = {
+            ...this.state,
+            editBounty: this.editBounty
+        }
         return (
-            <Provider value={this.state}>
+            <Provider value={value}>
                 {this.props.children}
             </Provider>
         )

@@ -1,13 +1,24 @@
 import React from 'react'
 
-function EditForm({ inputs }) {
-    return (
-        <form>
-            <input type="text" name="name" value={inputs.name} />
-            <input type="number" name="price" value={inputs.price} />
-            <label htmlFor="">Status:</label> <input type="checkbox" name="alive" checked={inputs.alive}/>
+import FormContainer from './FormContainer'
 
-        </form>
+function EditForm({ inputs, submit }) {
+    return (
+
+
+        <FormContainer inputs={inputs}  submit={submit}>
+            {({ handleChange, handleSubmit, inputs }) => (
+                <form onSubmit={handleSubmit}>
+                    <input onChange={handleChange} type="text" name="name" value={inputs.name} />
+                    <input onChange={handleChange} type="number" name="price" value={inputs.price} />
+                    <label htmlFor="">Alive: <input onChange={handleChange} type="checkbox" name="alive" checked={inputs.alive} /></label>
+                    <button>Save</button>
+
+                </form>
+
+            )}
+        </FormContainer>
+
     )
 }
 
