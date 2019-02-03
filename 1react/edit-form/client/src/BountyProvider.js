@@ -12,7 +12,6 @@ export default class BountyProvider extends Component {
         }
         this.editBounty = this.editBounty.bind(this);
     }
-
     editBounty(id, updatedBounty){
         //send out put requet,
         alert(JSON.stringify(id, updatedBounty))
@@ -21,10 +20,6 @@ export default class BountyProvider extends Component {
             bounties: ps.bounties.map(bounty =>bounty._id === id ? {...bounty, ...updatedBounty} : bounty)
         }))
     }
-    
-
-    
-
     
     render() {
         const value = {

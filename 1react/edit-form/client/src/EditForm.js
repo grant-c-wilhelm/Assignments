@@ -3,7 +3,7 @@ import React from 'react'
 import FormContainer from './FormContainer'
 
 function EditForm({ inputs, submit }) {
-    return (
+    return ( 
 
 
         <FormContainer inputs={inputs}  submit={submit}>

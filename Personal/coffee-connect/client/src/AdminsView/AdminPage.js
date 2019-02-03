@@ -1,14 +1,14 @@
 import React from 'react'
 import Navigation from '../Header/Navigation';
+import SkierList from './SkierList';
 
 const AdminPage = () => {
     return (
         <div>
             <Navigation />
+            <SkierList />
 
-            Here the will be the admin page and eventually be password protected via login.  
-            Here i want to be able to edit(put) delete(delete) 
-    </div>
+        </div>
 
     )
 

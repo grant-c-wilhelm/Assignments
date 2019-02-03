@@ -3,7 +3,7 @@ import React from 'react'
 import EditForm from './EditForm';
 import { withToggler } from './Toggler'
 import { withBountyContext } from './BountyProvider'
-
+ 
 
 function BountyDetail({ _id, name, price, alive, toggle, on, editBounty }) {
     return (
@@ -13,7 +13,7 @@ function BountyDetail({ _id, name, price, alive, toggle, on, editBounty }) {
             <h2>Status: {alive ? "Alive" : "Dead"}</h2>
             <button>X</button>
             <button onClick={toggle}>edit</button>
-            {on && <EditForm
+            {on && <EditForm 
                 inputs={{ name, price, alive }}
                 submit={inputs => editBounty(_id, inputs)} />}
 
