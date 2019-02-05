@@ -4,18 +4,18 @@ import { withToggler } from '../Helpers/Toggler';
 import { withSkierContext } from './SkiInfoProvider';
 
 
-function SkierDetail({ _id, firstName, lastName, email, homeResortArea, experienceLevel, sessionLength, toggle, on, editSkierDetail }) {
+function SkierDetail({ _id, firstName, lastName, email, homeResortArea, experience, skiLengthTime, toggle, on, editSkierDetail }) {
     return (
         <div>
             <h2>First name: {firstName}</h2>
             <h2>Last name: {lastName}</h2>
             <h2>Email: {email}</h2>
-            <h2>Home resort/area {homeResortArea}</h2>
-            <h2>Experience (beginner, intermediate, advanced, pro): {experienceLevel} </h2>
-            <h2>Average session length (in hours): {sessionLength}</h2>
-            <button onClick={toggle} >Edit </button>
+            <h2>Home resort/area: {homeResortArea}</h2>
+            <h2>Experience (beginner, intermediate, advanced, pro): {experience} </h2>
+            <h2>Average session length (in hours): {skiLengthTime}</h2>
+            <button onClick={toggle} >Edit </button> 
             {on && <AdminEdit
-                inputs={{ firstName, lastName, email, homeResortArea, experienceLevel, sessionLength }}
+                inputs={{ firstName, lastName, email, homeResortArea, experience, skiLengthTime }}
                  submit={inputs => editSkierDetail(_id, inputs)}
             />}
         </div>

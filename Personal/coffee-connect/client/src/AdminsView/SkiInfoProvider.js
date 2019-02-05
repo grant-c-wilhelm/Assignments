@@ -1,6 +1,6 @@
 import React, { Component, createContext } from 'react'
 
-import skierInfo from './skierInfo.json'
+import axios from 'axios'
 
 const { Consumer, Provider } = createContext();
 
@@ -8,15 +8,32 @@ export default class SkiInfoProvider extends Component {
     constructor() {
         super();
         this.state = {
-            skierInfo
+            skierData: []
         }
-        this.editSkierDetail = this.editSkierDetail.bind(this)
+        // this.editSkierDetail = this.editSkierDetail.bind(this)
     }
-    editSkierDetail(id, updatedDetails) {
-        //send out the axios put request and set the state 
-        alert(JSON.stringify( id, updatedDetails ))
+
+    //I need to get the data from the server i created
+    getSkierData() {
+        axios.get('/api/skierModel')
+            .then(serversResponse => this.setState({
+                skierData: serversResponse.data
+            }))
     }
-    
+    componentDidMount() {
+        this.getSkierData();
+    }
+
+    // editSkierDetail(id, updatedDetails) {
+    //     //send out the axios put request and set the state 
+    //     alert(JSON.stringify(id, updatedDetails))
+
+    //     //After the axios we will do what is below
+    //     this.setState(ps => ({
+    //         skierData: ps.skierData.map(skiers => skierData._id === id ? { ...skierData, ...updatedDetails } : skierData)
+    //     }))
+    // }
+
     render() {
         const value = {
             ...this.state,
@@ -24,7 +41,7 @@ export default class SkiInfoProvider extends Component {
         }
         return (
             //2. the value is passed to the provider
-            <Provider value={value}> 
+            <Provider value={value}>
                 {this.props.children}
             </Provider>
 
@@ -33,7 +50,7 @@ export default class SkiInfoProvider extends Component {
 }
 export const withSkierContext = C => props => (
     // 3. Provider is accessed via the consumer which i wrapped in 'withskiercontext'
-    <Consumer> 
+    <Consumer>
         {value => <C {...value} {...props} />}
     </Consumer>
 )
