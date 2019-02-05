@@ -10,10 +10,13 @@ export default class SkiInfoProvider extends Component {
         this.state = {
             skierData: []
         }
-        // this.editSkierDetail = this.editSkierDetail.bind(this)
+        this.editSkierData = this.editSkierData.bind(this)
+        this.deleteSkierData = this.deleteSkierData.bind(this);
     }
 
-    //I need to get the data from the server i created
+    //AXIOS REQUESTS
+
+    //GET request ot display data on the ADMIN DOM
     getSkierData() {
         axios.get('/api/skierModel')
             .then(serversResponse => this.setState({
@@ -23,8 +26,34 @@ export default class SkiInfoProvider extends Component {
     componentDidMount() {
         this.getSkierData();
     }
+    // DELETE the data entry on the ADMIN DOM
+    deleteSkierData(id) {
+        axios.delete(`./api/skierModel/${id}`)
+            .then(serversResponse => this.setState(ps => ({
+                skierData: ps.skierData.filter(psData => psData._id !== id)
+            })))
+           
+    }
+
+    //PUT (edit data) edit the data on the ADMIN DOM
+    editSkierData(){
+        axios.put('./api/skierModel')
+            .then(serversResponse => this.setState({
+                skierData: serversResponse.data
+            }))
+    }
+    //POST (create new skier) on the USER DOM
+    postSkierData() {
+        axios.post('/api/skiModel')
+            .then(serversResponse => this.setState({
+                skierData: serversResponse.data
+            }))
+    }
+
 
     // editSkierDetail(id, updatedDetails) {
+    //HERE WILL GO MY FUNCTION TO THE EDIT BUTTON WHICH WILL CALL ON THE PUT REQUEST TO EDIT THE INFO!
+
     //     //send out the axios put request and set the state 
     //     alert(JSON.stringify(id, updatedDetails))
 
@@ -37,7 +66,8 @@ export default class SkiInfoProvider extends Component {
     render() {
         const value = {
             ...this.state,
-            editSkierDetail: this.editSkierDetail // 1. this editskier is set to be the value
+            editSkierData: this.editSkierData, // 1. this editskier is set to be the value
+            deleteSkierData: this.deleteSkierData
         }
         return (
             //2. the value is passed to the provider

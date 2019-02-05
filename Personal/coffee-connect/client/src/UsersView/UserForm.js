@@ -1,5 +1,8 @@
 import React from 'react'
 
+// import {postSkierData} from '../AdminsView/SkiInfoProvider'
+// import { withSkierContext } from './SkiInfoProvider.js';
+
 function UserForm() {
     return (
         <form>
@@ -14,7 +17,7 @@ function UserForm() {
                 <input type="text" placeholder="Home Resort / Ski Area" />
                 <input type="text" placeholder="Experience level"/>
                 <input type="text" placeholder="Average session length"/> <br/><br/>
-                <button>Submit</button>
+                {/* <button onClick={postSkierData} >Submit</button> */}
 
             </div>
 
@@ -23,4 +26,4 @@ function UserForm() {
 }
 //THERE NEEDS TO BE A POST REQUEST HERE ATTACHED TO THE SUBMIT BUTTON 
 
-export default UserForm
+export default (UserForm)

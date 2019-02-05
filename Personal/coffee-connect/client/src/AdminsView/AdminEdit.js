@@ -1,7 +1,9 @@
 import React from 'react'
 import FormContainer from '../Helpers/FormContainer';
 
-function AdminEdit({inputs, submit}) {
+import {withSkierContext} from './SkiInfoProvider'
+
+function AdminEdit({inputs, submit, id, deleteSkierData}) {
     return (
 
         //FormContainer is expecting inputs hence why we pass them. 
@@ -14,7 +16,8 @@ function AdminEdit({inputs, submit}) {
                     <input onChange={handleChange} type="text"name='homeResortArea'placeholder="Home Resort/Ski Area" value={inputs.homeResortArea}/>
                     <input onChange={handleChange} type="text"name='experienceLevel'placeholder="Experience level" value={inputs.experience}/>
                     <input onChange={handleChange} type="text"name='sessionLength'placeholder="Average session length" value={inputs.skiLengthTime}/>
-                    <button >Save</button> <button>X</button>
+                    <button >Save</button> 
+                    <button type="button" onClick= { () =>  deleteSkierData(id) } >X</button>
                 </form>
             )}
         </FormContainer>
@@ -23,7 +26,7 @@ function AdminEdit({inputs, submit}) {
     )
 }
 
-export default AdminEdit
+export default withSkierContext(AdminEdit)
 
 
 
