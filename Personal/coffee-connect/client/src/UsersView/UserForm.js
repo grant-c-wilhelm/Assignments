@@ -1,29 +1,62 @@
 import React from 'react'
 
 // import {postSkierData} from '../AdminsView/SkiInfoProvider'
-// import { withSkierContext } from './SkiInfoProvider.js';
+// import { postSkierData } from '../AdminsView/SkiInfoProvider'
 
-function UserForm() {
+import { withSkierContext } from '../AdminsView/SkiInfoProvider'
+import FormContainer from '../Helpers/FormContainer';
+function UserForm({ postSkierData }) {
+    const inputs = {
+        firstName: "",
+        lastName: "",
+        email: '',
+        homeResortArea: "",
+        experienceLevel: "",
+        sessionLength: " "
+    }
     return (
-        <form>
-            <div className="form-wrapper">
-                <h2>Your Information</h2>
-                <input type="text" placeholder="First Name" />
-                <input type="text" placeholder="Last Name" />
-                <input type="text" placeholder="Email" />
-                <br />
-                <br />
-                <h2>Ski Information</h2>
-                <input type="text" placeholder="Home Resort / Ski Area" />
-                <input type="text" placeholder="Experience level"/>
-                <input type="text" placeholder="Average session length"/> <br/><br/>
-                {/* <button onClick={postSkierData} >Submit</button> */}
+        <FormContainer inputs={inputs} submit={postSkierData}>
+            {({ handleChange, handleSubmit, inputs }) => (
 
-            </div>
+                <form className='formContainerImage'>
+                    <section className="formContainer">
+                        <div className="circle">
+                            <div className="triangle">
+                                <div className="traingle-info">
+                                    <div className="formText">Your Information</div>
+                                    <input onChange={handleChange} type="text" name='firstName' placeholder="First Name" value={inputs.firstName} />
+                                    <input onChange={handleChange} type="text" name='lastName' placeholder="Last Name" value={inputs.lastName} />
+                                    <input onChange={handleChange} type="text" name='email' placeholder="Email" value={inputs.email} />
+                                    <br />
+                                    <br />
+                                    <div className="formText">Ski Information</div>
+                                    <input onChange={handleChange} type="text" name='homeResortArea' placeholder="Home Resort/Ski Area" value={inputs.homeResortArea} />
+                                    <input onChange={handleChange} type="text" name='experienceLevel' placeholder="Experience level" value={inputs.experienceLevel} />
+                                    <input onChange={handleChange} type="text" name='sessionLength' placeholder="Average session length" value={inputs.sessionLength} />
+                                    <br /><br />
+                                    <button type='button' className="submitPost" onClick={() => postSkierData(inputs)} >Submit</button>
+                                </div>
 
-        </form>
+
+                            </div>
+                        </div>
+                    </section>
+
+                    <div className="form-wrapper">
+
+
+
+
+
+
+
+                    </div>
+                </form>
+            )}
+        </FormContainer>
+
     )
 }
 //THERE NEEDS TO BE A POST REQUEST HERE ATTACHED TO THE SUBMIT BUTTON 
 
-export default (UserForm)
+export default withSkierContext(UserForm)

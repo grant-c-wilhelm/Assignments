@@ -1,0 +1,61 @@
+* *::after *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit
+}
+
+html {
+    font-family: sans-serif;
+    font-size: 62.5%;
+    font-weight: 100;
+    color: white;
+}
+
+body {
+    box-sizing: border-box;
+
+}
+
+/*NAVIGATION*/
+#main-nav {
+    background: rgba(210, 180, 140, 0.253);
+}
+ul{
+    
+}
+
+
+form {
+    background-size: cover;
+    background-image: url(../img/backimg.jpeg);
+
+}
+
+.circle {
+
+    background-color: tan;
+    clip-path: circle();
+    height: 100vh;
+}
+
+.formText {
+    margin-bottom: .5em;
+    margin-top: .5em;
+    font-size: 2.1em;
+}
+
+.triangle {
+    background-color: rgba(165, 42, 42, 0.5);
+    clip-path: polygon(100% 0, 100% 0%, 50% 100vh, 0 0%);
+    height: 100vh;
+    z-index: 1;
+}
+
+.traingle-info {
+    position: absolute;
+    font-size: 3em;
+    left: 515px;
+    top: 185px;
+
+
+}

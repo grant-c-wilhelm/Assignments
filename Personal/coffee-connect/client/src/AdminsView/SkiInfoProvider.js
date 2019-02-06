@@ -1,5 +1,7 @@
 import React, { Component, createContext } from 'react'
 
+
+
 import axios from 'axios'
 
 const { Consumer, Provider } = createContext();
@@ -12,6 +14,7 @@ export default class SkiInfoProvider extends Component {
         }
         this.editSkierData = this.editSkierData.bind(this)
         this.deleteSkierData = this.deleteSkierData.bind(this);
+        this.postSkierData = this.postSkierData.bind(this);
     }
 
     //AXIOS REQUESTS
@@ -34,21 +37,28 @@ export default class SkiInfoProvider extends Component {
             })))
            
     }
+    //POST (create new skier) on the USER DOM
+    postSkierData(inputs) {
+        axios.post('/api/skierModel', inputs)
+            .then(serversResponse => this.setState(ps => ({
+                skierData: [
+                    ...ps.skierData,
+                    serversResponse.data
+                ]
+            })))
+    }
 
     //PUT (edit data) edit the data on the ADMIN DOM
     editSkierData(){
         axios.put('./api/skierModel')
-            .then(serversResponse => this.setState({
-                skierData: serversResponse.data
-            }))
+            .then(serversResponse => this.setState(ps => ({
+                skierData: [
+                    ...ps.skierData,
+                    serversResponse.data
+                ]
+            })))
     }
-    //POST (create new skier) on the USER DOM
-    postSkierData() {
-        axios.post('/api/skiModel')
-            .then(serversResponse => this.setState({
-                skierData: serversResponse.data
-            }))
-    }
+    
 
 
     // editSkierDetail(id, updatedDetails) {
@@ -67,7 +77,8 @@ export default class SkiInfoProvider extends Component {
         const value = {
             ...this.state,
             editSkierData: this.editSkierData, // 1. this editskier is set to be the value
-            deleteSkierData: this.deleteSkierData
+            deleteSkierData: this.deleteSkierData,
+            postSkierData: this.postSkierData
         }
         return (
             //2. the value is passed to the provider
