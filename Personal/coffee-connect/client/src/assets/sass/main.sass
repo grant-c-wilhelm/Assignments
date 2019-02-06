@@ -3,6 +3,19 @@
         content: ""
         display: block
         clear: both
+
+@mixin mediaQuery($arg...) 
+    @if length($arg)==1 
+        @media screen and (max-width: nth($arg, 1)) 
+            @content; //@content allows us to apply w/e styling we want once injected into styles file.
+        
+    
+    @if length($arg) == 2 
+        @media screen and (max-width: nth($arg, 1)) and (min-width: nth($arg,2)) 
+            @content; 
+        
+    
+    //the arg is to set the width at which the mediaQuery is triggered, then inside {} you do styling; the ... says we dont know how many args we could get but store whatever we do get
       
 * *::after *::before 
     margin: 0
@@ -27,9 +40,11 @@ body
         @include clearingFunction
     li
         list-style: none
-        float: right
+        float: left
         font-size: 2em
         width: (100%/3)
+        @include mediaQuery(860px) 
+            width: 100%
     a
         color: white
         text-decoration: none
@@ -41,46 +56,72 @@ body
 
 
 //FORM
-input
-    margin-right: .5em
+
 
 .formContainerImage
     transform: translate(0px, -9px)
     background-size: cover
     background-image: url(../img/backimg.jpeg)
-
+    @include mediaQuery(414px)
+        background-position-x: -40em
 
     .formContainer
    
         .circle 
             background-color: rgba(210, 180, 140, 0.553)
             clip-path: circle()
-            height: 100vh
+            height: 110vh
+        
 
-
-        .formText 
-            margin-bottom: .5em
-            margin-top: .5em
-            color: white
-            font-size: 2.1em
-
-
-        .triangle 
+        .triangle
             background-color: rgba(165, 42, 42, 0.85)
-            clip-path: polygon(100% 0, 100% 0%, 50% 100vh, 0 0%)
-            height: 100vh
-            z-index: 1
+            clip-path: polygon(90% 0, 150% 0%, 50% 85vh, -16em 0%)
+             height: 100vh
+            .formText 
+                transform: translate(0em, 16em)
+                color: white
+                font-size: 1.4em
+                text-align: center
+                input
+                    margin-bottom: .5em
+                    margin-top: .5em
+                .submitPost
+                    transform: translate(0em,0em)
+            @include mediaQuery(768px)
+                background-color: rgba(165, 42, 42, 0.85)
+                clip-path: polygon(90% 0, 150% 0%, 50% 85vh, -45% 0%)
+                height: 100vh
+                .formText 
+                    transform: translate(0em, 8em)
+                    color: white
+                    font-size: 3.4em
+                    text-align: center
+                    input
+                        margin-bottom: .5em
+                        margin-top: .5em
+                        font-size: .4em
+                    .submitPost
+                        transform: translate(0em,-3em)
 
+            @include mediaQuery(414px) 
+                background-color: rgba(165, 42, 42, 0.85)
+                clip-path: polygon(90% 0, 150% 0%, 50% 85vh, -16em 0%)
+                height: 100vh
+                .formText 
+                    transform: translate(0em, 16em)
+                    color: white
+                    font-size: 1.4em
+                    text-align: center
+                    input
+                        margin-bottom: .5em
+                        margin-top: .5em
+                    .submitPost
+                        transform: translate(0em,0em)
+            
+            
+            
+            
 
-        .traingle-info 
-            display: block
-            position: fixed
-            transform: translate(16em, 0)
-            font-size: 2.5em
-            top: 85px
-            //  @media screen and (max-height: )
-
-        .submitPost
-            transform: translate(16em, 0)
+        
 
 

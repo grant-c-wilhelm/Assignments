@@ -22,22 +22,23 @@ function UserForm({ postSkierData }) {
                     <section className="formContainer">
                         <div className="circle">
                             <div className="triangle">
-                                <div className="traingle-info">
-                                    <div className="formText">Your Information</div>
-                                    <input onChange={handleChange} type="text" name='firstName' placeholder="First Name" value={inputs.firstName} />
-                                    <input onChange={handleChange} type="text" name='lastName' placeholder="Last Name" value={inputs.lastName} />
+
+                                <div className="formText"><div> Your Information   </div>
+                                    <input onChange={handleChange} type="text" name='firstName' placeholder="First Name" value={inputs.firstName} /><br />
+                                    <input onChange={handleChange} type="text" name='lastName' placeholder="Last Name" value={inputs.lastName} /><br />
                                     <input onChange={handleChange} type="text" name='email' placeholder="Email" value={inputs.email} />
                                     <br />
                                     <br />
-                                    <div className="formText">Ski Information</div>
-                                    <input onChange={handleChange} type="text" name='homeResortArea' placeholder="Home Resort/Ski Area" value={inputs.homeResortArea} />
-                                    <input onChange={handleChange} type="text" name='experienceLevel' placeholder="Experience level" value={inputs.experienceLevel} />
+                                    <div >Ski Information</div>
+                                    <input onChange={handleChange} type="text" name='homeResortArea' placeholder="Home Resort/Area" value={inputs.homeResortArea} /> <br />
+                                    <input onChange={handleChange} type="text" name='experienceLevel' placeholder="Experience level" value={inputs.experienceLevel} /><br />
+                                    
                                     <input onChange={handleChange} type="text" name='sessionLength' placeholder="Average session length" value={inputs.sessionLength} />
+                                   
                                     <br /><br />
                                     <button type='button' className="submitPost" onClick={() => postSkierData(inputs)} >Submit</button>
+
                                 </div>
-
-
                             </div>
                         </div>
                     </section>
