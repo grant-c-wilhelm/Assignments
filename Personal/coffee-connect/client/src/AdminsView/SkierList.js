@@ -12,7 +12,7 @@ const SkierList = ({ skierData }) => {
     const skierComponents = skierData.map(skier => <SkierDetail key={skier._id} {...skier} />)
 
     return (
-        <div>
+        <div className='skierComponents'>
             {skierComponents}
         </div>
     )

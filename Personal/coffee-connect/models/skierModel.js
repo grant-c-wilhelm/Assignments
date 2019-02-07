@@ -14,10 +14,7 @@ const skierSchema = new mongoose.Schema({
         required: true
     },
     homeResortArea: String,
-    experience: {
-        type: String,
-        enum: ["beginner", "intermediate", "advanced", "pro"]
-    },
+    experience: String,
     skiLengthTime: Number,
  
 })

@@ -1,7 +1,5 @@
 import React from 'react'
 
-// import {postSkierData} from '../AdminsView/SkiInfoProvider'
-// import { postSkierData } from '../AdminsView/SkiInfoProvider'
 
 import { withSkierContext } from '../AdminsView/SkiInfoProvider'
 import FormContainer from '../Helpers/FormContainer';
@@ -30,11 +28,9 @@ function UserForm({ postSkierData }) {
                                     <br />
                                     <br />
                                     <div >Ski Information</div>
-                                    <input onChange={handleChange} type="text" name='homeResortArea' placeholder="Home Resort/Area" value={inputs.homeResortArea} /> <br />
+                                    <input onChange={handleChange} type="text" name='homeResortArea' placeholder="Home Resort/Ski Area" value={inputs.homeResortArea} /> <br />
                                     <input onChange={handleChange} type="text" name='experienceLevel' placeholder="Experience level" value={inputs.experienceLevel} /><br />
-                                    
                                     <input onChange={handleChange} type="text" name='sessionLength' placeholder="Average session length" value={inputs.sessionLength} />
-                                   
                                     <br /><br />
                                     <button type='button' className="submitPost" onClick={() => postSkierData(inputs)} >Submit</button>
 

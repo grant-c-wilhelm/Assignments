@@ -1,3 +1,8 @@
+//Variables
+$color-primary: #D2B48C
+$color-primary-light: #7ed56f
+    
+//MIXINS
 @mixin clearingFunction 
     &:after 
         content: ""
@@ -13,9 +18,17 @@
     @if length($arg) == 2 
         @media screen and (max-width: nth($arg, 1)) and (min-width: nth($arg,2)) 
             @content; 
+@mixin mediaQueryHeight($arg...) 
+    @if length($arg)==1 
+        @media screen and (max-height: nth($arg, 1)) 
+            @content; //@content allows us to apply w/e styling we want once injected into styles file.
         
     
-    //the arg is to set the width at which the mediaQuery is triggered, then inside {} you do styling; the ... says we dont know how many args we could get but store whatever we do get
+    @if length($arg) == 2 
+        @media screen and (max-height: nth($arg, 1)) and (min-height: nth($arg,2)) 
+            @content;         
+    
+
       
 * *::after *::before 
     margin: 0
@@ -62,8 +75,13 @@ body
     transform: translate(0px, -9px)
     background-size: cover
     background-image: url(../img/backimg.jpeg)
-    @include mediaQuery(414px)
+    background-position-x: 0em
+    @include mediaQuery(1024px)
         background-position-x: -40em
+    @include mediaQuery(768px)
+        background-position-x: -40em
+    @include mediaQuery(375px)
+        background-position-x: -36em
 
     .formContainer
    
@@ -75,53 +93,83 @@ body
 
         .triangle
             background-color: rgba(165, 42, 42, 0.85)
-            clip-path: polygon(90% 0, 150% 0%, 50% 85vh, -16em 0%)
-             height: 100vh
+            clip-path: polygon(90% 0, 115% 0%, 50% 85vh, -16em 0%)
+             height: 110vh
             .formText 
-                transform: translate(0em, 16em)
+                transform: translate(0em, 7em)
                 color: white
                 font-size: 1.4em
                 text-align: center
+                height: 100vh //this is getting my triangle to touch the.. tip
+                div
+                    font-size: 2.5em
                 input
                     margin-bottom: .5em
                     margin-top: .5em
+                    font-size: 1.5em
                 .submitPost
                     transform: translate(0em,0em)
-            @include mediaQuery(768px)
-                background-color: rgba(165, 42, 42, 0.85)
+            @include mediaQuery(1024px)
                 clip-path: polygon(90% 0, 150% 0%, 50% 85vh, -45% 0%)
                 height: 100vh
                 .formText 
-                    transform: translate(0em, 8em)
+                    transform: translate(0em, 10em)
                     color: white
                     font-size: 3.4em
                     text-align: center
                     input
-                        margin-bottom: .5em
-                        margin-top: .5em
                         font-size: .4em
-                    .submitPost
-                        transform: translate(0em,-3em)
-
+            @include mediaQuery(768px)
+                clip-path: polygon(90% 0, 150% 0%, 50% 85vh, -45% 0%)
+                height: 100vh
+                .formText 
+                    transform: translate(0em, 12em)
+                    color: white
+                    font-size: 2.4em
+                    text-align: center
+                    input
+                        font-size: .4em
             @include mediaQuery(414px) 
-                background-color: rgba(165, 42, 42, 0.85)
                 clip-path: polygon(90% 0, 150% 0%, 50% 85vh, -16em 0%)
                 height: 100vh
                 .formText 
-                    transform: translate(0em, 16em)
+                    transform: translate(0em, 17em)
                     color: white
                     font-size: 1.4em
                     text-align: center
+                    div
+                        font-size: 1.5em
                     input
-                        margin-bottom: .5em
-                        margin-top: .5em
-                    .submitPost
-                        transform: translate(0em,0em)
+            @include mediaQueryHeight(667px) 
+                clip-path: polygon(90% 0, 150% 0%, 50% 85vh, -16em 0%)
+                height: 100vh
+                .formText 
+                    transform: translate(0em, 15em)
+                    color: white
+                    font-size: 1.4em
+                    div
+                        font-size: 1.5em
+                    
+            @include mediaQueryHeight (812px)
+                clip-path: polygon(90% 0, 150% 0%, 50% 85vh, -16em 0%)
+                height: 100vh
+                .formText 
+                    transform: translate(0em, 22em)
+                    color: white
+                    font-size: 1.4em
+                    div
+                        font-size: 1.5em
             
             
-            
-            
+// //home page
+.homeImage
+    height: 95vh
+    background-image: linear-gradient(to right bottom, rgba($color-primary, 0.601), rgba($color-primary, 0.801)),url(../img/caveimg.jpeg)
+    background-size: cover
+    background-position: top
 
+   
+    
         
 
 
