@@ -7,7 +7,7 @@ function AboutPage() {
                 <div className="u-center-text u-margin-bottom-big">
                     {/* above classname/div here for styling purposes; a 'utility class' */}
                     <h2 className="heading-secondary">
-                        Exciting tours for adventurous people
+                        A few of my favorite projects
                 </h2>
                 </div>
                 <div className="row">
