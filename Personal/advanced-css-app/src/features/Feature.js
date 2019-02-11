@@ -8,8 +8,6 @@ import { FaSass } from 'react-icons/fa'
 export default class Feature extends Component {
     render() {
         return (
-
-
             <section className='section-feature'>
 
 
