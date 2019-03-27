@@ -44,25 +44,37 @@
 //   }
 // }
 // count();
-var officeItems = [
-  "stapler",
-  "monitor",
-  "computer",
-  "desk",
-  "lamp",
-  "computer",
-  "lamp",
-  "stapler",
-  "computer",
-  "computer"
-];
-function checkForItem(arr, item) {
-  var count = 0;
-  for (i = 0; i < arr.length; i++) {
-    if (arr[i] === item) {
-      count++;
+// var officeItems = [
+//   "stapler",
+//   "monitor",
+//   "computer",
+//   "desk",
+//   "lamp",
+//   "computer",
+//   "lamp",
+//   "stapler",
+//   "computer",
+//   "computer"
+// ];
+// function checkForItem(arr, item) {
+//   var count = 0;
+//   for (i = 0; i < arr.length; i++) {
+//     if (arr[i] === item) {
+//       count++;
+//     }
+//   }
+//   console.log(count);
+// }
+// checkForItem(officeItems, "lamp");
+
+function count() {
+  var counter;
+  for (counter = 0; counter <= 101; counter++) {
+    if (counter % 2 == 0) {
+      console.log(counter + " EVEN");
+    } else {
+      console.log(counter + " ODD");
     }
   }
-  console.log(count);
 }
-checkForItem(officeItems, "lamp");
+count();
