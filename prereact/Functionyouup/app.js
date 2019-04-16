@@ -162,83 +162,84 @@
 // }
 // oldEnough();
 
-var person = {
-  name: "The Joker",
-  homeTown: "Gotham City",
-  type: "evil",
-  enemy: "Batman",
-  speak: function() {
-    console.log("My name is " + this.name);
-    console.log("I am " + this.type + " and my enemy is " + this.enemy);
-    console.log("I am from " + this.homeTown);
-  }
-};
+// var person = {
+//   name: "The Joker",
+//   homeTown: "Gotham City",
+//   type: "evil",
+//   enemy: "Batman",
+//   speak: function() {
+//     console.log("My name is " + this.name);
+//     console.log("I am " + this.type + " and my enemy is " + this.enemy);
+//     console.log("I am from " + this.homeTown);
+//   }
+// };
 
-person.speak();
+// person.speak();
 
-function Car(myModel, myMake, myColor, myYear) {
-  this.model = myModel;
-  this.make = myMake;
-  this.color = myColor;
-  this.year = myYear;
-}
-const toyota = new Car("4 runner", "Toyota", "White", "2017");
-const tesla = new Car("Model 3", "Tesla", "White", "2017");
-console.log(toyota, tesla);
+// function Car(myModel, myMake, myColor, myYear) {
+//   this.model = myModel;
+//   this.make = myMake;
+//   this.color = myColor;
+//   this.year = myYear;
+// }
+// const toyota = new Car("4 runner", "Toyota", "White", "2017");
+// const tesla = new Car("Model 3", "Tesla", "White", "2017");
+// console.log(toyota, tesla);
 
-var cats = [
-  "Polydactyl",
-  " Snowshoe",
-  " Calico",
-  " British Shorthair",
-  " Siamese",
-  " Norwegian Forest Cat",
-  " Japanese Bobtail",
-  " Persian",
-  " Scottish Fold",
-  " Gray Tabby"
-];
+// var cats = [
+//   "Polydactyl",
+//   " Snowshoe",
+//   " Calico",
+//   " British Shorthair",
+//   " Siamese",
+//   " Norwegian Forest Cat",
+//   " Japanese Bobtail",
+//   " Persian",
+//   " Scottish Fold",
+//   " Gray Tabby"
+// ];
 
-console.log(cats);
+// console.log(cats);
 
-cats.reverse();
-console.log(cats);
-cats.reverse();
+// cats.reverse();
+// console.log(cats);
+// cats.reverse();
 
-console.log(
-  cats.filter((element, index) => {
-    return index % 2 === 1;
-  })
-);
+// console.log(
+//   cats.filter((element, index) => {
+//     return index % 2 === 1;
+//   })
+// );
 
-console.log(
-  cats.filter((element, index) => {
-    return index % 2 === 0;
-  })
-);
+// console.log(
+//   cats.filter((element, index) => {
+//     return index % 2 === 0;
+//   })
+// );
 
-const coffeeCup = {
-  type: "Coffee Cup ",
-  color: "black ",
-  clean: false,
-  brand: "Yeti ",
-  talk: function() {
-    let cleanOrDirty = "";
-    if (this.clean === false) {
-      cleanOrDirty = " dirty ";
-    }
-    console.log(
-      "I am a " +
-        this.color +
-        this.brand +
-        this.type +
-        ". And I am currently " +
-        cleanOrDirty +
-        this.clean
-    );
-  }
-};
-coffeeCup.talk();
-function myFunctionTwo() {
-  newArr = [1, 2, 3, 4, 5];
-}
+// const coffeeCup = {
+//   type: "Coffee Cup ",
+//   color: "black ",
+//   clean: false,
+//   brand: "Yeti ",
+//   talk: function() {
+//     let cleanOrDirty = "";
+//     if (this.clean === false) {
+//       cleanOrDirty = " dirty ";
+//     }
+//     console.log(
+//       "I am a " +
+//         this.color +
+//         this.brand +
+//         this.type +
+//         ". And I am currently " +
+//         cleanOrDirty +
+//         this.clean
+//     );
+//   }
+// };
+// coffeeCup.talk();
+// function myFunctionTwo() {
+//   newArr = [1, 2, 3, 4, 5];
+// }
+
