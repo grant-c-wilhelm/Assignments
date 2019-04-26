@@ -243,25 +243,28 @@
 //   newArr = [1, 2, 3, 4, 5];
 // }
 
-function myFunction(newObj) {
-    console.log('Hello World')
-    alert('hello world')
-}
+// function myFunction(newObj) {
+//     console.log('Hello World')
+//     alert('hello world')
+// }
 
-function comparable(num1, num2, num3) {
-    if (num1 > num2 && num1 > num3) {
-        console.log(num1)
-    } else if (num2 > num1 && num2 > num3) {
-        console.log(num2)
-    } else if (num3 > num1 && num3 > num2) {
-        console.log(num3)
-    }
-}
-function evenOdd(numToCheck) {
-    numToCheck % 2 === 0 ? console.log("even") : console.log('Odd')
-}
-function toCaps(text) {
+// function comparable(num1, num2, num3) {
+//     if (num1 > num2 && num1 > num3) {
+//         console.log(num1)
+//     } else if (num2 > num1 && num2 > num3) {
+//         console.log(num2)
+//     } else if (num3 > num1 && num3 > num2) {
+//         console.log(num3)
+//     }
+// }
+// function evenOdd(numToCheck) {
+//     numToCheck % 2 === 0 ? console.log("even") : console.log('Odd')
+// }
+// function toCaps(text) {
 
-    console.log(text.toUpperCase());
-}
-toCaps('Now this is here and I am screaming!')
+//     console.log(text.toUpperCase());
+// }
+// toCaps('Now this is here and I am screaming!')
+
+
+

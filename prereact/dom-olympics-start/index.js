@@ -1,28 +1,104 @@
+const newHeader = document.createElement('h1')
+const newHeaderText = document.createTextNode('Welcome to the DOM Olympics!');
+newHeader.setAttribute('class', 'header');
+newHeader.prepend(newHeaderText);
+
+document.getElementsByTagName('body')[0].prepend(newHeader)
+
+const newSubHeader = document.createElement('h6');
+const newSubHeaderText = document.createTextNode("Everything you see displayed on the DOM was done so using JavaScript!");
+newSubHeader.prepend(newSubHeaderText);
+document.getElementsByTagName('h1')[0].appendChild(newSubHeader)
 
 var subHeader1 = document.createElement('span');
 subHeader1.innerHTML = ' wrote the javascript';
-document.getElementsByTagName('body')[0].prepend(subHeader1);
+document.getElementsByTagName('div')[0].prepend(subHeader1);
 
 var subHeader = document.createElement('span');
 subHeader.innerHTML = 'G-Money';
 subHeader.style.color = "#0000FF";
-document.getElementsByTagName('body')[0].prepend(subHeader);
-
-var myHeader = document.createElement('h1');
-var HeaderText = document.createTextNode('Javascript made this ');
-myHeader.prepend(HeaderText); 
-document.body.prepend(myHeader);
+document.getElementsByTagName('div')[0].prepend(subHeader);
 
 
-function clearDialogueChat(dialogue){
-    for (i = 0; i<dialogue.length;i++){
-        dialogue[i].innerHTML= " This is nice";
+
+//Start for clear dialogue
+function clearDialogueChat(dialogue) {
+    for (i = 0; i < dialogue.length; i++) {
+        dialogue[i].innerHTML = "  ";
     }
 }
-document.getElementById("clear-button").addEventListener('click',function(){
-    var dialogue = document.getElementsByClassName('messages');
-   clearDialogueChat(dialogue);      
-}); 
+document.getElementById("clear-button").addEventListener('click', function () {
+    let dialogue = document.getElementsByClassName('messages');
+    clearDialogueChat(dialogue);
+});
+//End for clear dialogue
+//clear all right
+document.getElementById('clear-right').addEventListener('click', () => {
+    let dialogue = document.getElementsByClassName('message-right')
+    clearDialogueChat(dialogue)
+})
+//end clear all right
+//clear all left
+document.getElementById('clear-left').addEventListener('click', () => {
+    let dialogue = document.getElementsByClassName('message-left');
+    clearDialogueChat(dialogue)
+})
+//add message right side
+document.getElementById('send-button-right').addEventListener('click', () => {
+    let newMessage = document.createElement('div')
+    let newMessageText = document.createTextNode('New Message')
+    newMessage.setAttribute('class', 'message-right')
+    newMessage.prepend(newMessageText);
+    document.getElementsByTagName('div')[6].appendChild(newMessage)
+}
+)
+//add message left
+document.getElementById('send-button-left').addEventListener('click', () => {
+    let newMessage = document.createElement('div');
+    let newMessageText = document.createTextNode('New Message');
+    newMessage.setAttribute('class', 'message-left');
+    newMessage.prepend(newMessageText);
+    //document.getElementsByClassName('message-left').appendChild(newMessage)
+    document.querySelectorAll('.message-left:last-child').prepend(newMessage)
+
+})
+
+
+
+
+
+
+
+
+
+
+
+// //Start clear Right side
+// function clearRightSide(rightDialogue) {
+//     for (i = 0; i < rightDialogue.length; i++) {
+//         rightDialogue[i].innerHTML = " ";
+//     };
+// };
+// document.getElementById("clear-right").addEventListener('click', function () {
+//     const rightDialogue = document.getElementsByClassName('message-right');
+//     clearRightSide(rightDialogue);
+
+// })
+// //end 
+// //Start clear one message
+
+// function clearOneRightMessage(oneRightMessage) {
+//     for (i = 0; i < oneRightMessage.length; i++) {
+//         oneRightMessage[0].innerHTML = " "
+//     };
+// };
+// document.getElementById('clear-one-right').addEventListener('click', function () {
+//     const oneRightMessage = document.getElementsByClassName('message-right');
+//     clearOneRightMessage(oneRightMessage);
+// })
+
+
+
 
 // function clearDialogueChat2(dialogueRight){
 //     for (i=0; i < dialogueRight.length; i++){
