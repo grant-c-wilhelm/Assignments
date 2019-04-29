@@ -1,12 +1,12 @@
 const newHeader = document.createElement('h1')
-const newHeaderText = document.createTextNode('Welcome to the DOM Olympics!');
+const newHeaderText = document.createTextNode('Check out my messaging app!');
 newHeader.setAttribute('class', 'header');
 newHeader.prepend(newHeaderText);
 
 document.getElementsByTagName('body')[0].prepend(newHeader)
 
 const newSubHeader = document.createElement('h6');
-const newSubHeaderText = document.createTextNode("Everything you see displayed on the DOM was done so using JavaScript!");
+const newSubHeaderText = document.createTextNode("Built using JavaScript");
 newSubHeader.prepend(newSubHeaderText);
 document.getElementsByTagName('h1')[0].appendChild(newSubHeader)
 
@@ -44,26 +44,22 @@ document.getElementById('clear-left').addEventListener('click', () => {
     clearDialogueChat(dialogue)
 })
 //add message right side
-document.getElementById('send-button-right').addEventListener('click', () => {
+document.getElementById('send-button-right').addEventListener('click', (e) => {
+    let userText = document.sendNewMessageRight.messageText.value;
     let newMessage = document.createElement('div')
-    let newMessageText = document.createTextNode('New Message')
     newMessage.setAttribute('class', 'message-right')
-    newMessage.prepend(newMessageText);
-    document.getElementsByTagName('div')[6].appendChild(newMessage)
+    newMessage.prepend(userText);
+    document.getElementsByClassName('messages')[0].appendChild(newMessage)
 }
 )
 //add message left
-document.getElementById('send-button-left').addEventListener('click', () => {
+document.getElementById('send-button-left').addEventListener('click', (e) => {
+    let userText = document.sendNewMessageLeft.messageText.value;
     let newMessage = document.createElement('div');
-    let newMessageText = document.createTextNode('New Message');
+    newMessage.prepend(userText);
     newMessage.setAttribute('class', 'message-left');
-    newMessage.prepend(newMessageText);
-    //document.getElementsByClassName('message-left').appendChild(newMessage)
-    document.querySelectorAll('.message-left:last-child').prepend(newMessage)
-
+    document.getElementsByClassName('messages')[0].appendChild(newMessage)
 })
-
-
 
 
 
