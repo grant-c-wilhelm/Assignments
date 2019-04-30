@@ -1,5 +1,5 @@
 import React from 'react'
-import {Route} from 'react-router-dom'
+import { Route } from 'react-router-dom'
 import Loading from './Loading'
 import ErrorHandler from './ErrorHandler'
 import CannabisData from './CannabisData'
