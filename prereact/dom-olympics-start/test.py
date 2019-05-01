@@ -1,1 +1,1 @@
-print("geeksQuiz")
+print "geeksQuiz"`
