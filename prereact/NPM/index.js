@@ -2,7 +2,7 @@ var readlineSync = require('readline-sync');
 var name = readlineSync.question('Whats up mother brother! Whats your name man?!: ');
 var enemies = [' Colorado Snowboarder', ' California Ski Bum', ' Ski Tourist', ' dude who wears only spyder ', 'Ski Patrol'];
 // just call it User, its convention to name constructors after the noun they generate
-function User (name) {
+function User(name) {
     this.user = name;
     this.activeBro = true;
     this.broHP = 105;
@@ -15,9 +15,9 @@ function Tourist() {
 }
 var self = new User(name);
 function genRandomTourist() {  //generatre random enemy
-    var randomNumber = Math.floor(Math.random() * (enemies.length)); //gens randpm enemy from the 3 i have available. Id need to change this up if i add more enemies
-    var newTourist = enemies[randomNumber];           //multiplying enemies array by the random number generated to choose a random enemy
-    return newTourist;                 //tourist is set equal to random the above comment and information
+    var randomNumber = Math.floor(Math.random() * (enemies.length));
+    var newTourist = enemies[randomNumber];
+    return newTourist;
 };
 function dealTouristDamage(tourist) {
     var userLocalsOnlyPower = Math.floor(Math.random() * (75 - 25)); //gens users power
