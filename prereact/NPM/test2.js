@@ -4,7 +4,7 @@
 // }
 
 function anticaps(strings) {
-    return strings.split('').map(string => string === string.toUpperCase() ? string = string.toLowerCase() + string : string = string.toUpperCase() - string).join('')
+    return strings.split('').map(string => string === string.toUpperCase() ? string = string.toLowerCase()  : string = string.toUpperCase() && + '*').join(''+ '*')
 
 }
 console.log(anticaps('FRANK'))
