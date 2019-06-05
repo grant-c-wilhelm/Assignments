@@ -12,7 +12,7 @@ const letters = ['qail', 'weather', 'elephant', 'raptor', 'toranto', 'yellow', '
 function doubler(arr) {
     arr.map((arrs) => {
         arrs += ' '
-        console.log(arrs)
+        console.log(arrs * 2)
     })
 }
 doubler([1, 2, 3])
@@ -27,8 +27,14 @@ function upperCaseIt(arr) {
 }
 upperCaseIt(['grant', 'ralph', 'wallace', 'bernard', 'Ali'])
 
-
-let arr = [
+function namesOnly(arr) {
+    for (i = 0; i < arr.length; i++) {
+        let names = []
+        names += (arr[i].name)
+        console.log(names)
+    }
+}
+namesOnly([
     {
         name: "Angelina Jolie",
         age: 80
@@ -49,15 +55,38 @@ let arr = [
         name: "Bob Ziroll",
         age: 100
     },
-]
-for (i = 0; i < arr.length; i++) {
-    let names = []
-    names.push(arr[i].name)
-    console.log(names)
+])
+
+function makeStrings(arr) {
+    newArr = []
+    for (i = 0; i < arr.length; i++) {
+        if (arr[i].age >= 18) {
+            console.log(arr[i].name + " can go to the Matrix")
+        } else {
+            console.log(arr[i].name + " CANNOT go to the Matrix")
+        }
+    }
 }
 
-
-    //     let newArr = [ ]
-    //    newArr = newArr.push(arr[name])
-    //     console.log(newArr)
-
+makeStrings([
+    {
+        name: "Angelina Jolie",
+        age: 80
+    },
+    {
+        name: "Eric Jones",
+        age: 2
+    },
+    {
+        name: "Paris Hilton",
+        age: 5
+    },
+    {
+        name: "Kayne West",
+        age: 16
+    },
+    {
+        name: "Bob Ziroll",
+        age: 100
+    }
+]); 
