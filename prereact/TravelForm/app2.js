@@ -52,6 +52,33 @@ function ageChecker(arr) {
     age: 100
 }
 ]
+ageChecker([{
+    name: "Angelina Jolie",
+    gender: 'female',
+    age: 80
+},
+{
+    name: "Eric Jones",
+    gender: 'male',
+    age: 2
+},
+{
+    name: "Paris Hilton",
+    gender: 'female',
+    age: 5
+},
+{
+    name: "Kayne West",
+    gender: 'male',
+    age: 16
+},
+{
+    name: "Bob Ziroll",
+    gender: 'male',
+    age: 100
+}
+])
+
 //Matrix checker reqs: state male/female, age, allowed into matrix if age > 18
 function matrixChecker(arr) {
     const fName = arr.name
