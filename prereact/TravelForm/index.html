@@ -6,14 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="travel.css">
+    <link rel="stylesheet" href="blank.css">
 </head>
 
 <body>
-    <h1 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">Hello World</h1>
-    <button onclick="myFunction()">Tap Here</button>
+    <h1>The G Calculator</h1>
+    <div class="big-calc">
+        <form id="master">
+            <div>
+                <input name="firstAddNum" type="number">
+                <input name="secondAddNum" type="number">
+                <button class="add-button">+</button>
+            </div>
+            <div>
+                <input name="firstMultiNum" type="number">
+                <input name="secondMultiNum" type="number">
+                <button class="multi-button">*</button>
+            </div>
+            <div>
+                <input name="firstDivideNum" type="number">
+                <input name="secondDivideNum" type="number">
+                <button class="divide-button">/</button>
+            </div>
+        </form>
+    </div>
 
-    <script src="app.js"></script>
+
+    <div id="output-display">
+        <div id="final-output-display">
+
+        </div>
+    </div>
+
+
+    <script src="blank.js"></script>
 </body>
 
 </html>

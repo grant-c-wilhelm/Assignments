@@ -1,27 +1,35 @@
-function seeFamFont() {
-    let genFamFonts = ["Serif", "Sans-Serif", "Monospace", "Cursive", "Fantasy"];
-    //let text = "";
-    let i;
-    for (i = 0; i < genFamFonts.length; i++) {
-        console.log(genFamFonts[i] + "<br>");
+const outputDisplay = document.getElementById("final-output-display");
+const calcForm = document.querySelector('#master')
+const addButton = document.querySelector('.add-button')
+const multiButton = document.querySelector('.multi-button')
+const divideButton = document.querySelector('.divide-button')
+
+addButton.addEventListener("click", function (event) {
+    event.preventDefault();
+    const firstNumAdd = calcForm.firstAddNum.value;
+    const secondNumAdd = calcForm.secondAddNum.value;
+    const addingTotal = Number(secondNumAdd) + Number(firstNumAdd);
+    outputDisplay.innerHTML = addingTotal + (" is your adding total")
+})
+multiButton.addEventListener("click", function (event) {
+    event.preventDefault();
+    const firstNumMulti = calcForm.firstMultiNum.value;
+    const secondNumMulti = calcForm.secondMultiNum.value;
+    const multiplyTotal = Number(firstNumMulti) * Number(secondNumMulti)
+    outputDisplay.innerHTML = multiplyTotal + (" is you multiply total");
+})
+divideButton.addEventListener("click", function (event) {
+    event.preventDefault();
+    const firstDivideNum = calcForm.firstDivideNum.value;
+    const secondDivideNum = calcForm.secondDivideNum.value;
+    const divideTotal = Math.floor(firstDivideNum / secondDivideNum);
+    outputDisplay.innerHTML = divideTotal + (" is your division total")
+})
+
+const multiArray = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+for (i = 0; i < multiArray.length; i++) {
+    for (j = 0; j < multiArray[i][j].length; i++) {
+        console.log(multiArray[i][j])
     }
 }
-seeFamFont();
-function fontsNumber(guess) {
-    guess = 33
-    if (guess === 33) {
-        console.log('You guessed the number!');
-    } else if (guess <= 0) {
-        console.log(`It's definitely above zero!`);
-    } else if (guess >= 1 && guess <= 19) {
-        console.log(`A bit higher than that!`);
-    } else if (guess >= 20 && guess <= 32) {
-        console.log(`Getting closer. It's a little higher!`);
-    } else if (guess >= 33) {
-        console.log(`Too many. Try lower than that.`);
-    } else {
-        console.log(yep);
-    }
-    ;
-}
-fontsNumber(33)
+

@@ -72,37 +72,43 @@
 // return storingArray;
 // }
 // console.log(acceptsString(str));
-var thisIsAString = "this ha h a hha"
-function acceptsTwoInputs (str, character){
-    var storedCharacter = [];
-    for (i=0; i<str.length; i++){
-        if (str[i] == character){
-            // console.log('the specified character was found at ' + str[i].indexOf(character))
-            storedCharacter.push(i);
-        } 
-    }console.log(storedCharacter) ;
-}
-acceptsTwoInputs(thisIsAString,'h');
+// var thisIsAString = "this ha h a hha"
+// function acceptsTwoInputs (str, character){
+//     var storedCharacter = [];
+//     for (i=0; i<str.length; i++){
+//         if (str[i] == character){
+//             // console.log('the specified character was found at ' + str[i].indexOf(character))
+//             storedCharacter.push(i);
+//         } 
+//     }console.log(storedCharacter) ;
+// }
+// acceptsTwoInputs(thisIsAString,'h');
 
 
-var numArray = [ 32, 42, 60, 43, 56, 54,23,45,32,789,43];
+// var numArray = [ 32, 42, 60, 43, 56, 54,23,45,32,789,43];
  
-function findsFourtyTwo(arr) {
-    for (i=0; i<arr.length;i++){
-        if ( arr[i] === 42){
-            console.log('42 was found at the index location of ' + i)
-        }
-    }
-}
-findsFourtyTwo(numArray);
+// function findsFourtyTwo(arr) {
+//     for (i=0; i<arr.length;i++){
+//         if ( arr[i] === 42){
+//             console.log('42 was found at the index location of ' + i)
+//         }
+//     }
+// }
+// findsFourtyTwo(numArray);
 
-function findSmallNumber(arr){
-    currentNum = arr[0];
-    for (i=0; i<arr.length;i++){
-        if (arr[i] < currentNum){
-            currentNum = arr[i];
-        }
-    }
-    return currentNum;
+// function findSmallNumber(arr){
+//     currentNum = arr[0];
+//     for (i=0; i<arr.length;i++){
+//         if (arr[i] < currentNum){
+//             currentNum = arr[i];
+//         }
+//     }
+//     return currentNum;
+// }
+// console.log(findSmallNumber(numArray));
+
+var officeItems = ["stapler", "monitor", "computer", "desk", "lamp", "computer", "lamp", "stapler", "computer",  "computer"]
+for (i=0;i<officeItems.length;i++){
+    count = 0
+    if (officeItems[i]){}
 }
-console.log(findSmallNumber(numArray));
