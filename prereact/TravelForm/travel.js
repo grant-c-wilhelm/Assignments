@@ -1,6 +1,5 @@
 var submitButton = document.querySelector('.submit');
 
-
 submitButton.addEventListener("click", function (e) {
     e.preventDefault();
     var form = document.querySelector('#master');
@@ -17,16 +16,4 @@ submitButton.addEventListener("click", function (e) {
         '\n Preferred Lunch: ' +
         form.diet.value);
 });
-function reversal(string) {
-    const splitString = string.split("");
-    const reversedString = splitString.reverse();
-    const joinArray = reversedString.join("");
 
-    console.log(splitString)
-    console.log(reversedString)
-    console.log(joinArray)
-}
-reversal('something Here')
-
-
-var anyArray = ['dog','cat','bird']
