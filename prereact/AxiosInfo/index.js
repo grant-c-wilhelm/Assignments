@@ -22,9 +22,22 @@
 // xhr.send()
 
 var request = axios.get('https://api.vschool.io/pokemon');
-request.then(function(response){
-console.log(response.data);
-
+request.then(function (response) {
+    const pokemonObject = (response.data);
+    pokemons(pokemonObject)
 })
-
+function pokemons(arr) {
+    //const pokemonCharacters = arr.objects[0].pokemon
+    let arrayPokemonCharacters = []
+    arrayPokemonCharacters = arr.objects[0].pokemon
+    arrayPokemonCharacters.map((pokies)=>{
+        const pokeData = pokies
+        putDataOnDom(pokeData)
+    })
+}
+function putDataOnDom(dataToDisplay){
+    const pokemonList = document.getElementById("PokemonList")
+    pokemonList.innerHTML=dataToDisplay
+    console.log(Object.entries(dataToDisplay))
+}
 

@@ -49,44 +49,50 @@
 // }
 // restOperator(1, 23, 23, 34, 24, 534, 5, 35625, 654, 645, 36, 4536)
 
-function RunningBack(height, weight, speed, agility) {
-    this.height = height * 12;
-    this.weight = weight;
-    this.speed = speed;
-    this.agility = agility;
-    this.power = Math.floor((height + (weight / 2) + speed) / 3);
-    this.overall = Math.floor((speed + agility + this.power) / 3);
-}
-function LineBacker(height, weight, speed, stopPower) {
-    this.height = height * 15;
-    this.weight = weight;
-    this.speed = speed;
-    this.stopPower = stopPower;
-    this.power = Math.floor((height + (weight / 2) + speed) / 3);
-    this.overall = Math.floor((speed + stopPower + this.power) / 3);
-}
-const grantRunningBack = new RunningBack(6.2, 245, 92, 85)
-const garrettLineBacker = new LineBacker(6.3, 195, 95, 90)
+// function RunningBack(height, weight, speed, agility) {
+//     this.height = height * 12;
+//     this.weight = weight;
+//     this.speed = speed;
+//     this.agility = agility;
+//     this.power = Math.floor((height + (weight / 2) + speed) / 3);
+//     this.overall = Math.floor((speed + agility + this.power) / 3);
+// }
+// function LineBacker(height, weight, speed, stopPower) {
+//     this.height = height * 15;
+//     this.weight = weight;
+//     this.speed = speed;
+//     this.stopPower = stopPower;
+//     this.power = Math.floor((height + (weight / 2) + speed) / 3);
+//     this.overall = Math.floor((speed + stopPower + this.power) / 3);
+// }
+// const grantRunningBack = new RunningBack(6.2, 245, 92, 85)
+// const garrettLineBacker = new LineBacker(6.3, 195, 95, 90)
 
 
 
-const digits = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-digits.forEach((digit) => { console.log(digit) })
+// const digits = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+// // digits.forEach((digit) => { console.log(digit) })
 
-// digits.filter(digit => {
-//     digit % 2 === 0 ?
-//         console.log(`${digit} even`) :
-//         console.log(`${digit} odd`)
-// })
-const users = [
-    {name: "Fred",  id: 1},
-    {name: "Bill",  id: 2},
-    {name: "Alice", id: 3},
-    {name: "Annie", id: 4}
-]
-const findPerson = users.find(user=>{
-    if (user.name[0] === "A"){
-        return user
-    }
-})
-console.log(findPerson)
+// // digits.filter(digit => {
+// //     digit % 2 === 0 ?
+// //         console.log(`${digit} even`) :
+// //         console.log(`${digit} odd`)
+// // })
+// const users = [
+//     { name: "Fred", id: 1 },
+//     { name: "Bill", id: 2 },
+//     { name: "Alice", id: 3 },
+//     { name: "Annie", id: 4 }
+// ]
+// const findPerson = users.find(user => user.id === 3)
+
+
+// const numbers = [12, 24, 346, 457, 5468, 4657, 6345, 56, 57, 865, 43, 45, 57, 56]
+// // numbers.sort((a,b)=>{
+// //     return b-a
+// // })
+// const numbersArrTotal = numbers.reduce((total, num) => {
+//     console.log(total)
+//     return total += num
+// }, 0) 
+
