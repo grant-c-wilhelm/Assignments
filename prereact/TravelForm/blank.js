@@ -78,21 +78,21 @@
 // //         console.log(`${digit} even`) :
 // //         console.log(`${digit} odd`)
 // // })
-// const users = [
-//     { name: "Fred", id: 1 },
-//     { name: "Bill", id: 2 },
-//     { name: "Alice", id: 3 },
-//     { name: "Annie", id: 4 }
-// ]
-// const findPerson = users.find(user => user.id === 3)
+const users = [
+    { name: "Fred", id: 1 },
+    { name: "Bill", id: 2 },
+    { name: "Alice", id: 3 },
+    { name: "Annie", id: 4 }
+]
+const findPerson = users.find(user => user.id === 3)
 
 
-// const numbers = [12, 24, 346, 457, 5468, 4657, 6345, 56, 57, 865, 43, 45, 57, 56]
-// // numbers.sort((a,b)=>{
-// //     return b-a
-// // })
-// const numbersArrTotal = numbers.reduce((total, num) => {
-//     console.log(total)
-//     return total += num
-// }, 0) 
+const numbers = [12, 24, 346, 457, 5468, 4657, 6345, 56, 57, 865, 43, 45, 57, 56]
+// numbers.sort((a,b)=>{
+//     return b-a
+// })
+const numbersArrTotal = numbers.reduce((total, num) => {
+    console.log(total)
+    return total += num
+}, 0) 
 

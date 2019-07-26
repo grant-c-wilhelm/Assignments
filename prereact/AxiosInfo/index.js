@@ -30,14 +30,20 @@ function pokemons(arr) {
     //const pokemonCharacters = arr.objects[0].pokemon
     let arrayPokemonCharacters = []
     arrayPokemonCharacters = arr.objects[0].pokemon
-    arrayPokemonCharacters.map((pokies)=>{
-        const pokeData = pokies
-        putDataOnDom(pokeData)
-    })
+        for (i = 0; i < arrayPokemonCharacters.length; i++) {
+            console.log(arrayPokemonCharacters[i].name)
+            const newNode = document.createElement('li')
+            newNode.textContent = arrayPokemonCharacters[i].name
+            document.getElementById('PokemonList').appendChild(newNode)
+        }
+      
 }
-function putDataOnDom(dataToDisplay){
-    const pokemonList = document.getElementById("PokemonList")
-    pokemonList.innerHTML=dataToDisplay
-    console.log(Object.entries(dataToDisplay))
+function putDataOnDom(dataToDisplay) {
+    for (i = 0; i < dataToDisplay.length; i++) {
+        const pokemonDiv = document.createElement('div')
+        const dataToAppend = document.createTextNode(dataToDisplay[i])
+        pokemonDiv.appendChild(dataToAppend)
+    }
+
 }
 
