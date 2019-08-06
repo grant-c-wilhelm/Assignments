@@ -1,27 +1,3 @@
-// var xhr = new XMLHttpRequest();
-// pokemon = [];
-// xhr.onreadystatechange = function (){
-//     if (xhr.readyState == 4 && xhr.status == 200){
-//         var jsonData = xhr.responseText;
-//         var data = JSON.parse(jsonData);
-//         tempArr = [];
-//         tempArr = data.objects[0].pokemon;
-//         for (let i = 0; i < tempArr.length; i++){
-//             pokemon.push(tempArr[i])
-//             console.log(tempArr[i])
-//         var pokeData = tempArr[i];
-// var node = document.createElement('div');
-// var nodeToAppend = document.createTextNode(pokeData)
-// node.appendChild(nodeToAppend);
-//         } 
-//     }
-
-// };
-
-// xhr.open('GET', 'https://api.vschool.io/pokemon', true)
-// xhr.send()
-
-
 var request = axios.get('https://api.vschool.io/pokemon');
 request.then(function (response) {
     const pokemonObject = (response.data);
@@ -29,20 +5,36 @@ request.then(function (response) {
 })
 function pokemons(arr) {
     let arrayPokemonCharacters = []
-    console.log(arr.objects[0].pokemon[0])
     arrayPokemonCharacters = arr.objects[0].pokemon
-    for (i = 0; i < arrayPokemonCharacters.length; i++) {
-        const thePokemonNames = arrayPokemonCharacters[i].name
-        
-        const firstLetter = arrayPokemonCharacters[i].name[0][0];
+    //Below array will be used in the loop to take in names
+    let sortedPokiesArray = []
+    arrayPokemonCharacters.map(pokemonCharacters => {
+        //Storing names from object to a variable
+        const thePokemonNames = (pokemonCharacters.name)
+        //Pushing those names to the emtpy array created outside scope above.
+        sortedPokiesArray.push(thePokemonNames)
+        //Below is sorting
+        theSorter(sortedPokiesArray)
+    })
+    //Mapping through the sorted array and capitalizing each first letter
+    sortedPokiesArray.map(individualPokie => {
+        const firstLetter = individualPokie[0][0];
         const firstLetterCapitalized = firstLetter.toUpperCase()
-        const slicedPokemon = firstLetterCapitalized + thePokemonNames.slice(1)
+        const slicedPokemon = firstLetterCapitalized + individualPokie.slice(1)
+        //appending to the DOM with function
         appendToDomAtPokeList(slicedPokemon)
-    }
+    })
 }
+//HELPER FUNCTIONS
 function appendToDomAtPokeList(slicedPokemon) {
-    const newNode = document.createElement('li')
+    const newNode = document.createElement('span')
     newNode.textContent = slicedPokemon
     document.getElementById('PokemonList').appendChild(newNode)
 }
-
+function theSorter(slicedPokemon) {
+    slicedPokemon.sort(function (a, b) {
+        if (a < b) return -1;
+        else if (a > b) return 1;
+        return 0;
+    });
+}

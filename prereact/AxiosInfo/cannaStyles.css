@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#names {
+    display: inline-block;
+    border: 3px solid black;
+    width: 305px;
+    margin: 50px;
+}
+
+#races {
+    border: 3px solid black;
+    display: inline-block;
+    width: 175px;
+    transform: translateY(-22px);
+}
+
+.strain-names {
+    display: block;
+    font-size: 20px;
+}
+
+.strain-race {
+    display: block;
+    font-size: 20px;
+}
