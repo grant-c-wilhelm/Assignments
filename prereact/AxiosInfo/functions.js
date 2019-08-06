@@ -24,17 +24,19 @@
 //execute a function using () syntax
 
 //ther is no sppon
-var pen = {
-    magicInk: {
-    getColor: function () {
-        var colors = ['red', 'white', 'green', 'maroon'];
-        var randomIndex = Math.floor(Math.random() * colors.length);
-        return colors [randomIndex];
-    }
+// var pen = {
+//     magicInk: {
+//         getColor: function () {
+//             var colors = ['red', 'white', 'green', 'maroon'];
+//             var randomIndex = Math.floor(Math.random() * colors.length);
+//             return colors[randomIndex];
+//         },
 
-    price= 2,
-    isGelPen: false,
-    write: function() {
-        console.log("I'm a " + this.color + " pen that costs $" + this.price);
-    }
-}
+//         price= 2,
+//         isGelPen: false,
+//         write: function () {
+//             console.log("I'm a " + this.color + " pen that costs $" + this.price);
+//         }
+//     }
+// }
+
