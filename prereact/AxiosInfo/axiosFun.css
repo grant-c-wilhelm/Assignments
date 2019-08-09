@@ -1,6 +1,8 @@
-body{
+body {
     font-family: Arial, Helvetica, sans-serif;
+    background-color: #51d0de;
 }
+
 #master {
     display: flex;
     justify-content: flex-end;
@@ -9,6 +11,7 @@ body{
 .button-wrapper {
     display: inline-block;
     margin-right: 25px;
+
 }
 
 .add-btn {
@@ -16,6 +19,8 @@ body{
     width: 65px;
     margin-bottom: 10px;
     font-size: 15px;
+    color: #d9d9d9;
+    background-color: #6f4e37;
 
 }
 
@@ -23,6 +28,8 @@ body{
     display: block;
     width: 65px;
     font-size: 15px;
+    color: #d9d9d9;
+    background-color: #6f4e37;
 
 }
 
@@ -37,7 +44,6 @@ body{
 
 #not-completed {
     margin-right: 8px;
-    ;
     border: 2px solid black;
     height: 100vh;
     width: 30%;
@@ -45,7 +51,6 @@ body{
 
 #in-progress {
     margin-right: 8px;
-    ;
     border: 2px solid black;
     height: 100vh;
     width: 30%;
@@ -56,5 +61,13 @@ body{
     border: 2px solid black;
     height: 100vh;
     width: 30%;
+}
 
+.new-todo {
+    margin-left: 9%;
+    border: 2px solid black;
+    list-style: none;
+    background-color: #6f4e37;
+    width: 350px;
+    height: 150px;
 }
