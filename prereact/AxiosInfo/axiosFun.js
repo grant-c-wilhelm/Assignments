@@ -8,20 +8,35 @@ addButton.addEventListener("click", function (event) {
     event.preventDefault();
 
     const description = document.createElement('li');
-    description.setAttribute("class", "new-todo")
-    description.setAttribute("id", "div1")
+    const inputBox = document.createElement('input')
+    const addTodoButton = document.createElement('button')
+    
 
+    description.setAttribute("class", "new-todo")
+    description.setAttribute("id", "todo-box")
+    inputBox.setAttribute('id', 'todoDetails')
+    addTodoButton.setAttribute('id', 'todo-button')
+    
+    const grabTheTodoButton = document.getElementById('todo-button')
 
     description.setAttribute("draggable", true);
     description.addEventListener("dragstart", drag)
+    grabTheTodoButton.innerText =  'tap here'
 
     needsToGetDone.appendChild(description)
+    description.appendChild(inputBox)
+    description.appendChild(addTodoButton)
+    
+
+    
+
 })
+
 //DELETE BUTTON
 deleteButton.addEventListener("click", function () {
-    const description = document.getElementById('div1')
+    const description = document.getElementById('todo-box')
     needsToGetDone.removeChild(description)
-    
+
 })
 
 //DRAG n DROP FUNCTIONALITY
