@@ -39,7 +39,8 @@ function renderTodo(todo) { //gets all the todos
     const description = document.createElement('p');
     const price = document.createElement('p');
     const completed = document.createElement('input');
-    const deletebtn = document.createElement('button')
+    const deletebtn = document.createElement('button');
+  
 
 
     //MODIFICATIONS/styling
