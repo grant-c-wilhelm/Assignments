@@ -7,46 +7,63 @@ const grabAllHTMLElements = document.getElementsByTagName('*')
 //add btn
 addButton.addEventListener("click", function (event) {
     event.preventDefault();
-    
-    let uniqueID = '_'+ Math.floor((Math.random()*1000))
 
-    console.log(uniqueID)
+    let uniqueID = '_' + Math.floor((Math.random() * 1000))
 
     const description = document.createElement('li');
     const inputBox = document.createElement('input')
     const addTodoButton = document.createElement('button')
     const checkbox = document.createElement('input')
-    
+
 
     description.setAttribute("class", "new-todo")
     description.setAttribute("id", uniqueID)
     description.setAttribute("draggable", true);
     description.addEventListener("dragstart", drag)
-    
+
     checkbox.type = 'checkbox'
-    checkbox.setAttribute('id','check-box')
+    checkbox.setAttribute('class', 'check-box')
 
     inputBox.setAttribute('id', 'todoDetails')
+
     addTodoButton.setAttribute('id', 'todo-button')
     addTodoButton.textContent = "Add"
+
 
     domAppend(needsToGetDone, description)
     domAppend(description, inputBox)
     domAppend(description, addTodoButton)
     domAppend(description, checkbox)
 
+    addTodoButton.addEventListener('click', (event) => {
+        let todoDetails = inputBox.value
+        let target = event.target;
+        let parent = target.parentElement; //parent of "target"
+        let parentID = document.getElementById(parent.id)
+
+        parentID.textContent = todoDetails
+        domAppend(description, checkbox)
+
+    })
+
+
 })
-//Additional click listener on the add btn to make sure all new buttons recieve the 'tap' text inside them.
 
 
+
+
+
+//addTodoTextBtn.addEventListener('click', selectedProduct())
 //delete btn
 deleteButton.addEventListener("click", function () {
-    //loopThroughDomAndFind()
-    const description = document.getElementById('todo-box')
-    needsToGetDone.removeChild(description)
-   
+    findCheckedBoxesAndDelete()
+    //const description = document.getElementById('todo-box')
+    //needsToGetDone.removeChild(description)
 
 })
+
+
+
 //HELPER FUNCTIONS
 //Drag n Drop Functions
 function drag(event) {
@@ -64,19 +81,20 @@ function drop(event) {
     var data = event.dataTransfer.getData("text");
     event.target.appendChild(document.getElementById(data));
 }
-//finds any todo-button and inserts 'text'
-function loopThroughDomAndFind() {
-    const theCheckedBox = document.getElementById('check-box')
-    for (i = 0; i < grabAllHTMLElements.length; i++) {
-        if (grabAllHTMLElements[i].id === 'check-box') {
-            if(theCheckedBox.checked === true){
-                console.log( 'this should be deleted')
-            }
-            
-            //console.log(grabAllHTMLElements[i].id)
+//Checks if inputs are checked and deletes if they are
+function findCheckedBoxesAndDelete() {
+    const theCheckedBoxes = document.getElementsByClassName('check-box')
+    for (i = 0; i < theCheckedBoxes.length; i++) {
+        if (theCheckedBoxes[i].checked === true) {
+            theCheckedBoxes[i].parentNode.remove()
         }
     }
 }
 function domAppend(parent, child) {
     parent.appendChild(child)
+}
+function selectedProduct(event) {
+    let target = event.target;
+    let parent = target.parentElement; //parent of "target"
+    console.log(parent)
 }
