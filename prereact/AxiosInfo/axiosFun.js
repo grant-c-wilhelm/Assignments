@@ -2,19 +2,26 @@ const addButton = document.querySelector("#add-button")
 const deleteButton = document.querySelector("#delete-button")
 const needsToGetDone = document.getElementById('not-completed')
 const grabAllHTMLElements = document.getElementsByTagName('*')
-
+let todosArr = []
 //EVENT LISTENERS
 //add btn
-addButton.addEventListener("click", function (event) {
-    event.preventDefault();
 
-    let uniqueID = '_' + Math.floor((Math.random() * 1000))
+// var myValue = localStorage.getItem("todosArr")
+// console.log(myValue)
+const data = JSON.parse(localStorage.getItem('todosArr'))
+console.log(data)
+// data.forEach((todo)=>{
+//     domAppend() //append the todos using a function that creates the elemnts i need.
+// })
 
+///NOTES ON WHAT THE FUCK I HAVE DONE. I started splitting up this huge function into smaller function. The goal is to make things going on here more managable and compartmentalized.
+
+function createDomElements() {
+    let uniqueID = '_' + Math.floor((Math.random() * 10000000))
     const description = document.createElement('li');
     const inputBox = document.createElement('input')
     const addTodoButton = document.createElement('button')
     const checkbox = document.createElement('input')
-
 
     description.setAttribute("class", "new-todo")
     description.setAttribute("id", uniqueID)
@@ -24,41 +31,94 @@ addButton.addEventListener("click", function (event) {
     checkbox.type = 'checkbox'
     checkbox.setAttribute('class', 'check-box')
 
+
     inputBox.setAttribute('id', 'todoDetails')
+    inputBox.placeholder = 'Type todo here...'
+
 
     addTodoButton.setAttribute('id', 'todo-button')
     addTodoButton.textContent = "Add"
-
 
     domAppend(needsToGetDone, description)
     domAppend(description, inputBox)
     domAppend(description, addTodoButton)
     domAppend(description, checkbox)
 
-    addTodoButton.addEventListener('click', (event) => {
-        let todoDetails = inputBox.value
+    addTodoButtonEventListnerFunction(addTodoButton)
+}
+
+addButton.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    createDomElements()
+    // let uniqueID = '_' + Math.floor((Math.random() * 10000000))
+    // const description = document.createElement('li');
+    // const inputBox = document.createElement('input')
+    // const addTodoButton = document.createElement('button')
+    // const checkbox = document.createElement('input')
+
+    // description.setAttribute("class", "new-todo")
+    // description.setAttribute("id", uniqueID)
+    // description.setAttribute("draggable", true);
+    // description.addEventListener("dragstart", drag)
+
+    // checkbox.type = 'checkbox'
+    // checkbox.setAttribute('class', 'check-box')
+
+
+    // inputBox.setAttribute('id', 'todoDetails')
+    // inputBox.placeholder = 'Type todo here...'
+
+
+    // addTodoButton.setAttribute('id', 'todo-button')
+    // addTodoButton.textContent = "Add"
+
+
+
+    // addTodoButton.addEventListener('click', (event) => {
+    //     let todoDetail = inputBox.value
+    //     let target = event.target;
+    //     let parent = target.parentElement; //parent of "target"
+    //     let parentID = document.getElementById(parent.id)
+
+    //     parentID.textContent = todoDetail
+    //     //todoDetail.setAttribute('class', 'todo-text')
+
+    //     domAppend(description, checkbox)
+
+    //     todosArr.push(todoDetail)
+    //     localStorage.setItem('todosArr', JSON.stringify(todosArr))
+    //     //Run a loop on the body and pull out keys 'todosArr' and post them to the DOM?
+
+    // })
+
+})
+
+function addTodoButtonEventListnerFunction(buttonThatNeedsListener) {
+    buttonThatNeedsListener.addEventListener('click', (event) => {
+        let todoDetail = inputBox.value
         let target = event.target;
         let parent = target.parentElement; //parent of "target"
         let parentID = document.getElementById(parent.id)
 
-        parentID.textContent = todoDetails
+        parentID.textContent = todoDetail
+        //todoDetail.setAttribute('class', 'todo-text')
+
         domAppend(description, checkbox)
+
+        todosArr.push(todoDetail)
+        localStorage.setItem('todosArr', JSON.stringify(todosArr))
+        //Run a loop on the body and pull out keys 'todosArr' and post them to the DOM?
 
     })
 
-
-})
-
+}
 
 
 
 
-//addTodoTextBtn.addEventListener('click', selectedProduct())
-//delete btn
 deleteButton.addEventListener("click", function () {
     findCheckedBoxesAndDelete()
-    //const description = document.getElementById('todo-box')
-    //needsToGetDone.removeChild(description)
 
 })
 
@@ -68,7 +128,8 @@ deleteButton.addEventListener("click", function () {
 //Drag n Drop Functions
 function drag(event) {
     event.dataTransfer.setData("text", event.target.id);
-    console.log(event.dataTransfer.text)
+    console.log(event.target.id)
+
 }
 function setOnDragStart(elementToBeSet) {
     elementToBeSet.addEventListener("dragstart", drag(event))
@@ -83,12 +144,14 @@ function drop(event) {
 }
 //Checks if inputs are checked and deletes if they are
 function findCheckedBoxesAndDelete() {
-    const theCheckedBoxes = document.getElementsByClassName('check-box')
-    for (i = 0; i < theCheckedBoxes.length; i++) {
-        if (theCheckedBoxes[i].checked === true) {
-            theCheckedBoxes[i].parentNode.remove()
+    let theCheckedBoxes = document.getElementsByClassName('check-box')
+    theCheckedBoxes = [...theCheckedBoxes]
+    theCheckedBoxes.map(checked => {
+        if (checked.checked === true) {
+            checked.parentNode.remove()
         }
-    }
+    })
+
 }
 function domAppend(parent, child) {
     parent.appendChild(child)
