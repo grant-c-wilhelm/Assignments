@@ -83,7 +83,7 @@ function appendTodoDescriptionToDOMWithDelCheckBox(buttonGettingListener, inputV
             todoDetails: todoDetails,
             parentID: idOfParent
         }
-        console.log(idOfParent)
+        
         //keep track in here with local storage using parent id and inputvalue.value
 
         todosArr.push(todo)
@@ -91,7 +91,7 @@ function appendTodoDescriptionToDOMWithDelCheckBox(buttonGettingListener, inputV
 
         parentID.textContent = todoDetails
         domAppend(whereToAppend, checkbox)
-
+        
     })
 }
 //Drag n Drop Functions
@@ -124,9 +124,9 @@ function domAppend(parent, child) {
 }
 
 
-console.log((localStorage.getItem(todos)))
+const data = (localStorage.getItem('todos'))
 
-
+console.log(data)
 
 
 
