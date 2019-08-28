@@ -79,18 +79,16 @@ function createAddTodoButtonCharacteristics(addTodoButton) {
 
 function appendTodoDescriptionToDOMWithDelCheckBox(buttonGettingListener, inputValue, whereToAppend, checkbox) {
     buttonGettingListener.addEventListener('click', (event) => {
-        const todoDetails = inputValue.value
         const target = event.target;
         const parent = target.parentElement; //parent of "target"
         const idOfParent = parent.id //for the object
         const parentID = document.getElementById(idOfParent)
+        const todoDetails = inputValue.value
 
         const todo = {
             todoDetails: todoDetails,
             parentID: idOfParent
         }
-
-        //keep track in here with local storage using parent id and inputvalue.value
 
         todosArr.push(todo)
         localStorage.setItem('todos', JSON.stringify(todosArr))
