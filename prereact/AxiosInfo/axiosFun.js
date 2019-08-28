@@ -50,8 +50,14 @@ deleteButton.addEventListener("click", function () {
 
 
 //HELPER FUNCTIONS
-function createDescriptionLIAndSetCharacteristics(description) {
-    let uniqueID = '_' + Math.floor((Math.random() * 1000))
+function createDescriptionLIAndSetCharacteristics(description, id) {
+    //Does ID exist? Then use the ID, otherwise create unique id
+    let uniqueID;
+    if (id) {
+        uniqueID = id
+    } else {
+        uniqueID = '_' + Math.floor((Math.random() * 1000))
+    }
     description.setAttribute("class", "new-todo")
     description.setAttribute("id", uniqueID)
     description.setAttribute("draggable", true);
@@ -78,12 +84,12 @@ function appendTodoDescriptionToDOMWithDelCheckBox(buttonGettingListener, inputV
         const parent = target.parentElement; //parent of "target"
         const idOfParent = parent.id //for the object
         const parentID = document.getElementById(idOfParent)
-      
+
         const todo = {
             todoDetails: todoDetails,
             parentID: idOfParent
         }
-        
+
         //keep track in here with local storage using parent id and inputvalue.value
 
         todosArr.push(todo)
@@ -91,7 +97,7 @@ function appendTodoDescriptionToDOMWithDelCheckBox(buttonGettingListener, inputV
 
         parentID.textContent = todoDetails
         domAppend(whereToAppend, checkbox)
-        
+
     })
 }
 //Drag n Drop Functions
@@ -124,13 +130,28 @@ function domAppend(parent, child) {
 }
 
 
-const data = (localStorage.getItem('todos'))
+const pullLocalStorage = () => {
+    const data = JSON.parse(localStorage.getItem('todos'))
+    data.map(todo => {
+        const description = document.createElement('li');
+        const checkbox = document.createElement('input')
 
-console.log(data)
+        const todoDetailFromStorage = todo.todoDetails
+        const IDOftodoFromStorage = todo.parentID
 
+        createDescriptionLIAndSetCharacteristics(description, IDOftodoFromStorage)
+        createTodoCheckBoxForDeletionCharacteristics(checkbox)
 
+        domAppend(needsToGetDone, description)
 
+        let todoIDNodeForAppending = document.getElementById(IDOftodoFromStorage)
+        console.log(todoIDNodeForAppending)
+        todoIDNodeForAppending.innerHTML = todoDetailFromStorage
+        domAppend(description, checkbox)
 
+    })
+}
+pullLocalStorage()
 
 
 // function selectedProduct(event) {
