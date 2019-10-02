@@ -27,8 +27,8 @@ function App() {
                 title={"Grant"}
                 subTitle={'Wilhelm'}
                 information='lorem ipsum somthing or another' />
-            <Turtles />
-            <VacationSpots />
+            {/* <Turtles /> */}
+            <div> <VacationSpots /></div>
         </div>
     )
 }

@@ -28,13 +28,13 @@ function Turtles() {
         }
     ]
     return (
-        <div>
+        <div className="turtle-card">
         {turtles.map(turtle =>
-        <div>
-            <h1>{turtle.name} ({turtle.nickName})</h1>
-            <p>Weapon of choice: {turtle.weapon}</p>
-            <img src={turtle.imgUrl} alt={`${turtle.name}`} width="200"/>
-            <hr/>
+        <div >
+            <h1 className='turtle-text'>{turtle.name} ({turtle.nickName})</h1>
+            <p className='turtle-text'>Weapon of choice: {turtle.weapon}</p>
+            <img className='turtle-image' src={turtle.imgUrl} alt={`${turtle.name}`} width="200"/>
+            
         </div>
         )}
 

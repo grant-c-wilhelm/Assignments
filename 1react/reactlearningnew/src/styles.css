@@ -26,3 +26,30 @@
     text-align: center;
     background-color: peachpuff;
 }
+.turtle-card{
+    display: grid;
+    grid-template-columns: 900px 900px;
+    width: 500px;
+    height: 400px;
+    margin: 5px;
+}
+.turtle-text{
+    margin: 15px;
+    text-align: center;
+}
+.turtle-image{
+    margin-left: 40%;
+    height: 300px;
+}
+.Spring{
+    background-color: yellowgreen;
+}
+.Summer{
+    background-color: lightskyblue;
+}
+.Fall{
+    background-color: burlywood;
+}
+.Winter{
+    background-color: cornflowerblue;
+}
