@@ -1,45 +1,51 @@
 import React from 'react'
+import { isSpreadProperty } from '@babel/types'
 
 function VacationSpots() {
     let vacationSpots = [
         {
             place: "Meridian, Idaho",
             price: 40,
-            timeToGo: "Spring"
+            timeToGo: "Spring",
+
         }, {
             place: "Cancun",
             price: 900,
-            timeToGo: "Winter"
+            timeToGo: "Winter",
+
         }, {
             place: "China",
             price: 1200,
-            timeToGo: "Fall"
+            timeToGo: "Fall",
+
         }, {
             place: "Russia",
             price: 1100,
-            timeToGo: "Summer"
+            timeToGo: "Summer",
+
         }, {
             place: "Lebanon",
             price: 400,
-            timeToGo: "Spring"
+            timeToGo: "Spring",
+
         }
     ]
 
-    return (
-        <div>
-            {vacationSpots.map(spots => {
-                return (
-                    <div className={spots.timeToGo}>
-                        <h1>{spots.place}</h1>
-                        <h3>${spots.price}</h3>
-                        <h4>Best time to go: {spots.timeToGo}</h4>
-                    </div>
-                )
 
-            }
-            )
-            }
-        </div>
+
+    const mappedLocations = vacationSpots.map((spots, i) => {
+        return (
+            <div key={i} className={spots.timeToGo} >
+                <h1>{spots.place}</h1>
+                <h3>${spots.price}</h3>
+                <h4>Best time to go: {spots.timeToGo}</h4>
+            </div>
+        )
+    })
+
+
+    return (
+        <div>{mappedLocations}</div>
     )
 }
 export default VacationSpots
