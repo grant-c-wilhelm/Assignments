@@ -1,39 +1,45 @@
-import React, { Component } from 'react'
-import PostCompiler from './PostCompiler';
+import React from 'react'
+import BlogList from './BlogList'
 
-export default class BlogPost extends Component {
-    constructor() {
-        super();
-        this.state = {
-            blogpost: [
-                {
-                    _id: '1',
-                    title: 'Will POW be forever?',
-                    sub_title: "The End Story" ,
-                    author: 'Grant Wilhelm',
-                    date: 'January 12, 2018'
-                },
-                {
-                    _id: '2',
-                    title: 'This Years Gear In Review',
-                    sub_title: "The inside scoop on this years gear!" ,
-                    author: 'Grant Wilhelm',
-                    date: 'January 1, 2019'
-                },
-                {
-                    _id: '3',
-                    title: 'Best POW So Far',
-                    sub_title: "A look at his years season!" ,
-                    author: 'Grant Wilhelm',
-                    date: 'December 23, 2018'
-                }
-            ]
+function BlogPost() {
+    const blogs = [
+        {
+            title: "Man must explore, and this is exploration at its greatest",
+            subTitle: "Problems look mighty small from 150 miles up",
+            author: "Start Bootstrap",
+            date: "September 24, 2019"
+        }, {
+            title: "I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.",
+            subTitle: "",
+            author: "Start Bootstrap",
+            date: "eptember 18, 2019"
+        }, {
+            title: "Science has not yet mastered prophecy",
+            subTitle: "We predict too much for the next year and yet far too little for the next ten.",
+            author: "Start Bootstrap",
+            date: "August 24, 2019"
+        }, {
+            title: "Failure is not an option",
+            subTitle: "Many say exploration is part of our destiny, but it’s actually our duty to future generations.",
+            author: "Start Bootstrap",
+            date: "July 8, 2019"
         }
-    }
-    render() {
-        const {blogpost} = this.state
+    ]
+    const mappedBlogs = blogs.map(post => {
         return (
-            <PostCompiler blogpost = {blogpost} />
+            <BlogList
+                title= {post.title}
+                subtitle = {post.subTitle}
+                author = {post.author}
+                date = {post.date}
+            />
         )
-    }
+    })
+    return (
+        <div>
+            {mappedBlogs}
+        </div>
+    )
 }
+
+export default BlogPost
