@@ -1,0 +1,15 @@
+.box {
+    display: inline-block;
+    margin: 10px;
+    height: 200px;
+    width: 200px;
+    border: solid black 3px;
+}
+
+.box-two {
+    display: inline-block;
+    margin: 10px;
+    height: 200px;
+    width: 200px;
+    border: solid black 3px;
+}
