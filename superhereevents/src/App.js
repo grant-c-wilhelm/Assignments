@@ -1,11 +1,13 @@
 import React from 'react';
-import SuperHero from './SuperHero';
+
 import './styles.css'
+import Dice from './Dice';
+
 
 function App() {
   return (
     <div >
-      <SuperHero />
+      <Dice />
     </div>
   );
 }

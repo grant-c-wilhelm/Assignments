@@ -1,4 +1,6 @@
 body{
+    display: flex;
+    justify-content: center;
     background-color: slategrey;
     color: white;
 }
@@ -8,13 +10,9 @@ img{
 }
 .hero-box{
     display: flex;
-    justify-content: space-around, center;
     flex-direction: column;
     padding: 18px;
     border: black solid 1px;
     height: 750px;
     width: 525px;
-}
-.container{
-    margin-left: 30%;
 }
