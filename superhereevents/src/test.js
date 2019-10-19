@@ -1,14 +1,28 @@
-function ipAddressChecker(theAddress) {
-    const address = "123.32.49.167"
-    for (let index = 0; index < address.length; index++) {
-        const element = address[index];
-        let parsedElem = parseInt(element)
-        isNaN(parsedElem) ?
-            console.log('this is not a number') :
-                
-            console.log(parsedElem)
+import React, { Component } from 'react'
+
+export default class test extends Component {
+    constructor() {
+        super()
+        this.state = {
+            firstName: "",
+            lastName: "",
+            naems: []
+        }
+    }
+    handleChange = (event) => {
+        this.setState({
+            [event.target.name]: event.target.value
+
+        })
+    }
+    render() {
+        return (
+            <div>
+                <form action="">
+                    <input type="text" name="firstName" value={this.state.firstName} onChange={this.handleChange} />
+                    <input type="text" name="lastName" value={this.state.lastName} onChange={this.handleChange} />
+                </form>
+            </div>
+        )
     }
 }
-ipAddressChecker()
-
-

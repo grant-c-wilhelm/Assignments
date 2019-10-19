@@ -9,26 +9,28 @@ export default class NameBox extends Component {
             names: []
         }
     }
-    handleChangeFName = (event) => {
+    handleChange = (event) => {
         this.setState({
-            firstName: event.target.value
+            [event.target.name]: event.target.value
         })
     }
-    onSubmitFName = (event) => {
+    onSubmit = (event) => {
         event.preventDefault()
         const newFirstName = this.state.firstName
+        const newLastName = this.state.lastName
         this.setState(prevState => ({
             firstName: "",
-            names: [...prevState.names, newFirstName]
+            lirstName: "",
+            names: [...prevState.names, `${newFirstName} ${newLastName}` ]
         }))
     }
     render() {
         const mappedNames = this.state.names.map(name => <h3>{name}</h3>)
         return (
             <div>
-                <form action="" onSubmit={this.onSubmitFName} >
-                    <input type="text" name="firstName" value={this.state.firstName} onChange={this.handleChangeFName} />
-                    <input type="text" name="lastName" value={this.state.lastName} onChange={this.handleChangeLName} />
+                <form action="" onSubmit={this.onSubmit} >
+                    <input type="text" name="firstName" value={this.state.firstName} onChange={this.handleChange} />
+                    <input type="text" name="lastName" value={this.state.lastName} onChange={this.handleChange} />
                     <button >Tap</button>
                     <h1>{mappedNames}</h1>
                 </form>
