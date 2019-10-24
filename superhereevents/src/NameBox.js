@@ -16,22 +16,37 @@ export default class NameBox extends Component {
     }
     onSubmit = (event) => {
         event.preventDefault()
-        const newFirstName = this.state.firstName
-        const newLastName = this.state.lastName
+        let newName = {
+            firstName: this.state.firstName,
+            lastName: this.state.lastName
+        }
+        // const newFirstName = this.state.firstName
+        // const newLastName = this.state.lastName
         this.setState(prevState => ({
             firstName: "",
-            lirstName: "",
-            names: [...prevState.names, `${newFirstName} ${newLastName}` ]
+            lastName: "",
+            // names: [...prevState.names, `${newFirstName} ${newLastName}` ]
+            names: [...prevState.names, newName]
         }))
     }
     render() {
-        const mappedNames = this.state.names.map(name => <h3>{name}</h3>)
+        const mappedNames = this.state.names.map(person =>
+            <h3>
+                {person.firstName} {person.lastName}
+            </h3>)
         return (
             <div>
-                <form action="" onSubmit={this.onSubmit} >
-                    <input type="text" name="firstName" value={this.state.firstName} onChange={this.handleChange} />
-                    <input type="text" name="lastName" value={this.state.lastName} onChange={this.handleChange} />
-                    <button >Tap</button>
+                <form action=""
+                    onSubmit={this.onSubmit} >
+                    <input
+                        type="text"
+                        placeholder="First Name" name="firstName"
+                        value={this.state.firstName} onChange={this.handleChange} />
+                    <input
+                        type="text"
+                        placeholder="Last Name" name="lastName"
+                        value={this.state.lastName} onChange={this.handleChange} />
+                    <button>Tap</button>
                     <h1>{mappedNames}</h1>
                 </form>
             </div>
