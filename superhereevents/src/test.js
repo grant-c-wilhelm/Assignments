@@ -1,4 +1,7 @@
 import React, { Component } from 'react'
+import NameForm from './NameForm'
+import NameList from './NameList'
+
 
 export default class Test extends Component {
     constructor() {
@@ -20,35 +23,24 @@ export default class Test extends Component {
             firstName: this.state.firstName,
             lastName: this.state.lastName
         }
-        // const newFirstName = this.state.firstName
-        // const newLastName = this.state.lastName
         this.setState(prevState => ({
             firstName: "",
             lastName: "",
-            // names: [...prevState.names, `${newFirstName} ${newLastName}` ]
             names: [...prevState.names, newName]
         }))
     }
     render() {
-        const mappedNames = this.state.names.map(person =>
-            <h3>
-                {person.firstName} {person.lastName}
-            </h3>)
         return (
             <div>
-                <form action=""
-                    onSubmit={this.onSubmit} >
-                    <input
-                        type="text"
-                        placeholder="First Name" name="firstName"
-                        value={this.state.firstName} onChange={this.handleChange} />
-                    <input
-                        type="text"
-                        placeholder="Last Name" name="lastName"
-                        value={this.state.lastName} onChange={this.handleChange} />
-                    <button>Tap</button>
-                    <h1>{mappedNames}</h1>
-                </form>
+                <NameForm
+                    onSubmit={this.onSubmit}
+                    handleChange={this.handleChange}
+                    firstName={this.state.firstName}
+                    lastName={this.state.lastName}
+                />
+                <NameList
+                    names={this.state.names}
+                />
             </div>
         )
     }
