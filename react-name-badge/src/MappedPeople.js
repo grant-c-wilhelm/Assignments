@@ -1,18 +1,21 @@
 import React from 'react'
+import PersonBadge from './PersonBadge'
 
 function MappedPeople(props) {
     const mappedPeople = props.people.map(person =>
-        <div>
-            <h1>{person.firstName}</h1>
-            <h2>{person.lastName}</h2>
-            <h3>{person.location}</h3>
-            <h4>{person.placeOfBirth}</h4>
-            <h5>{person.birthday}</h5>
-            <h5>{person.favFood}</h5>
+        <div className="badge-container">
+            <PersonBadge  
+                firstName={person.firstName}
+                lastName={person.lastName}
+                location={person.location}
+                placeOfBirth={person.placeOfBirth}
+                birthday={person.birthday}
+                favFood={person.favFood}
+            />
         </div>
     )
     return (
-        <div>
+        <div className="mappedPeople-container">
             {mappedPeople}
         </div>
     )

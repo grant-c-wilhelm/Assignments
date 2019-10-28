@@ -55,7 +55,9 @@ export default class Main extends Component {
                     handleChange={this.handleChange}
                     handleSubmit={this.handleSubmit}
                 />
-                <MappedPeople people={this.state.people} />
+                <div><MappedPeople people={this.state.people} /></div>
+
+
             </div>
         )
     }
