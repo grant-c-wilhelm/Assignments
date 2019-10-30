@@ -1,11 +1,11 @@
 import React from 'react'
 
 import { Link } from 'react-router-dom'
-import ServiceDetail from './ServiceDetail' 
+import ServiceDetail from './ServiceDetail'
 import ServicesContainer from './ServicesContainer'
 
 
-function Service({ services }) {
+function Services({ services }) {
     const serviceLinks = services.map((service => (
         <li key={service._id}><Link to={{ pathname: `/services/${service._id}`, state: { service } }}>{service.name}</Link></li>
     )))
@@ -20,4 +20,4 @@ function Service({ services }) {
     )
 }
 
-export default Service
+export default Services

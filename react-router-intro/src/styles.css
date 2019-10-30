@@ -1,0 +1,43 @@
+* {
+    margin: 0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 50px;
+}
+
+.home {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: firebrick;
+}
+
+.about-us {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: coral;
+}
+
+.contact-us {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: yellowgreen;
+}
+.nav-bar,a {
+    display: flex;
+    justify-content: space-evenly;
+    text-decoration: none;
+    background-color: darkslategray;
+    color: white;
+}
+a:hover {
+    color: pink;
+}
+

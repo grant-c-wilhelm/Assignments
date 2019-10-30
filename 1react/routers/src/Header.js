@@ -6,6 +6,6 @@ import Nav from './Nav'
          <div>
              <Nav />
          </div>
-     )
+     ) 
  }
  export default Header; 

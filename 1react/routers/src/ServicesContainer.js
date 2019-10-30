@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-  import Service from './Service'
+  import Service from './Services'
 
 export default class Services extends Component {
     constructor(){
