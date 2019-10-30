@@ -12,12 +12,15 @@ export default class Main extends Component {
             placeOfBirth: "",
             birthday: "",
             favFood: "",
+            isMuggle: false,
+            hogwartsHouse: "--Select House--",
             people: []
         }
     }
     handleChange = (event) => {
+        const value = event.target.type === "checkbox" ? event.target.checked : event.target.value
         this.setState({
-            [event.target.name]: event.target.value
+            [event.target.name]: value
         })
     }
     handleSubmit = (event) => {
@@ -28,7 +31,9 @@ export default class Main extends Component {
             location: this.state.location,
             placeOfBirth: this.state.placeOfBirth,
             birthday: this.state.birthday,
-            favFood: this.state.favFood
+            favFood: this.state.favFood,
+            isMuggle: this.state.isMuggle,
+            hogwartsHouse: this.state.hogwartsHouse
         }
 
         this.setState(prevState => ({
@@ -38,6 +43,8 @@ export default class Main extends Component {
             placeOfBirth: "",
             birthday: "",
             favFood: "",
+            isMuggle: false,
+            hogwartsHouse: "--Select House--",
             people: [...prevState.people, newPerson]
         }))
     }
@@ -52,6 +59,8 @@ export default class Main extends Component {
                     placeOfBirth={this.state.placeOfBirth}
                     birthday={this.state.birthday}
                     favFood={this.state.favFood}
+                    isMuggle={this.state.isMuggle}
+                    hogwartsHouse={this.state.hogwartsHouse}
                     handleChange={this.handleChange}
                     handleSubmit={this.handleSubmit}
                 />

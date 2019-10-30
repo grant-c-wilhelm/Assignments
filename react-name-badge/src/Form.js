@@ -1,7 +1,7 @@
 import React from 'react'
 
 function Form(props) {
-    const { firstName, lastName, location, placeOfBirth, birthday, favFood, handleChange, handleSubmit } = props
+    const { firstName, lastName, location, placeOfBirth, birthday, favFood, isMuggle, handleChange, handleSubmit } = props
     return (
         <div>
             <form action="text" className="form-container" onSubmit={handleSubmit}>
@@ -50,11 +50,32 @@ function Form(props) {
                         type="text"
                         onChange={handleChange}
                         placeholder="Favorite Food"
-                        className="form-input" name="favFood"
+                        className="form-input"
+                        name="favFood"
                         value={favFood}
                     />
+
+
+                    <input
+                        className="muggle-box"
+                        type="checkbox"
+                        onChange={handleChange}
+                        name="isMuggle"
+                        value={isMuggle} />
+
+                    <select name="hogwartsHouse" onChange={handleChange}>
+                        <option value="--Select House--">--Select House--</option>
+                        <option value="Huffle Puff">Huffle Puff</option>
+                        <option value="Gryffindor">Gryffindor</option>
+                        <option value="Slytherin">Slytherin</option>
+                        <option value="Raven Claw">Raven Claw</option>
+                    </select>
                 </div>
-                <button>Submit</button>
+                <div className="muggle-container"><p className="muggle" >Muggle</p></div>
+                <div className="button-container">
+                    <button>Submit</button>
+                </div>
+
 
             </form>
         </div>
