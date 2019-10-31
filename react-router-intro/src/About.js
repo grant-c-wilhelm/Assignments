@@ -1,6 +1,6 @@
 import React from 'react'
 
-function AboutUs() {
+function About() {
     return (
         <div className="about-us">
             About Us
@@ -8,4 +8,4 @@ function AboutUs() {
     )
 }
 
-export default AboutUs
+export default About
