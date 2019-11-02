@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import FormInputs from './FormInputs'
 
 export default class Form extends Component {
     constructor() {
@@ -27,15 +26,16 @@ export default class Form extends Component {
             names: [...prevState.names, newName]
         }))
     }
+
     render() {
         return (
             <div>
-                <FormInputs
-                    firstName={this.state.firstName}
-                    lastName={this.state.lastName}
-                    handleChange={this.handleChange}
-                    handleSubmit={this.handleSubmit}
-                />
+                <form action="" onSubmit={this.handleSubmit}>
+                    <input type="text" name="firstName" value={this.state.firstName} onChange={this.handleChange} />
+                    <input type="text" name="lastName" value={this.state.lastName} onChange={this.handleChange} />
+                    <button>Tap</button>
+
+                </form>
 
             </div>
         )
