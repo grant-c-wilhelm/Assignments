@@ -37,7 +37,7 @@ function VacationSpots() {
         return (
             <div key={i} className={spots.timeToGo} >
                 <h1>{spots.place}</h1>
-                <h3>${spots.price}</h3>
+                <h3>${spots.price > 400 ? "$$"  : "$"}</h3>
                 <h4>Best time to go: {spots.timeToGo}</h4>
             </div>
         )
