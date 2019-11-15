@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+}
+
+.home {
+    height: 100vh;
+    width: 100vw;
+    background-color: steelblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 55px;
+
+
+}
+
+.contact {
+    height: 100vh;
+    width: 100vw;
+    background-color: dodgerblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 55px;
+}
+
+.about {
+    height: 100vh;
+    width: 100vw;
+    background-color: firebrick;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 55px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 33px;
+    background-color: rgba(21, 84, 134, 0.514);
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.bounty-container {
+    display: grid;
+    grid-template-columns: 750px 750px;
+    margin-left: 175px;
+}
+
+.bountyDisplay-container {
+    display: flex;
+}
+
+.bd-subContainer {
+    width: 350px;
+    height: 300px;
+}
+
+.bounty-name {
+    text-align: center;
+    padding: 10px;
+}
+
+.bounty-image {
+    height: 150px;
+    width: 350px;
+}
