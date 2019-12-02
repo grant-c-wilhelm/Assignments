@@ -1,7 +1,6 @@
 * {
     margin: 0px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 50px;
 }
 
 .home {
@@ -30,14 +29,52 @@
     align-items: center;
     background-color: yellowgreen;
 }
-.nav-bar,a {
+
+.nav-bar,
+a {
     display: flex;
     justify-content: space-evenly;
     text-decoration: none;
     background-color: darkslategray;
     color: white;
+    font-size: 50px;
 }
+
 a:hover {
     color: pink;
 }
 
+.form-signup {
+    height: 2vh;
+    width: 12vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-signup>input {
+    font-size: 25px;
+}
+
+.sign-up-text {
+    margin-top: -25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: firebrick;
+    font-size: 50px;
+    transform: translateX(50px);
+}
+
+.make-block {
+    display: block;
+    transform: translateY(5em);
+}
+.form-positioning{
+    transform: translateX(-75px);
+
+}
+.login-questions{
+
+}
+  
