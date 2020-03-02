@@ -7,7 +7,7 @@ function TodoDomDisplay(props) {
             <div id={_id} className="bd-subContainer">
                 <h1 className="todo-name">{title}</h1>
                 <h2>{description}</h2>
-                <h2>{completed ? "completed" : "not complete"}</h2>
+                <h2>{completed ? "completed" : "not complete"}</h2> 
                 <img className="todo-image" src={imgUrl} alt="" />
                 <button onClick={() => handleDelete(_id)} >Delete</button>
             </div>
