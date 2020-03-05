@@ -1,6 +1,7 @@
 import React from 'react';
 import Data from "./data"
 import VacationSpotComponent from './VacationSpotComponent'
+import FriendListComponent from './FriendListComponent';
 function App() {
   const mappedSpots = Data.map(spot => {
     return <VacationSpotComponent
@@ -11,7 +12,8 @@ function App() {
   })
   return (
     <div>
-      {mappedSpots}
+      {/* {mappedSpots} */}
+      <FriendListComponent/>
     </div>
   );
 }
