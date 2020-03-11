@@ -1,14 +1,22 @@
-import React from 'react';
-import './index.css';
+import React from 'react'
+import { Switch, Route } from 'react-router-dom'
+import './index.css'
 import Header from "./Header.js"
 import Navbar from "./Navbar.js"
-import MainPhoto from "./MainPhoto.js"
+import RSVP from './RSVP'
+import Location from './Location'
+import Home from './Home'
 function App() {
   return (
     <div>
-      <Header/>
-      <Navbar/>
-      <MainPhoto/>
+      <Header />
+      <Navbar />
+      <Switch>
+        <Route exact path="/"   component={Home} />
+        <Route path="/location" component={Location} />
+        <Route path="/rsvp"     component={RSVP} />
+      </Switch>
+  
     </div>
   );
 }

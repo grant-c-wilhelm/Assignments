@@ -1,8 +1,7 @@
 body {
   font-family: Montserrat;
-  background-color: rgb(253, 251, 250);;
+  background-color: #C9CDD0;
   margin: 0px;
-
 }
 
 .header-main {
@@ -14,15 +13,27 @@ body {
 .diamond {
   position: relative;
   top: -180px;
-  background-color: rgb(253, 251, 250);;
+  background-color: #C9CDD0;
   height: 60vh;
   width: 100vw;
   clip-path: polygon(50% -5%, 100% 50%, 50% 105%, 0% 50%);
 }
 
+.logo-image {
+  position: relative;
+  left: 46.5vw;
+  height: 150px;
+  width: 150px;
+  background-image: url(diamond_logo.png);
+  background-size: 120px 120px;
+  background-repeat: no-repeat;
+
+}
+
 .diamond-text {
   font-size: 65px;
   font-family: Parisienne;
+  color: black;
   transform: translateY(200px);
   text-align: center;
 }
@@ -32,7 +43,7 @@ body {
   top: 0px;
   right: 9px;
   z-index: -1;
-  background-color: rgb(215, 238, 220, .25);
+  background-color: #242840;
   height: 22vh;
   width: 100vw;
 }
@@ -42,13 +53,12 @@ body {
   top: -360px;
   right: 10px;
   z-index: -1;
-  background-color: rgba(214, 224, 239, 0.23);
+  background-color: #516373;
   height: 22vh;
 }
 
 .navbar-main {
-  margin-top: -50px;
-  z-index: 2;
+  margin-top: 7vh;
   padding-top: 25px;
   display: flex;
   flex-direction: row;
@@ -59,24 +69,64 @@ body {
 
 .nav-link {
   font-size: 25px;
+  text-decoration: none;
+  color: black;
+}
+
+.main-container {
+  display: flex;
+  width: 100vw;
 }
 
 .image-houser {
-  background-color: rgb(253, 251, 250);;
+  background-color: #C9CDD0;
   height: 100vh;
   width: 100vw;
 }
 
 .actual-image {
   margin-top: 100px;
-  margin-left: 400px;
+  margin-left: 2.5vw;
+  margin-right: 2vw;
   height: 800px;
   width: 620px;
   background-image: url(main_photo.JPG);
   background-size: 620px 800px;
   background-repeat: no-repeat;
   box-shadow: 10px 10px 5px #ccc;
-  border: solid rgb(253, 251, 250) 2px;
+  border: solid #C9CDD0 2px;
+}
 
+.main-story-container {
+  height: 100vh;
+  width: 50vw;
+  font-family: Parisienne;
+  font-size: 65px;
+  margin-right: 15vw;
+}
 
+.main-story-text {
+  width: 40vw;
+  font-family: Montserrat;
+  font-size: 30px;
+}
+
+.map-location-link {
+  text-decoration: none;
+  color: black;
+}
+
+.map-location-link:hover {
+  margin-top: 5px;
+  text-decoration: underline;
+}
+
+.location-image {
+  height: 115px;
+  width: 190px;
+}
+
+.location-description {
+  height: 4vh;
+  width: 13vw;
 }
