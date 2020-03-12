@@ -5,6 +5,7 @@ function Navbar() {
         <div className="navbar-main">
             
             <Link className="nav-link" to="/">Home</Link>
+            <Link className="nav-link" to="/when">When</Link>
             <Link className="nav-link" to="/location">Where</Link>
             <Link className="nav-link" to="/rsvp">RSVP</Link>
 

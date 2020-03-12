@@ -6,6 +6,7 @@ import Navbar from "./Navbar.js"
 import RSVP from './RSVP'
 import Location from './Location'
 import Home from './Home'
+import When from './When'
 function App() {
   return (
     <div>
@@ -15,6 +16,7 @@ function App() {
         <Route exact path="/"   component={Home} />
         <Route path="/location" component={Location} />
         <Route path="/rsvp"     component={RSVP} />
+        <Route path="/when"     component={When} />
       </Switch>
   
     </div>

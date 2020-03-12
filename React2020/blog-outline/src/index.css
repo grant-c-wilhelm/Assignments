@@ -19,7 +19,7 @@ body {
   clip-path: polygon(50% -5%, 100% 50%, 50% 105%, 0% 50%);
 }
 
-.logo-image {
+/* .logo-image {
   position: relative;
   left: 46.5vw;
   height: 150px;
@@ -28,7 +28,7 @@ body {
   background-size: 120px 120px;
   background-repeat: no-repeat;
 
-}
+} */
 
 .diamond-text {
   font-size: 65px;
@@ -129,4 +129,23 @@ body {
 .location-description {
   height: 4vh;
   width: 13vw;
+}
+
+.circle-logo {
+  position: relative;
+  left: 46.5vw;
+  height: 150px;
+  width: 150px;
+  background-image: url(circle_logo.png);
+  background-size: 120px 120px;
+  background-repeat: no-repeat;
+}
+.when-text-container{
+  position: relative;
+  left: 17vw;
+}
+.when-text {
+  width: 70vw;
+  font-family: Montserrat;
+  font-size: 30px;
 }
