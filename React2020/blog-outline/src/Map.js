@@ -63,7 +63,7 @@ class Map extends React.Component {
         //initializing the info wondow
         const infowindow = new window.google.maps.InfoWindow();
 
-        this.state.mapLocations.map(location => {
+        this.state.mapLocations.map(location  => {
             //getting the content of the info window from within the loop
             const contentString = `<div id="mapContainer" class="map-container">
             
@@ -98,7 +98,7 @@ class Map extends React.Component {
             height: "400px",
             margin: "10px",
             border: "2px solid rgb(63,81,181,0.4)",
-            margin: "0 auto"
+            // margin: "0 auto"
         };
         return (
             <main>

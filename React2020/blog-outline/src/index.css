@@ -38,6 +38,8 @@ body {
   text-align: center;
 }
 
+/* MEDIA QUARY NEEDED FOR TEXT ABOVE //////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
 .headerTop-color-div {
   position: relative;
   top: 0px;
@@ -47,6 +49,7 @@ body {
   height: 22vh;
   width: 100vw;
 }
+
 
 .headerBottom-color-div {
   position: relative;
@@ -67,6 +70,7 @@ body {
   width: 100vw;
 }
 
+/* NAV LINK TEXTS NEEDS MEDIA QUERY //////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 .nav-link {
   font-size: 25px;
   text-decoration: none;
@@ -75,6 +79,7 @@ body {
 
 .main-container {
   display: flex;
+  /*Not sure this display needs to be flex*/
   width: 100vw;
 }
 
@@ -84,6 +89,7 @@ body {
   width: 100vw;
 }
 
+/* PHOTO NEEDS A HEIGHT/WIDTH/DISPLAY MEDIA QUERY /////////////////////////////////////////////////////////////////////////////////////////////// */
 .actual-image {
   margin-top: 100px;
   margin-left: 2.5vw;
@@ -97,6 +103,7 @@ body {
   border: solid #C9CDD0 2px;
 }
 
+/* THE TEXT INSIDE THE H1, A CHILD OF THIS BELOW ELEMENT NEEDS A MEDIA QUARY //////////////////////////////////////////////////////////////////////// */
 .main-story-container {
   height: 100vh;
   width: 50vw;
@@ -105,6 +112,7 @@ body {
   margin-right: 15vw;
 }
 
+/* NEEDS TEXT MEDIA QUERRY ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 .main-story-text {
   width: 40vw;
   font-family: Montserrat;
@@ -140,12 +148,67 @@ body {
   background-size: 120px 120px;
   background-repeat: no-repeat;
 }
-.when-text-container{
+
+.when-text-container {
   position: relative;
   left: 17vw;
 }
+
 .when-text {
   width: 70vw;
   font-family: Montserrat;
   font-size: 30px;
+}
+
+.centered-registry-icon {
+  position: relative;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 480px) {
+  .diamond-text {
+    font-size: 45px;
+    transform: translateY(195px);
+  }
+
+  .navbar-main {
+    margin-top: 0px;
+    height: 2.75vh;
+  }
+
+  .nav-link {
+    height: 0px;
+    font-size: 18px;
+  }
+
+  .image-houser {
+    height: 23vh;
+    width: 42vw;
+  }
+
+
+  .actual-image {
+    display: block;
+    height: 23vh;
+    width: 42vw;
+    background-size: 155px 185px;
+    position: relative;
+    top: 5%;
+    left: 100%;
+    transform: translate(-50%, -50%)
+  }
+
+  .main-container {
+    display: block;
+  }
+
+
+  .main-story-container {}
+
+  .main-story-container>h1 {
+    font-size: 50px;
+  }
 }
