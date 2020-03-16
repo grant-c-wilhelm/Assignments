@@ -31,6 +31,7 @@ body {
 } */
 
 .diamond-text {
+  width: 100vw;
   font-size: 65px;
   font-family: Parisienne;
   color: black;
@@ -43,7 +44,7 @@ body {
 .headerTop-color-div {
   position: relative;
   top: 0px;
-  right: 9px;
+
   z-index: -1;
   background-color: #242840;
   height: 22vh;
@@ -54,7 +55,7 @@ body {
 .headerBottom-color-div {
   position: relative;
   top: -360px;
-  right: 10px;
+
   z-index: -1;
   background-color: #516373;
   height: 22vh;
@@ -79,19 +80,19 @@ body {
 
 .main-container {
   display: flex;
-  /*Not sure this display needs to be flex*/
-  width: 100vw;
+  width: 99vw;
+
+
 }
 
 .image-houser {
   background-color: #C9CDD0;
   height: 100vh;
-  width: 100vw;
+  width: 40vw;
 }
 
 /* PHOTO NEEDS A HEIGHT/WIDTH/DISPLAY MEDIA QUERY /////////////////////////////////////////////////////////////////////////////////////////////// */
 .actual-image {
-  margin-top: 100px;
   margin-left: 2.5vw;
   margin-right: 2vw;
   height: 800px;
@@ -105,16 +106,23 @@ body {
 
 /* THE TEXT INSIDE THE H1, A CHILD OF THIS BELOW ELEMENT NEEDS A MEDIA QUARY //////////////////////////////////////////////////////////////////////// */
 .main-story-container {
-  height: 100vh;
-  width: 50vw;
+  position: relative;
+  left: 20%;
+  height: 10vh;
+  width: 20vw;
   font-family: Parisienne;
   font-size: 65px;
-  margin-right: 15vw;
+}
+
+.ourStory-text {
+  margin-top: 0px;
 }
 
 /* NEEDS TEXT MEDIA QUERRY ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 .main-story-text {
-  width: 40vw;
+  position: relative;
+  right: 60px;
+  width: 35vw;
   font-family: Montserrat;
   font-size: 30px;
 }
@@ -169,46 +177,72 @@ body {
 }
 
 @media screen and (max-width: 480px) {
+  .header-main {
+    position: relative;
+    right: 6.5%;
+    width: 100vw;
+    height: 55vh;
+  }
+
   .diamond-text {
-    font-size: 45px;
+    position: relative;
+    margin: 0 auto;
+    width: 65vw;
+    font-size: 40px;
     transform: translateY(195px);
   }
 
   .navbar-main {
-    margin-top: 0px;
+    margin: 0;
+    margin-top: 15px;
     height: 2.75vh;
+    width: 85vw;
   }
 
   .nav-link {
-    height: 0px;
-    font-size: 18px;
-  }
-
-  .image-houser {
-    height: 23vh;
-    width: 42vw;
-  }
-
-
-  .actual-image {
-    display: block;
-    height: 23vh;
-    width: 42vw;
-    background-size: 155px 185px;
-    position: relative;
-    top: 5%;
-    left: 100%;
-    transform: translate(-50%, -50%)
+    font-size: 14px;
   }
 
   .main-container {
     display: block;
+
+    margin: 0 auto;
+    width: 100vw;
   }
 
+  .image-houser {
+    height: 23vh;
+    width: 90vw;
+  }
 
-  .main-story-container {}
+  .actual-image {
+    position: relative;
+    display: block;
+    height: 23vh;
+    width: 42vw;
+    background-size: 155px 185px;
+    margin: 0 auto;
+    /* transform: translate(45%, -50%) */
+  }
 
-  .main-story-container>h1 {
-    font-size: 50px;
+  .main-story-container {
+    height: 40vh;
+    margin-right: 0px;
+  }
+
+  .ourStory-text {
+    font-size: 45px;
+    width: 50vw;
+    position: relative;
+    left: 0%;
+    top: 0%;
+    margin-top: 0px;
+  }
+
+  .main-story-text {
+    position: relative;
+    left: 0%;
+    width: 50vw;
+    font-size: 12px;
   }
 }

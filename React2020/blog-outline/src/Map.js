@@ -98,7 +98,7 @@ class Map extends React.Component {
             height: "400px",
             margin: "10px",
             border: "2px solid rgb(63,81,181,0.4)",
-            // margin: "0 auto"
+            margin: "0 auto"
         };
         return (
             <main>
