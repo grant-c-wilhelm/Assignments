@@ -176,25 +176,37 @@ body {
   transform: translate(-50%, -50%);
 }
 
+
+
+/* BELOW IS MAIN MEDIA QUERIE FOR SMALLER DEVICES */
 @media screen and (max-width: 480px) {
+
   /* .header-main {
     position: relative;
     right: 6.5%;
     width: 100vw;
     height: 55vh;
   }
-*/ 
+*/
+  .headerTop-color-div {
+    height: 23vh;
+  }
+
+  .headerBottom-color-div {
+    height: 23vh;
+  }
+
   .diamond-text {
     position: relative;
     margin: 0 auto;
     width: 65vw;
     font-size: 40px;
-    transform: translateY(195px);
+    transform: translateY(180px);
   }
 
   .navbar-main {
-   margin: 0px;
-   padding: 0px;
+    margin: 0px;
+    padding: 0px;
   }
 
   .nav-link {
@@ -219,11 +231,11 @@ body {
     width: 42vw;
     background-size: 155px 185px;
     margin: 0 auto;
-    transform: translate(45%, -50%) 
+    transform: translate(15%, -50%)
   }
 
   .main-story-container {
-    height: 40vh;
+    height: 37vh;
     margin-right: 0px;
   }
 
@@ -231,15 +243,70 @@ body {
     font-size: 45px;
     width: 50vw;
     position: relative;
-    left: 0%;
-    top: 0%;
-    margin-top: 0px;
+    left: 40%;
+    top: -20%;
   }
 
   .main-story-text {
     position: relative;
-    left: 0%;
+    text-align: center;
+    left: 40%;
+    bottom: 25%;
     width: 50vw;
     font-size: 12px;
-  } 
+  }
+}
+
+
+
+
+
+/* BELOW IS FOR IPHONE X */
+@media screen and (max-height: 900px) {
+  .headerTop-color-div {
+    height: 22.5vh;
+  }
+
+  .diamond-text {
+    width: 85vw;
+    transform: translateY(190px);
+    font-size: 40px;
+  }
+
+  .headerBottom-color-div {
+    height: 22.5vh;
+  }
+}
+
+/* BELOW IS FOR IPHONE 6/7/8 PLUS! */
+@media screen and (max-height: 800px) {
+  .headerTop-color-div {
+    height: 24.5vh;
+  }
+
+  .diamond-text {
+    transform: translateY(170px);
+    font-size: 37px;
+    width: 65vw;
+  }
+
+  .headerBottom-color-div {
+    height: 25vh;
+  }
+}
+
+/* BELOW IS FOR IPHONE 6/7/8 */
+@media screen and (max-height: 700px) {
+  .headerTop-color-div {
+    height: 27.5vh;
+  }
+
+  .diamond-text {
+    transform: translateY(150px);
+    font-size: 37px;
+  }
+
+  .headerBottom-color-div {
+    height: 27.3vh;
+  }
 }
