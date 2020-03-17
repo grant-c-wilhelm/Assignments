@@ -13,12 +13,12 @@ function App() {
       <Header />
       <Navbar />
       <Switch>
-        <Route exact path="/"       component={Home} />
-        <Route path="/location"     component={Location} />
-        <Route path="/registry"     component={Registry} />
-        <Route path="/when"         component={When} />
+        <Route exact path="/" component={Home} />
+        <Route path="/location" component={Location} />
+        <Route path="/registry" component={Registry} />
+        <Route path="/when" component={When} />
       </Switch>
-  
+
     </div>
   );
 }
