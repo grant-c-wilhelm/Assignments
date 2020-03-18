@@ -127,7 +127,8 @@ body {
   right: 60px;
   width: 35vw;
   font-family: Montserrat;
-  font-size: 30px;
+  font-size: 25px;
+  line-height: 35px;
 }
 
 .map-location-link {
@@ -440,7 +441,8 @@ body {
   .headerBottom-color-div {
     height: 27.3vh;
   }
-  .image-houser{
+
+  .image-houser {
     margin: 0 auto;
   }
 }
