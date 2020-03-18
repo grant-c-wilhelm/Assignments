@@ -3,8 +3,9 @@ import Map from './Map'
 function Location() {
     return (
         <div>
-            <Map/>
-            test
+            <div className="circle-logo-where"></div>
+            <Map />
+
         </div>
     )
 }

@@ -1,7 +1,9 @@
 import React from 'react'
 function Home() {
+
     return (
         <div className="main-container">
+            <div className="circle-logo-home"></div>
             <div className="image-houser">
                 <div className="actual-image"></div>
             </div>
