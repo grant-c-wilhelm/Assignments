@@ -131,6 +131,15 @@ body {
   line-height: 35px;
 }
 
+.location-text-map {
+  margin: 0 auto;
+  margin-bottom: 15vh;
+  width: 68vw;
+  font-family: Montserrat;
+  text-align: center;
+  font-size: 30px;
+}
+
 .map-location-link {
   text-decoration: none;
   color: black;
@@ -289,26 +298,27 @@ body {
   }
 
   .main-story-container {
-    height: 37vh;
+    height: 50vh;
     margin-right: 0px;
     left: 0%;
   }
 
   .ourStory-text {
     font-size: 45px;
-    width: 50vw;
+    width: 53vw;
     position: relative;
     left: 25%;
-    top: -20%;
+    top: -18%;
   }
 
   .main-story-text {
     position: relative;
     text-align: center;
-    left: 25%;
+    left: 23%;
     bottom: 25%;
-    width: 50vw;
-    font-size: 12px;
+    width: 55vw;
+    font-size: 15px;
+    line-height: 14px;
   }
 
   /* FOR THE WHEN PAGE STYLING */
@@ -321,6 +331,11 @@ body {
   }
 
   .when-text {
+    transform: translate(-1vh);
+    font-size: 17px;
+  }
+
+  .location-text-map {
     transform: translateY(-10vh);
     font-size: 17px;
   }
@@ -423,6 +438,7 @@ body {
     width: 75px;
     background-size: 60px 60px;
   } */
+
 }
 
 /* BELOW IS FOR IPHONE 6/7/8 */
@@ -445,4 +461,5 @@ body {
   .image-houser {
     margin: 0 auto;
   }
+
 }
