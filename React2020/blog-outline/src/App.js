@@ -7,6 +7,8 @@ import Registry from './Registry'
 import Location from './Location'
 import Home from './Home'
 import When from './When'
+
+
 function App() {
   return (
     <div>

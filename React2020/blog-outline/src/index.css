@@ -55,11 +55,14 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  text-align: center;
   height: 20vh;
-  width: 100vw;
+  /* width: 100vw; */
 }
 
+/* Adjusted/ added width here////////////////////////////////////////////////////// */
 .nav-link {
+  width: 24vw;
   font-size: 25px;
   text-decoration: none;
   color: black;
@@ -129,6 +132,11 @@ body {
   font-size: 30px;
 }
 
+#mapContainer{
+  width: 250px;
+  text-align: center;
+}
+
 .map-location-link {
   text-decoration: none;
   color: black;
@@ -140,18 +148,19 @@ body {
 }
 
 .location-image {
-  height: 115px;
-  width: 190px;
+  height: 17vh;
+  width: 15vw;
 }
 
 .location-description {
+  text-align: center;
   height: 4vh;
-  width: 13vw;
+  /* width: 13vw; */
 }
 
 .circle-logo-home {
   position: relative;
-  left: 44vw;
+  left: 45vw;
   top: -14vh;
   height: 150px;
   width: 150px;
@@ -163,7 +172,7 @@ body {
 
 .circle-logo-when {
   position: relative;
-  left: 42.4vw;
+  left: 44vw;
   top: -17.2vh;
   height: 150px;
   width: 150px;
@@ -175,7 +184,7 @@ body {
 
 .circle-logo-where {
   position: relative;
-  left: 44vw;
+  left: 45vw;
   top: -14vh;
   height: 150px;
   width: 150px;
@@ -187,7 +196,7 @@ body {
 
 .circle-logo-registry {
   position: relative;
-  left: 42.4vw;
+  left: 44vw;
   top: -17.2vh;
   height: 150px;
   width: 150px;
@@ -215,8 +224,9 @@ body {
   position: relative;
   display: block;
   top: 50%;
-  left: 50%;
+  left: 51.4%;
   transform: translate(-50%, -50%);
+  margin-bottom: 150px;
 }
 
 #map {
@@ -231,8 +241,11 @@ body {
 
 }
 
-/* BELOW IS MAIN GENERAL MEDIA QUEREY FOR SMALLER DEVICES */
+/* MEDIA QUERIES START HERE */
 
+
+
+/* BELOW IS MAIN GENERAL MEDIA QUEREY FOR SMALLER DEVICES */
 @media screen and (max-width: 480px) {
 
   /* FOR THE HEADER STYLING */
