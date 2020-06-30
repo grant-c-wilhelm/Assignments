@@ -132,7 +132,7 @@ body {
   font-size: 30px;
 }
 
-#mapContainer{
+#mapContainer {
   width: 250px;
   text-align: center;
 }
@@ -246,7 +246,7 @@ body {
 
 
 /* BELOW IS MAIN GENERAL MEDIA QUEREY FOR SMALLER DEVICES */
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
 
   /* FOR THE HEADER STYLING */
 
@@ -262,13 +262,14 @@ body {
     position: relative;
     margin: 0 auto;
     width: 65vw;
-    font-size: 40px;
+    font-size: 35px;
     transform: translateY(180px);
   }
 
   /* FOR THE NAVBAR STYLING */
   .navbar-main {
     margin: 0px;
+    margin-top: 10px;
     padding: 0px;
   }
 
@@ -276,6 +277,41 @@ body {
     font-size: 14px;
   }
 
+  .circle-logo-home {
+    position: relative;
+    left: 40.5vw;
+    top: -10vh;
+    height: 75px;
+    width: 75px;
+    background-size: 60px 60px;
+  }
+
+  .circle-logo-when {
+    position: relative;
+    left: 38.5vw;
+    top: -11.5vh;
+    height: 75px;
+    width: 75px;
+    background-size: 60px 60px;
+  }
+
+  .circle-logo-where {
+    position: relative;
+    left: 40.5vw;
+    top: -10vh;
+    height: 75px;
+    width: 75px;
+    background-size: 60px 60px;
+  }
+
+  .circle-logo-registry {
+    position: relative;
+    left: 38.5vw;
+    top: -11.5vh;
+    height: 75px;
+    width: 75px;
+    background-size: 60px 60px;
+  }
 
   /* FOR THE HOME PAGE STYLING */
   .main-container {
@@ -337,9 +373,19 @@ body {
     font-size: 17px;
   }
 
+  #mapContainer {
+    height: auto;
+    width: auto;
+  }
+
   .location-text-map {
     transform: translateY(-10vh);
     font-size: 17px;
+  }
+
+  .location-image {
+    height: 50px;
+    width: 50px;
   }
 
   #map {
@@ -359,7 +405,7 @@ body {
 
 
 /* BELOW IS FOR IPHONE X  and larger width screens*/
-@media screen and (max-height: 900px)and (max-width: 1000px) {
+@media screen and (min-width:768px) and (max-width:1023px) {
   .headerTop-color-div {
     height: 22.5vh;
   }
@@ -416,59 +462,8 @@ body {
   }
 }
 
-/* BELOW IS FOR IPHONE 6/7/8 PLUS! */
-@media screen and (max-height: 800px) {
-  .headerTop-color-div {
-    height: 24.5vh;
-  }
-
-  .diamond-text {
-    transform: translateY(170px);
-    font-size: 37px;
-    width: 65vw;
-  }
-
-  .headerBottom-color-div {
-    height: 25vh;
-  }
-
-  /* .circle-logo-home {
-    position: relative;
-    left: 41vw;
-    top: -10vh;
-    height: 75px;
-    width: 75px;
-    background-size: 60px 60px;
-  } */
-
-}
-
-/* BELOW IS FOR IPHONE 6/7/8 */
-
-@media screen and (max-height: 700px) {
-  .headerTop-color-div {
-    height: 27.5vh;
-  }
-
-
-  .diamond-text {
-    transform: translateY(150px);
-    font-size: 37px;
-  }
-
-  .headerBottom-color-div {
-    height: 27.3vh;
-  }
-
-  .image-houser {
-    margin: 0 auto;
-  }
-
-}
-
-/* BELOW FOR IPADS PORTRAIT/LANDSCAPE 1,2, MINI, AIR */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
-  /* FOR THE HEADER STYLING */
+/* BELOW FOR IPAD PORTRAIT*/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
 
   .headerTop-color-div {
     height: 18vh;
@@ -486,7 +481,6 @@ body {
     transform: translateY(250px);
   }
 
-  /* FOR THE NAVBAR STYLING */
   .navbar-main {
     margin-top: -5%;
   }
@@ -543,7 +537,7 @@ body {
     background-repeat: no-repeat;
   }
 
-  /* FOR THE HOME PAGE STYLING */
+
   .main-container {
     display: block;
     margin: 0 auto;
@@ -593,14 +587,15 @@ body {
   .when-text-container {
     margin: 0 auto;
     width: 65vw;
-    height: 45vh;
+    height: 65vh;
     text-align: center;
 
   }
 
   .when-text {
-    transform: translate(-1%, -65%);
-    font-size: 17px;
+    position: relative;
+    bottom: 30%;
+    font-size: 20px;
   }
 
   .location-text-map {
@@ -629,130 +624,67 @@ body {
 
 }
 
-/* FOR IPAD PRO */
-@media only screen and (min-device-width: 834px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
+/* BELOW IS FOR iPad landscape */
 
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape){
   .headerTop-color-div {
-    height: 13.5vh;
-  }
-
-  .headerBottom-color-div {
-    height: 13.5vh;
-  }
-
-  .diamond {
-    height: 40vh;
+    height: 24.5vh;
   }
 
   .diamond-text {
-    position: relative;
-    margin: 0 auto;
-    width: 65vw;
-    font-size: 51px;
-    transform: translateY(250px);
+    transform: translateY(190px);
+    font-size: 45px;
   }
 
-  .navbar-main {
-    margin-top: -33%;
-  }
-
-  .nav-link {
-    font-size: 24px;
+  .headerBottom-color-div {
+    height: 25vh;
   }
 
   .circle-logo-home {
-    position: relative;
-    left: 42.8vw;
-    top: -16vh;
-    height: 150px;
-    width: 150px;
-    transform: rotate(45deg);
-    background-image: url(circle_logo.png);
-    background-size: 120px 120px;
-    background-repeat: no-repeat;
-  }
-
-  .circle-logo-when {
-    position: relative;
-    left: 41vw;
-    top: -17.2vh;
-    height: 150px;
-    width: 150px;
-    transform: rotate(135deg);
-    background-image: url(circle_logo.png);
-    background-size: 120px 120px;
-    background-repeat: no-repeat;
+    left: 43vw;
   }
 
   .circle-logo-where {
-    position: relative;
-    left: 42.8vw;
-    top: -16vh;
-    margin-bottom: 15vh;
-    height: 150px;
-    width: 150px;
-    transform: rotate(45deg);
-    background-image: url(circle_logo.png);
-    background-size: 120px 120px;
-    background-repeat: no-repeat;
+    left: 43vw;
+  }
+
+  .circle-logo-when {
+    left: 41.5vw;
   }
 
   .circle-logo-registry {
-    position: relative;
-    left: 41vw;
-    top: -17.2vh;
-    height: 150px;
-    width: 150px;
-    transform: rotate(135deg);
-    background-image: url(circle_logo.png);
-    background-size: 120px 120px;
-    background-repeat: no-repeat;
-  }
-
-  /* FOR THE HOME PAGE STYLING */
-  .main-container {
-    display: block;
-    margin: 0 auto;
-    width: 100vw;
+    left: 41.5vw;
   }
 
   .image-houser {
     margin: 0 auto;
-    height: 23vh;
-    width: 90vw;
+    height: 20vh;
+    width: 22vw;
   }
 
   .actual-image {
     margin: 0 auto;
+    padding-bottom: 100px;
     position: relative;
-    top: -60%;
-    left: 6%;
+    top: 55%;
     display: block;
-    height: 35vh;
+    height: 51vh;
     width: 42vw;
     background-size: 305px 385px;
   }
 
-  .main-story-container {
-    height: 55vh;
-    margin-right: 0px;
-    left: 0%;
-  }
-
   .ourStory-text {
-    font-size: 55px;
     width: 53vw;
     position: relative;
-    left: 25%;
-    top: -30%;
+    top: -18%;
   }
 
   .main-story-text {
     position: relative;
     text-align: center;
-    left: 23%;
-    bottom: 30%;
-    width: 55vw;
+    left: 15%;
+    bottom: 23%;
+    width: 40vw;
     font-size: 19px;
     line-height: 21px;
   }
@@ -766,34 +698,30 @@ body {
   }
 
   .when-text {
-    transform: translate(-1%, -115%);
-    font-size: 17px;
+    position: relative;
+    top: -35%;
+    font-size: 23px;
   }
 
   .location-text-map {
-    transform: translateY(-30vh);
-    font-size: 17px;
+    transform: translateY(-15vh);
+    font-size: 25px;
+  }
+
+  #mapContainer {
+    font-size: 20px;
   }
 
   #map {
     width: 80vw;
-    height: 40vh;
+    height: 45vh;
     margin: 0px auto;
     margin-top: 7vh;
-    margin-bottom: 100px;
-    bottom: 40vh;
-    border: 5px solid rgba(63, 81, 181, 0.4);
+    bottom: 25vh;
+    border: 2px solid rgba(63, 81, 181, 0.4);
     position: relative;
     overflow: hidden;
   }
 
-  .centered-registry-icon {
-    padding: 150px;
-    height: 200px;
-    width: 200px;
-    transform: translate(-50%, -70%);
-
-  }
-
-
 }
+
