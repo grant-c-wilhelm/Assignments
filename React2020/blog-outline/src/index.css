@@ -405,7 +405,8 @@ body {
 
 
 /* BELOW IS FOR IPHONE X  and larger width screens*/
-@media screen and (min-width:768px) and (max-width:1023px) {
+/*@media screen and (min-width:768px) and (max-width:1023px)*/
+@media only screen and (max-width : 320px) {
   .headerTop-color-div {
     height: 22.5vh;
   }
@@ -626,7 +627,7 @@ body {
 
 /* BELOW IS FOR iPad landscape */
 
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape){
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
   .headerTop-color-div {
     height: 24.5vh;
   }
@@ -725,3 +726,345 @@ body {
 
 }
 
+
+/* iPad Pro */
+@media only screen and (min-device-width : 1024px) and (max-device-width : 1124px) and (orientation : portrait) {
+
+  .headerTop-color-div {
+    height: 12vh;
+  }
+
+  .diamond {
+    height: 45vh;
+  }
+
+  .headerBottom-color-div {
+    height: 13vh;
+  }
+
+  .diamond-text {
+    position: relative;
+    margin: 0 auto;
+    width: 65vw;
+    font-size: 50px;
+    transform: translateY(275px);
+  }
+
+  .navbar-main {
+    margin-top: -25%;
+  }
+
+  .nav-link {
+    font-size: 24px;
+  }
+
+  .circle-logo-home {
+    position: relative;
+    left: 43.2vw;
+    top: -14vh;
+    height: 150px;
+    width: 150px;
+    transform: rotate(45deg);
+    background-image: url(circle_logo.png);
+    background-size: 120px 120px;
+    background-repeat: no-repeat;
+  }
+
+  .circle-logo-when {
+    position: relative;
+    left: 41vw;
+    top: -17.2vh;
+    height: 150px;
+    width: 150px;
+    transform: rotate(135deg);
+    background-image: url(circle_logo.png);
+    background-size: 120px 120px;
+    background-repeat: no-repeat;
+  }
+
+  .circle-logo-where {
+    position: relative;
+    left: 43.2vw;
+    top: -14vh;
+    height: 150px;
+    width: 150px;
+    transform: rotate(45deg);
+    background-image: url(circle_logo.png);
+    background-size: 120px 120px;
+    background-repeat: no-repeat;
+  }
+
+  .circle-logo-registry {
+    position: relative;
+    left: 41vw;
+    top: -17.2vh;
+    height: 150px;
+    width: 150px;
+    transform: rotate(135deg);
+    background-image: url(circle_logo.png);
+    background-size: 120px 120px;
+    background-repeat: no-repeat;
+  }
+
+
+  .main-container {
+    display: block;
+    margin: 0 auto;
+    width: 100vw;
+  }
+
+  .image-houser {
+    margin: 0 auto;
+    height: 23vh;
+    width: 90vw;
+  }
+
+  .actual-image {
+    margin: 0 auto;
+    position: relative;
+    top: -60%;
+    left: 7%;
+    display: block;
+    height: 35vh;
+    width: 42vw;
+    background-size: 305px 385px;
+  }
+
+  .main-story-container {
+    height: 55vh;
+    margin-right: 0px;
+    left: 0%;
+  }
+
+  .ourStory-text {
+    font-size: 45px;
+    width: 53vw;
+    position: relative;
+    left: 25%;
+    top: -25%;
+  }
+
+  .main-story-text {
+    position: relative;
+    text-align: center;
+    left: 23%;
+    bottom: 25%;
+    width: 55vw;
+    font-size: 19px;
+    line-height: 19px;
+  }
+
+  .when-text-container {
+    margin: 0 auto;
+    width: 65vw;
+    height: 65vh;
+    text-align: center;
+
+  }
+
+  .when-text {
+    position: relative;
+    bottom: 30%;
+    font-size: 20px;
+  }
+
+  .location-text-map {
+    transform: translateY(-15vh);
+    font-size: 17px;
+    border-bottom: #C9CDD0 solid 50px;
+  }
+
+  #map {
+    position: relative;
+    padding-bottom: 55vh;
+    height: 10vh;
+    width: 80vw;
+    border: 2px solid rgba(63, 81, 181, 0.4);
+    overflow: hidden;
+    bottom: 32vh;
+  }
+
+  .centered-registry-icon {
+    margin: 200px;
+    height: 200px;
+    width: 200px;
+    transform: translate(-155%, -190%);
+    border-bottom: solid #C9CDD0 25px;
+
+  }
+
+}
+
+
+@media only screen and (min-device-width :1366px) and (max-device-width : 1370px) and (orientation : landscape) {
+
+  .headerTop-color-div {
+    height: 17vh;
+  }
+
+  .diamond {
+    height: 55vh;
+  }
+
+  .headerBottom-color-div {
+    height: 18vh;
+  }
+
+  .diamond-text {
+    position: relative;
+    margin: 0 auto;
+    width: 65vw;
+    font-size: 60px;
+    transform: translateY(255px);
+  }
+
+  .navbar-main {
+    margin-top: -5%;
+  }
+
+  .nav-link {
+    font-size: 30px;
+  }
+
+  .circle-logo-home {
+    position: relative;
+    left: 45vw;
+    top: -14vh;
+    height: 150px;
+    width: 150px;
+    transform: rotate(45deg);
+    background-image: url(circle_logo.png);
+    background-size: 120px 120px;
+    background-repeat: no-repeat;
+  }
+
+  .circle-logo-when {
+    position: relative;
+    left: 43.5vw;
+    top: -17.2vh;
+    height: 150px;
+    width: 150px;
+    transform: rotate(135deg);
+    background-image: url(circle_logo.png);
+    background-size: 120px 120px;
+    background-repeat: no-repeat;
+  }
+
+  .circle-logo-where {
+    position: relative;
+    left: 45vw;
+    top: -14vh;
+    height: 150px;
+    width: 150px;
+    transform: rotate(45deg);
+    background-image: url(circle_logo.png);
+    background-size: 120px 120px;
+    background-repeat: no-repeat;
+  }
+
+  .circle-logo-registry {
+    position: relative;
+    left: 43.5vw;
+    top: -17.2vh;
+    height: 150px;
+    width: 150px;
+    transform: rotate(135deg);
+    background-image: url(circle_logo.png);
+    background-size: 120px 120px;
+    background-repeat: no-repeat;
+  }
+
+
+
+  .main-container {
+    display: flex;
+    width: 99vw;
+  }
+  
+  .image-houser {
+    position: relative;
+    left: -5%;
+    background-color: #C9CDD0;
+    margin-top: 10vh;
+    height: 100vh;
+    width: 40vw;
+  }
+  
+  .actual-image {
+    margin-left: 2.5vw;
+    margin-right: 2vw;
+    height: 800px;
+    width: 620px;
+    background-image: url(main_photo.JPG);
+    background-size: 520px 700px;
+    background-repeat: no-repeat;
+    box-shadow: 10px 10px 5px #ccc;
+    border: solid #C9CDD0 2px;
+  }
+  
+
+  .main-story-container {
+    position: relative;
+    left: 5%;
+    margin: 0 auto;
+    margin-top: 10vh;
+    height: 10vh;
+    font-family: Parisienne;
+    font-size: 55px;
+    text-align: center;
+  }
+  
+  .ourStory-text {
+    width: 25vw;
+    font-size: 70px;
+    margin-top: 0px;
+  }
+  
+  .main-story-text {
+    position: relative;
+    right: 60px;
+    width: 35vw;
+    font-family: Montserrat;
+    font-size: 25px;
+    line-height: 35px;
+  }
+
+  .when-text-container {
+    margin: 0 auto;
+    width: 65vw;
+    height: 65vh;
+    text-align: center;
+
+  }
+
+  .when-text {
+    position: relative;
+    bottom: 30%;
+    font-size: 20px;
+  }
+
+  .location-text-map {
+    transform: translateY(-15vh);
+    font-size: 25px;
+    border-bottom: #C9CDD0 solid 50px;
+  }
+
+  #map {
+    position: relative;
+    padding-bottom: 55vh;
+    height: 10vh;
+    width: 80vw;
+    border: 2px solid rgba(63, 81, 181, 0.4);
+    overflow: hidden;
+    bottom: 32vh;
+  }
+
+  .centered-registry-icon {
+    margin: 200px;
+    height: 200px;
+    width: 200px;
+    transform: translate(-155%, -150%);
+    border-bottom: solid #C9CDD0 25px;
+
+  }
+}

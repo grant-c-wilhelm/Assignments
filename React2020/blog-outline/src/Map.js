@@ -105,6 +105,7 @@ class Map extends React.Component {
         return (
             <main>
                 <div id="map" className='map-styling' />
+                
             </main>
         );
     }

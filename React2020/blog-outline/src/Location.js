@@ -7,6 +7,7 @@ function Location() {
             <div className="circle-logo-where"></div>
             <p className="location-text-map">Use the markers on the map below to find the wedding venue and nearby hotels!</p>
             <Map />
+            
 
         </div>
     )
