@@ -220,15 +220,26 @@ body {
   font-size: 30px;
 }
 
-.centered-registry-icon {
-  position: relative;
-  display: block;
-  top: 50%;
-  left: 51.4%;
-  transform: translate(-50%, -50%);
-  margin-bottom: 150px;
+.registry-container{
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  height: 50vh;
+  width: 50vw;
+  transform: translate(0%, -20%);
 }
 
+.centered-registry-icon {
+  position: relative;
+  display: inline-block;
+  height: 150px;
+  
+
+}
+.amazon {
+  height: 150px;
+  margin-left: 10vw;
+}
 #map {
   position: relative;
   bottom: 10vh;
@@ -615,11 +626,19 @@ body {
     overflow: hidden;
   }
 
+  .registry-container{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    height: 50vh;
+    width: 50vw;
+    transform: translate(0%, 0%);
+  }
   .centered-registry-icon {
     margin-bottom: 200px;
-    height: 200px;
-    width: 200px;
-    transform: translate(-50%, -70%);
+    height: 155px;
+    width: 155px;
+    transform: translate(0%, -70%);
 
   }
 
@@ -723,6 +742,7 @@ body {
     position: relative;
     overflow: hidden;
   }
+
 
 }
 
@@ -885,14 +905,19 @@ body {
   }
 
   .centered-registry-icon {
-    margin: 200px;
     height: 200px;
     width: 200px;
-    transform: translate(-155%, -190%);
+    transform: translate(0%, -50%);
     border-bottom: solid #C9CDD0 25px;
-
   }
-
+  .registry-container{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    height: 50vh;
+    width: 50vw;
+    transform: translate(0%, 0%);
+  }
 }
 
 
@@ -1060,11 +1085,18 @@ body {
   }
 
   .centered-registry-icon {
-    margin: 200px;
     height: 200px;
     width: 200px;
-    transform: translate(-155%, -150%);
+    transform: translate(0%, -50%);
     border-bottom: solid #C9CDD0 25px;
 
+  }
+  .registry-container{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    height: 50vh;
+    width: 50vw;
+    transform: translate(0%, 0%);
   }
 }
