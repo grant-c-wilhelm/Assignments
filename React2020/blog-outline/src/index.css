@@ -237,7 +237,8 @@ body {
 
 }
 .amazon {
-  height: 150px;
+  height: 155px;
+  width: 155px;
   margin-left: 10vw;
 }
 #map {
