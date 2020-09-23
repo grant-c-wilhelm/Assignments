@@ -113,13 +113,19 @@ body {
   margin-top: 0px;
 }
 
+.ourStory-text-transportation {
+  width: 25vw;
+  font-size: 35px;
+  margin-top: 0px;
+}
+
 /* NEEDS TEXT MEDIA QUERRY ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 .main-story-text {
   position: relative;
   right: 60px;
   width: 35vw;
   font-family: Montserrat;
-  font-size: 25px;
+  font-size: 15px;
   line-height: 35px;
 }
 
@@ -220,7 +226,7 @@ body {
   font-size: 30px;
 }
 
-.registry-container{
+.registry-container {
   display: flex;
   justify-content: center;
   margin: 0 auto;
@@ -233,14 +239,19 @@ body {
   position: relative;
   display: inline-block;
   height: 150px;
-  
+
 
 }
+
 .amazon {
+  background-image: url(./ZonWeddingLogo.png);
+  background-size: 155px 155px;
+  background-repeat: no-repeat;
   height: 155px;
   width: 155px;
   margin-left: 10vw;
 }
+
 #map {
   position: relative;
   bottom: 10vh;
@@ -361,13 +372,18 @@ body {
     top: -18%;
   }
 
+  .ourStory-text-transportation {
+    font-size: 20px;
+    margin-top: 0px;
+  }
+
   .main-story-text {
     position: relative;
     text-align: center;
     left: 23%;
     bottom: 25%;
     width: 55vw;
-    font-size: 15px;
+    font-size: 9px;
     line-height: 14px;
   }
 
@@ -587,13 +603,18 @@ body {
     top: -18%;
   }
 
+  .ourStory-text-transportation {
+    font-size: 20px;
+    margin-top: 0px;
+  }
+
   .main-story-text {
     position: relative;
     text-align: center;
     left: 23%;
     bottom: 23%;
     width: 55vw;
-    font-size: 19px;
+    font-size: 10px;
     line-height: 19px;
   }
 
@@ -627,7 +648,7 @@ body {
     overflow: hidden;
   }
 
-  .registry-container{
+  .registry-container {
     display: flex;
     justify-content: center;
     margin: 0 auto;
@@ -635,6 +656,7 @@ body {
     width: 50vw;
     transform: translate(0%, 0%);
   }
+
   .centered-registry-icon {
     margin-bottom: 200px;
     height: 155px;
@@ -700,13 +722,18 @@ body {
     top: -18%;
   }
 
+  .ourStory-text-transportation {
+    font-size: 20px;
+    margin-top: 0px;
+  }
+
   .main-story-text {
     position: relative;
     text-align: center;
     left: 15%;
     bottom: 23%;
     width: 40vw;
-    font-size: 19px;
+    font-size: 10px;
     line-height: 21px;
   }
 
@@ -865,13 +892,18 @@ body {
     top: -25%;
   }
 
+  .ourStory-text-transportation {
+    font-size: 20px;
+    margin-top: 0px;
+  }
+
   .main-story-text {
     position: relative;
     text-align: center;
     left: 23%;
     bottom: 25%;
     width: 55vw;
-    font-size: 19px;
+    font-size: 10px;
     line-height: 19px;
   }
 
@@ -911,7 +943,8 @@ body {
     transform: translate(0%, -50%);
     border-bottom: solid #C9CDD0 25px;
   }
-  .registry-container{
+
+  .registry-container {
     display: flex;
     justify-content: center;
     margin: 0 auto;
@@ -1006,7 +1039,7 @@ body {
     display: flex;
     width: 99vw;
   }
-  
+
   .image-houser {
     position: relative;
     left: -5%;
@@ -1015,7 +1048,7 @@ body {
     height: 100vh;
     width: 40vw;
   }
-  
+
   .actual-image {
     margin-left: 2.5vw;
     margin-right: 2vw;
@@ -1027,7 +1060,7 @@ body {
     box-shadow: 10px 10px 5px #ccc;
     border: solid #C9CDD0 2px;
   }
-  
+
 
   .main-story-container {
     position: relative;
@@ -1039,19 +1072,24 @@ body {
     font-size: 55px;
     text-align: center;
   }
-  
+
   .ourStory-text {
     width: 25vw;
     font-size: 70px;
     margin-top: 0px;
   }
-  
+
+  .ourStory-text-transportation {
+    font-size: 20px;
+    margin-top: 0px;
+  }
+
   .main-story-text {
     position: relative;
     right: 60px;
     width: 35vw;
     font-family: Montserrat;
-    font-size: 25px;
+    font-size: 10px;
     line-height: 35px;
   }
 
@@ -1092,7 +1130,8 @@ body {
     border-bottom: solid #C9CDD0 25px;
 
   }
-  .registry-container{
+
+  .registry-container {
     display: flex;
     justify-content: center;
     margin: 0 auto;

@@ -34,8 +34,7 @@ function howAttractedIsLoisLaneToMe() {
     // 1 is not at all attracted, 10 is "super" attracted...
     return Math.floor((Math.random()*10)+1);
 }
-
-console.log(howAttractedIsLoisLaneToMe) ;
+ 
 
 var clarkKent = true;
 var superman = false;
